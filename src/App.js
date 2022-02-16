@@ -6,7 +6,7 @@ function App() {
   return (
   <Router>
     <div className="App">
-        <Navbar />
+        <Navbar title = "Products"/>
         <div className="content">
         </div>
         </div>

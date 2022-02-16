@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import Logo from './Logo.png';
 import Stack from 'react-bootstrap/Stack'
 
-const Navbar  = () => {
+const Navbar  = (props) => {
+     const {title} = props
     return ( 
          <nav className="menu">
           <div className="navbar">
                <img id="logo" src={Logo}></img>
-               <h1>Products</h1>
+               <h1>{title}</h1>
                <button>Logout</button> 
           </div>
 
