@@ -7,7 +7,7 @@
 }
 .navbar h1{
     color: #fff0d8;
-    margin-right: 10%;
+    margin-right: 15%;
 }
 
 .navbar button{
@@ -20,4 +20,8 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.container{
+    margin: 0px !important;
 }
