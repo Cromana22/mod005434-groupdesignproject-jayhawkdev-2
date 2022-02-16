@@ -5,15 +5,17 @@ import Container  from 'react-bootstrap';
 
 const Navbar  = () => {
     return ( 
-       <div class="container">
-       <div className="navbar">
-            <img id="logo" src={Logo}></img>
-            <h1>Products</h1>
-            <button>logout</button> 
-            </div>
+     <div class="container">
+          <div className="navbar">
+               <img id="logo" src={Logo}></img>
+               <h1>Products</h1>
+               <button>Logout</button> 
+          </div>
 
-            <div className="menu">
-          <h1>Products</h1>
+          <div className="products">
+               <div class="row g-3">
+               <h1>Products</h1>
+               </div>
           </div>
       </div>
      );
