@@ -22,6 +22,19 @@
   font-size: 16px;
 }
 
-.container{
-    margin: 0px !important;
+.links a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #1b1464;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.links{
+    margin-left: 70px;
+    padding: 20px;
+}
+
+.menu{
+    background-color: #d8e7ff;
 }
