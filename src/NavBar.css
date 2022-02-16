@@ -1,5 +1,6 @@
 #logo{
     max-width:25%;
+    margin-left: 20px;
 }
 .navbar{
     background-color:#1b1464;
@@ -14,6 +15,7 @@
   border-radius: 20px;
   color: rgb(0, 0, 0);
   padding: 5px 30px;
+  margin-right: 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
