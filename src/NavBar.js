@@ -8,7 +8,7 @@ const Navbar  = (props) => {
     return ( 
          <nav className="menu">
           <div className="navbar">
-               <img id="logo" src={Logo}></img>
+               <img id="logo" src={Logo}> </img>
                <h1>{title}</h1>
                <button>Logout</button> 
           </div>
@@ -22,6 +22,18 @@ const Navbar  = (props) => {
                               <Link to="#">Staff</Link>
                               <Link to="#">Report</Link>
                               <Link to="#">Help/Contact us</Link>
+                              <form action="/" method="get">
+                                   <label htmlFor="header-search">
+                                        <span className="visually-hidden">Search blog posts</span>
+                                   </label>
+                                   <input
+                                        type="text"
+                                        id="header-search"
+                                        placeholder="Search blog posts"
+                                        name="s" 
+                                   />
+                                   <button type="submit">Search</button>
+                              </form>
                          </Stack>
                     </div>
                </div>
