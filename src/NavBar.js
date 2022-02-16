@@ -8,7 +8,7 @@ const Navbar  = (props) => {
     return ( 
          <nav className="menu">
           <div className="navbar">
-               <img id="logo" src={Logo}> </img>
+               <img id="logo" src={Logo}/>
                <h1>{title}</h1>
                <button>Logout</button> 
           </div>
