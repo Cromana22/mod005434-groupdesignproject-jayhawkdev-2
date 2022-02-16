@@ -13,15 +13,25 @@ const Navbar  = (props) => {
                <button>Logout</button> 
           </div>
 
-          <div className="Menu">
-               <div className="links"> 
-                    <Stack direction="horizontal" gap={5}> 
-                         <Link to="#">Products</Link>
-                         <Link to="#">Purchase Orders</Link>
-                         <Link to="#">Staff</Link>
-                         <Link to="#">Report</Link>
-                         <Link to="#">Help/Contact us</Link>
-                         <form action="/" method="get">
+          <div class="row g-3">
+               <div class="col-lg-auto col-lg-auto"> 
+                    <Link to="#">Products</Link>
+               </div>
+               <div class="col-lg-auto col-lg-auto">
+               <Link to="#">Purchase Orders</Link>
+               </div>
+               <div class="col-lg-auto col-lg-auto"> 
+               <Link to="#">Staff</Link>
+               </div>
+               <div class="col-lg-auto col-lg-auto"> 
+               <Link to="#">Report</Link>
+               </div>
+               <div class="col-lg-auto col-lg-auto">
+               <Link to="#">Help/Contact us</Link>
+               </div>
+
+               <div class="col-lg-auto col-lg-auto"> 
+                    <form action="/" method="get">
                               <label htmlFor="header-search">
                                    <span className="visually-hidden">Keyword, Product....</span>
                               </label>
@@ -32,10 +42,15 @@ const Navbar  = (props) => {
                                    name="s" 
                               />
                               <button type="submit">Search</button>
-                         </form>
-                    </Stack>
+                    </form>
                </div>
-          </div>
+                         
+                         
+                         
+                         
+                         
+                    
+               </div>
           </nav>
      );
 }
