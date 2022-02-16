@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/public_html/GroupDesignProject/static/css/main.5d042b51.css",
-    "main.js": "/public_html/GroupDesignProject/static/js/main.47149fbc.js",
-    "static/media/Logo.png": "/public_html/GroupDesignProject/static/media/Logo.f3e92f68255d1046fda2.png",
-    "index.html": "/public_html/GroupDesignProject/index.html",
-    "main.5d042b51.css.map": "/public_html/GroupDesignProject/static/css/main.5d042b51.css.map",
-    "main.47149fbc.js.map": "/public_html/GroupDesignProject/static/js/main.47149fbc.js.map"
+    "main.css": "/public_html/GroupDesignProject/build/static/css/main.5d042b51.css",
+    "main.js": "/public_html/GroupDesignProject/build/static/js/main.e5aa3194.js",
+    "static/media/Logo.png": "/public_html/GroupDesignProject/build/static/media/Logo.f3e92f68255d1046fda2.png",
+    "index.html": "/public_html/GroupDesignProject/build/index.html",
+    "main.5d042b51.css.map": "/public_html/GroupDesignProject/build/static/css/main.5d042b51.css.map",
+    "main.e5aa3194.js.map": "/public_html/GroupDesignProject/build/static/js/main.e5aa3194.js.map"
   },
   "entrypoints": [
     "static/css/main.5d042b51.css",
-    "static/js/main.47149fbc.js"
+    "static/js/main.e5aa3194.js"
   ]
 }
