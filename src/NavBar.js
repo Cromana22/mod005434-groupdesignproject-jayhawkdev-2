@@ -24,12 +24,12 @@ const Navbar  = (props) => {
                               <Link to="#">Help/Contact us</Link>
                               <form action="/" method="get">
                                    <label htmlFor="header-search">
-                                        <span className="visually-hidden">Search blog posts</span>
+                                        <span className="visually-hidden">Keyword, Product....</span>
                                    </label>
                                    <input
                                         type="text"
                                         id="header-search"
-                                        placeholder="Search blog posts"
+                                        placeholder="Keyword, Product...."
                                         name="s" 
                                    />
                                    <button type="submit">Search</button>
