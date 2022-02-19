@@ -38,19 +38,12 @@
 .row {
     background-color: #d8e7ff;
     text-align: center;
-<<<<<<< HEAD
 }
-
 .row a{
     text-decoration: none;
 }
-
-
-
 form{
     list-style-type: none !important;
     display: inline;
     float: right;
-=======
->>>>>>> c4a9ff2e44e1fccabb4c865cde6d2c53f84f8cf0
 }
