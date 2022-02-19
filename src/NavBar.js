@@ -12,9 +12,9 @@ const Navbar  = (props) => {
           <div className="navbar">
           <Link to="#"><img id="logo" src={Logo}/></Link>
                <h1>{title}</h1>
-               <Link href='./login'><button>Logout</button></Link> 
+               <Link to='/login'><button>Logout</button></Link> 
           </div>
-          
+
           <Row>
                <Col><Link to="#">Products</Link></Col>
                <Col><Link to="#">Purchase Orders</Link> </Col>
