@@ -8,6 +8,7 @@
 .navbar h1{
     color: #fff0d8;
     margin-right: 15%;
+    text-align: center;
 }
 
 .navbar button{
@@ -34,9 +35,13 @@
     margin-left: 70px;
     padding: 20px;
 }
-.row{
+.row {
     background-color: #d8e7ff;
     text-align: center;
+}
+
+.row a{
+    text-decoration: none;
 }
 
 
