@@ -4,7 +4,6 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
   return (
-<Router>
     <Router>
       <div className="App">
           <Navbar title = "Products"/>
@@ -12,7 +11,6 @@ function App() {
           </div>
       </div>
     </Router>
-</Router>
   );
 }
 
