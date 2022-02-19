@@ -9,7 +9,7 @@ function App() {
   return (
       <Router>
           <div className="App">
-            <LoginPage />
+            <Navbar title="Products"/>
             <div className="content">
             <Switch>
             <Route path='/products'>

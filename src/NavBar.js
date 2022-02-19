@@ -10,7 +10,7 @@ const Navbar  = (props) => {
     return ( 
          <nav className="menu">
           <div className="navbar">
-          <Link to="#"><img id="logo" src={Logo}/></Link>
+          <img id="logo" src={Logo} href="/products"/>
                <h1>{title}</h1>
                <Link to='/login'><button>Logout</button></Link> 
           </div>
@@ -21,7 +21,7 @@ const Navbar  = (props) => {
                <Col><Link to="#">Report</Link> </Col>
                <Col><Link to="#">Help/Contact us</Link></Col>
                <Col xs={6}> 
-                    <form action="/" method="get">
+                    <form className="form" action="/" method="get">
                               <label htmlFor="header-search">
                                    <span className="visually-hidden">Keyword, Product....</span>
                               </label>
