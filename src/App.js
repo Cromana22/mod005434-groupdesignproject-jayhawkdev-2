@@ -5,18 +5,17 @@ import LoginPage from './LoginPage';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-          <Navbar title="Products"/>
-          <div className="content">
-            <Switch>
-              <Route exact path="/login">
-                <LoginPage />
-              </Route>
-            </Switch>
-          </div>
-        </div>
-    </Router>
+    
+    <div className="login">
+      <LoginPage />
+        <Router>
+          <div className="App">
+              <Navbar title="Products"/>
+              <div className="content">
+              </div>
+            </div>
+        </Router>
+    </div>
     
   );
 }

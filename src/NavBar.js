@@ -14,14 +14,13 @@ const Navbar  = (props) => {
                <h1>{title}</h1>
                <Link to='/login'><button>Logout</button></Link> 
           </div>
-
           <Row>
                <Col><Link to="#">Products</Link></Col>
                <Col><Link to="#">Purchase Orders</Link> </Col>
                <Col><Link to="#">Staff</Link></Col>
                <Col><Link to="#">Report</Link> </Col>
                <Col><Link to="#">Help/Contact us</Link></Col>
-               <Col id="last" xs={6}> 
+               <Col xs={6}> 
                     <form action="/" method="get">
                               <label htmlFor="header-search">
                                    <span className="visually-hidden">Keyword, Product....</span>
