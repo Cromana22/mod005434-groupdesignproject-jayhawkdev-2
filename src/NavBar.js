@@ -14,7 +14,7 @@ const Navbar  = (props) => {
                <h1>{title}</h1>
                <button>Logout</button> 
           </div>
-
+          
           <Row>
                <Col><Link to="#">Products</Link></Col>
                <Col><Link to="#">Purchase Orders</Link> </Col>
@@ -36,6 +36,7 @@ const Navbar  = (props) => {
                     </form>
                </Col>
           </Row>
+          
      </nav>
      );
 }

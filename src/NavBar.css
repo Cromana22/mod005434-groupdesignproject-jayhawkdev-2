@@ -38,6 +38,11 @@
     background-color: #d8e7ff;
     text-align: center;
 }
-#last{
-    float: right !important;
+
+
+
+form{
+    list-style-type: none !important;
+    display: inline;
+    float: right;
 }
