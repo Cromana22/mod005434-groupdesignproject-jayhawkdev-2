@@ -10,9 +10,11 @@ const Navbar  = (props) => {
     return ( 
          <nav className="menu">
           <div className="navbar">
+          <div className='logoclick'>
           <Link to="#"><img id="logo" src={Logo}/></Link>
                <h1>{title}</h1>
                <button>Logout</button> 
+          </div>
           </div>
           
           <Row>

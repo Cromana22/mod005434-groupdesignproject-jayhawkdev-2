@@ -1,26 +1,32 @@
 #logo{
     max-width:25%;
     margin-left: 20px;
+
 }
 .navbar{
     background-color:#1b1464;
 }
+
 .navbar h1{
     color: #fff0d8;
-    margin-right: 15%;
-    text-align: center;
+    position: relative;
+    left: 50%;
+    bottom: -50%;
+    top: 50%;
 }
 
 .navbar button{
-    background-color: #fff0d8;
+  background-color: #fff0d8;
   border-radius: 20px;
   color: rgb(0, 0, 0);
   padding: 5px 30px;
   margin-right: 20px;
+  margin-top: -5%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  float: right;
 }
 
 .links a{
@@ -38,19 +44,14 @@
 .row {
     background-color: #d8e7ff;
     text-align: center;
-<<<<<<< HEAD
 }
 
 .row a{
     text-decoration: none;
 }
 
-
-
 form{
     list-style-type: none !important;
     display: inline;
     float: right;
-=======
->>>>>>> c4a9ff2e44e1fccabb4c865cde6d2c53f84f8cf0
 }
