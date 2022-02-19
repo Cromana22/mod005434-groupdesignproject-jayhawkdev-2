@@ -1,36 +1,27 @@
 import './NavBar.css';
 import { Link } from "react-router-dom";
 import Logo from './Logo.png';
-import Stack from 'react-bootstrap/Stack'
+import Stack from 'react-bootstrap/Stack';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 const Navbar  = (props) => {
      const {title} = props
     return ( 
          <nav className="menu">
           <div className="navbar">
-               <img id="logo" src={Logo}/>
+          <Link to="#"><img id="logo" src={Logo}/></Link>
                <h1>{title}</h1>
                <button>Logout</button> 
           </div>
 
-          <div class="row g-3">
-               <div class="col-lg-auto col-lg-auto"> 
-                    <Link to="#">Products</Link>
-               </div>
-               <div class="col-lg-auto col-lg-auto">
-               <Link to="#">Purchase Orders</Link>
-               </div>
-               <div class="col-lg-auto col-lg-auto"> 
-               <Link to="#">Staff</Link>
-               </div>
-               <div class="col-lg-auto col-lg-auto"> 
-               <Link to="#">Report</Link>
-               </div>
-               <div class="col-lg-auto col-lg-auto">
-               <Link to="#">Help/Contact us</Link>
-               </div>
-
-               <div class="col-lg-auto col-lg-auto"> 
+          <Row>
+               <Col><Link to="#">Products</Link></Col>
+               <Col><Link to="#">Purchase Orders</Link> </Col>
+               <Col><Link to="#">Staff</Link></Col>
+               <Col><Link to="#">Report</Link> </Col>
+               <Col><Link to="#">Help/Contact us</Link></Col>
+               <Col id="last" xs={6}> 
                     <form action="/" method="get">
                               <label htmlFor="header-search">
                                    <span className="visually-hidden">Keyword, Product....</span>
@@ -43,15 +34,9 @@ const Navbar  = (props) => {
                               />
                               <button type="submit">Search</button>
                     </form>
-               </div>
-                         
-                         
-                         
-                         
-                         
-                    
-               </div>
-          </nav>
+               </Col>
+          </Row>
+     </nav>
      );
 }
  

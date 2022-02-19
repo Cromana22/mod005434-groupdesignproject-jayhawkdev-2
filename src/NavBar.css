@@ -34,7 +34,10 @@
     margin-left: 70px;
     padding: 20px;
 }
-
-.menu{
+.row{
     background-color: #d8e7ff;
+    text-align: center;
+}
+#last{
+    float: right !important;
 }
