@@ -1,12 +1,13 @@
 import './LoginPage.css';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 const LoginPage  = () => {
     return (
         <Form>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Control type="username" placeholder="Enter username" />
           <Form.Text className="text-muted">
           </Form.Text>
         </Form.Group>

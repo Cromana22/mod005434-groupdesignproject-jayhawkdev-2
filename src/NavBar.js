@@ -12,7 +12,7 @@ const Navbar  = (props) => {
           <div className="navbar">
           <Link to="#"><img id="logo" src={Logo}/></Link>
                <h1>{title}</h1>
-               <button>Logout</button> 
+               <Link href='./login'><button>Logout</button></Link> 
           </div>
           
           <Row>
