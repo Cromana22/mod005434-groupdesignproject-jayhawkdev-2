@@ -42,7 +42,7 @@
 .row a{
     text-decoration: none;
 }
-form{
+.form{
     list-style-type: none !important;
     display: inline;
     float: right;

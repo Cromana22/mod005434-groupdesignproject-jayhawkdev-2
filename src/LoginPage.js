@@ -1,9 +1,12 @@
 import './LoginPage.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Logo from './Logo.png';
 
 const LoginPage  = () => {
     return (
+      <div className='LoginPage'>
+      <img id="logo" src={Logo}/>
         <Form>
         <Form.Group className="mb-3" controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
@@ -19,10 +22,11 @@ const LoginPage  = () => {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Remember me" />
         </Form.Group>
-        <Button variant="primary" type="submit" href="/products">
+        <Button className="login" variant="primary" type="submit" href="/products">
           Log in
         </Button>
       </Form>
+      </div>
     );
 }
      
