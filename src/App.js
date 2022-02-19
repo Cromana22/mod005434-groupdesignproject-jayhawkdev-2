@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './NavBar';
 import LoginPage from './LoginPage';
-import Products from './Products';
+import PurchaseOrders from './PurchaseOrders';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import React from 'react';
 
@@ -13,7 +13,7 @@ function App() {
             <Navbar title="Home"/>
             <div className="content">
             <Switch>
-            <Products />
+            <PurchaseOrders />
             </Switch>
             </div>
           </div>
