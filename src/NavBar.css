@@ -7,7 +7,6 @@
 }
 .navbar h1{
     color: #fff0d8;
-    margin-right: 15%;
     text-align: center;
 }
 
@@ -37,13 +36,27 @@
 }
 .row {
     background-color: #d8e7ff;
-    text-align: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-right: 0% !important;
 }
 .row a{
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    float: right;
+    text-align: center !important;
 }
 .form{
     list-style-type: none !important;
     display: inline;
     float: right;
+    overflow: hidden;
+    margin-right: 85px;
+}
+
+input{
+    width: 250px;
 }

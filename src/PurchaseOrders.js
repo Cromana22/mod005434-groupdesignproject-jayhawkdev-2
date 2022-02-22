@@ -3,10 +3,12 @@ import * as React from 'react';
 import {DataGrid} from '@mui/x-data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 90 },
-  { field: 'firstName', headerName: 'First name', width: 150 },
-  { field: 'lastName', headerName: 'Last name', width: 150 },
-  { field: 'age', headerName: 'Age', type: 'number', width: 110 },
+  { field: 'id', headerName: 'Image', width: 90 },
+  { field: 'productName', headerName: 'Product Name', width: 150 },
+  { field: 'qtyAvailable', headerName: 'Quantity Available', width: 150 },
+  { field: 'age', headerName: 'Reorder Level', type: 'number', width: 150},
+  { field: 'stockstatus', headerName: 'Stock Status', width: 150 },
+  { field: 'qtytoorder', headerName: 'Quantity To Order', width: 150 },
   { field: 'fullName',
     headerName: 'Full name',
     description: 'This column has a value getter and is not sortable.',
@@ -18,15 +20,12 @@ const columns = [
 ];
 
 const rows = [
-  { id: 1, lastName: 'Yoan', firstName: 'Kirilov', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: 1, productName: 'Nerf N-Strike', qtyAvailable: 50, age: 35 },
+  { id: 2, productName: 'LEGO Classic bricks', qtyAvailable: 50, age: 42 },
+  { id: 3, productName: 'Polaroid Play 3D Pen', qtyAvailable: 50, age: 45 },
+  { id: 4, productName: 'USB Powerbank', qtyAvailable: 50, age: 16 },
+  { id: 5, productName: 'Spider catcher', qtyAvailable: 50, age: 20 },
+  { id: 6, productName: 'Star Wars USB Cup', qtyAvailable: 50, age: 150 },
 ];
 
 export default function DataTable() {

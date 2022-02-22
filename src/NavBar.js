@@ -28,7 +28,7 @@ const Navbar  = (props) => {
                               <input
                                    type="text"
                                    id="header-search"  
-                                   placeholder="Keyword, Product...."
+                                   placeholder="Products, Basket, PO...."
                                    name="s" 
                               />
                               <button type="submit">Search</button>
