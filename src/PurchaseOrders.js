@@ -3,20 +3,12 @@ import * as React from 'react';
 import {DataGrid} from '@mui/x-data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'Image', width: 90 },
-  { field: 'productName', headerName: 'Product Name', width: 150 },
-  { field: 'qtyAvailable', headerName: 'Quantity Available', width: 150 },
-  { field: 'age', headerName: 'Reorder Level', type: 'number', width: 150},
-  { field: 'stockstatus', headerName: 'Stock Status', width: 150 },
-  { field: 'qtytoorder', headerName: 'Quantity To Order', width: 150 },
-  { field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 170,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-  },
+  { field: 'id', headerName: 'PO Number', type: 'number', width: 120 },
+  { field: 'productName', headerName: 'Raised By', type: 'text', width: 150 },
+  { field: 'qtyAvailable', headerName: 'Raised Date', type: 'date', width: 130 },
+  { field: 'age', headerName: 'Supplier', type: 'text', width: 130},
+  { field: 'stockstatus', headerName: 'Total Value', width: 150},
+  { field: 'qtytoorder', headerName: 'Status', width: 150 },
 ];
 
 const rows = [
