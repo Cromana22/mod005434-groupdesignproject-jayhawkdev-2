@@ -8,6 +8,24 @@
 .navbar h1{
     color: #fff0d8;
     text-align: center;
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar h1{
+        color: #fff0d8;
+        text-align: center;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 318px){
+    .navbar h1{
+        color: #fff0d8;
+        text-align: center;
+        margin-right: 0px;
+        font-size: 20px;
+    }
 }
 
 .navbar button{
@@ -63,13 +81,17 @@ input{
 
 .navbar-nav-scroll{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     display: inline-block;
     float: none;
     vertical-align: top;
+    margin: 25px;
 }
 
+.navbar-light .navbar-nav .nav-link{
+    color: #1b1464 !important;
+}
 
 .btn-outline-success:hover {
     color: #fff !important;

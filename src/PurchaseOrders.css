@@ -1,3 +1,20 @@
-columns{
-    margin: 500px !important;
+.MuiDataGrid-cell{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
+
+.MuiDataGrid-columnHeaderTitle	{
+    font-size: 15px;
+    font-weight: bold !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.MuiDataGrid-columnHeaderTitleContainer{
+     margin: -5px;
+}
+
+.MuiDataGrid-row{
+    padding-bottom: 55px;
+}
+
+/* https://mui.com/api/data-grid/data-grid/#css <-- link for DataGrid CSS*/
