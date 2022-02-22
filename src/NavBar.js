@@ -30,11 +30,11 @@ const navbar = (props) => {
                                         style={{ maxHeight: '100px' }}
                                         navbarScroll
                                    >
-                                        <Nav.Link href="#action1">Products</Nav.Link>
-                                        <Nav.Link href="#action2">Purchase Orders</Nav.Link>
-                                        <Nav.Link href="#action2">Staff</Nav.Link>
-                                        <Nav.Link href="#action2">Report</Nav.Link>
-                                        <Nav.Link href="#action2">Help/Contact Us</Nav.Link>
+                                        <Nav.Link href="#home">Products</Nav.Link>
+                                        <Nav.Link href="#orders">Purchase Orders</Nav.Link>
+                                        <Nav.Link href="#staff">Staff</Nav.Link>
+                                        <Nav.Link href="#report">Report</Nav.Link>
+                                        <Nav.Link href="#support">Help/Contact Us</Nav.Link>
                                    </Nav>
                                    <Form className="d-flex">
                                         <FormControl
