@@ -13,15 +13,15 @@ const columns = [
 ];
 
 const rows = [
-  { id: 'HussnainZafar', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Sales'},
-  { id: 'HussnainZafar', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys, Gadgets', six: 'Sales'},
-  { id: 'HussnainZafar', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys', six: 'Senior'},
-  { id: 'HussnainZafar', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Sales'},
-  { id: 'HussnainZafar', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys', six: 'Sales'},
-  { id: 'HussnainZafar', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Senior'},
-  { id: 'HussnainZafar', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys, Gadgets', six: 'Senior'},
-  { id: 'HussnainZafar', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys, Gadgets', six: 'Senior'},
-  { id: 'HussnainZafar', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: '', six: 'Sales'},
+  { id: 'Hussnain Zafar', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Sales'},
+  { id: 'Lucinda Bradford', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys, Gadgets', six: 'Sales'},
+  { id: 'Samah Cano', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys', six: 'Senior'},
+  { id: 'Jamelia Finch', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Sales'},
+  { id: 'Sandra Coombes', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys', six: 'Sales'},
+  { id: 'Kaylee Alcock', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Senior'},
+  { id: 'Ellesha Whitley', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys, Gadgets', six: 'Senior'},
+  { id: 'Emile Acevedo', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys, Gadgets', six: 'Senior'},
+  { id: 'Jimmie Molina', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: '', six: 'Sales'},
 ];
 
 export default function DataTable() {
