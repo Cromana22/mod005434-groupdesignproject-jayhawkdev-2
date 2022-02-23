@@ -3,12 +3,12 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'PO Number', type: 'number', width: 110 },
-  { field: 'raisedby', headerName: 'Raised By', width: 150 },
-  { field: 'raiseddate', headerName: 'Raised Date', width: 150 },
-  { field: 'supplier', headerName: 'Supplier', width: 130 },
-  { field: 5, headerName: 'Total Value', width: 100 },
-  { field: 'status', headerName: 'Status', width: 110 },
+  { field: 'id', headerName: 'PO Number', type: 'number', width: 110, description: 'Unique Purchase Order number/ID' },
+  { field: 'raisedby', headerName: 'Raised By', width: 150, description: 'Shows which staff member rasied the Purchase Orders' },
+  { field: 'raiseddate', headerName: 'Raised Date', width: 150, description: 'The date the Purchase Order was Raised' },
+  { field: 'supplier', headerName: 'Supplier', width: 130, description: 'The supplier for the order' },
+  { field: 5, headerName: 'Total Value', width: 100, description: 'The total price excluding VAT?' },
+  { field: 'status', headerName: 'Status', width: 110, description: 'Status of the approval or rejection of the Purchase Order' },
 ];
 
 const rows = [
