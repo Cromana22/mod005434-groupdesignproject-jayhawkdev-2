@@ -1,27 +1,25 @@
 import './Table.css';
 import NavBar from './NavBar';
+import Logo from './Logo.png';
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'Name', width: 125, description: 'Displays the Name of the staff members' },
-  { field: 'two', headerName: 'Job Title', width: 125, description: 'Displays what Job title the staff members has' },
-  { field: 'three', headerName: 'Store', width: 120, description: 'Displays the store in which the staff members works' },
-  { field: 'four', headerName: 'Department', width: 110, description: 'Displays the department in which the staff members works' },
-  { field: 'five', headerName: 'Product Permissions', width: 175, description: 'Displays on which product the staff members has permissions' },
-  { field: 'six', headerName: 'Permission Level', width: 155, description: 'Displays the permission Level for the staff members' },
+  { field: 'id', headerName: 'Image', width: 115, type: 'number', description: 'Displays the Name of the staff members' },
+  { field: 'two', headerName: 'Product name', width: 165, description: 'Displays what Job title the staff members has' },
+  { field: 'three', headerName: 'Quantity Available', type: 'number', width: 170, description: 'Displays the store in which the staff members works' },
+  { field: 'four', headerName: 'Reorder Level', type: 'number', width: 140, description: 'Displays the department in which the staff members works' },
+  { field: 'five', headerName: 'Stock Status', width: 130, description: 'Displays on which product the staff members has permissions' },
+  { field: 'six', headerName: 'Quantity To Order', width: 155, description: 'Displays the permission Level for the staff members' },
 ];
 
 const rows = [
-  { id: 'Hussnain Zafar', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Sales'},
-  { id: 'Lucinda Bradford', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys, Gadgets', six: 'Sales'},
-  { id: 'Samah Cano', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys', six: 'Senior'},
-  { id: 'Jamelia Finch', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Sales'},
-  { id: 'Sandra Coombes', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys', six: 'Sales'},
-  { id: 'Kaylee Alcock', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Senior'},
-  { id: 'Ellesha Whitley', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys, Gadgets', six: 'Senior'},
-  { id: 'Emile Acevedo', two: 'Senior  Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys, Gadgets', six: 'Senior'},
-  { id: 'Jimmie Molina', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: '', six: 'Sales'},
+  { id: '1', two: 'Nerf N-Strike ', three: 100, four: 10, five: 'Authorised', six: ''},
+  { id: '2', two: 'LEGO Classic Bricks', three: 124, four: 20, five: 'Unauthorised', six: ''},
+  { id: '3', two: 'Polaroid Play 3D Pen', three: 90, four: 9, five: 'In Process', six: ''},
+  { id: '4', two: 'USB Power Bank', three: 87, four: 8, five: 'In Process', six: ''},
+  { id: '5', two: 'Spider Catcher', three: 45, four: 6, five: 'Unauthorised', six: ''},
+  { id: '6', two: 'Star Wars USB Cup', three: 25, four: 5, five: 'Authorised', six: ''},
 ];
 
 export default function DataTable() {
