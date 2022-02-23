@@ -2,6 +2,7 @@ import './Table.css';
 import NavBar from './NavBar';
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import './php/ajax.js';
 
 const columns = [
   { field: 'id', headerName: 'Name', width: 125, description: 'Displays the Name of the staff members' },
@@ -11,6 +12,8 @@ const columns = [
   { field: 'five', headerName: 'Product Permissions', width: 175, description: 'Displays on which product the staff members has permissions' },
   { field: 'six', headerName: 'Permission Level', width: 155, description: 'Displays the permission Level for the staff members' },
 ];
+
+ajaxFunction('stafftable.php', 'ajax');
 
 const rows = [
   { id: 'Hussnain Zafar', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Sales'},
@@ -35,6 +38,7 @@ export default function DataTable() {
         rowsPerPageOptions={[5]}
         checkboxSelection
       />
+      <div id="ajax"></div>
     </div>
   );
 }

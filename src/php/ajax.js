@@ -1,6 +1,6 @@
 var ajaxConnection = false;
 
-function ajaxFunction(phpPage)
+function ajaxFunction(phpFile, divOutput)
 {
     ajaxConnection = false;
 
@@ -14,31 +14,27 @@ function ajaxFunction(phpPage)
 		return false;
 	}
 
-    ajaxConnection.onreadystatechange = ajaxReply; // whenever the ready state is changed
-	ajaxConnection.open('GET', phpPage, true); // opens a request to server
+    ajaxConnection.onreadystatechange = ajaxReply(divOutput); // whenever the ready state is changed
+	ajaxConnection.open('GET', phpFile, true); // opens a request to server
 	ajaxConnection.send(null); // closes the request
 	// Now, the code waits unless the ready state changes.
 
 	return true;
 }
 
-function ajaxReply() {
+function ajaxReply(divOutput) {
 
 	if (ajaxConnection.readyState == 4) //if page loaded successfully
 	{
 		if (ajaxConnection.status == 200) //if get OK response
 		{
-			document.getElementById('Ajax').innerHTML = ajaxConnection.responseText;
+			document.getElementById(divOutput).innerHTML = ajaxConnection.responseText;
 		}
 
 		else 
-		{ // if the status code is anything else (a rare case though)
-
-			alert('Something weird occurred. HTTP error code ' + ajaxConnection.status.toString() + '.');
-			return; // exit
-
+		{
+			alert('An error occurred. HTTP error code: ' + ajaxConnection.status.toString() + '.');
+			return;
 		}
-
-	} // end if
-
-} // end function ajaxReply
+	}
+}
