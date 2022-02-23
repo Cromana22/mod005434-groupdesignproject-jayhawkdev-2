@@ -1,5 +1,5 @@
 <?php
-require('databaseTemplate.php');
+require 'databaseTemplate.php';
 
 $sql="SELECT * FROM `Staff`";
 $result = $pdo->prepare($sql);

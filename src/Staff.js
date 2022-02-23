@@ -2,7 +2,8 @@ import './Table.css';
 import NavBar from './NavBar';
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import ajaxFunction from './php/ajax';
+
+const axios = require('axios').default;
 
 const columns = [
   { field: 'id', headerName: 'Name', width: 125, description: 'Displays the Name of the staff members' },
@@ -25,6 +26,11 @@ const rows = [
   { id: 'Jimmie Molina', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: '', six: 'Sales'},
 ];
 
+// Make a request for a user with a given ID
+axios.get('https://localhost/mod005434-groupdesignproject-jayhawkdev/src/php/staffTable.php')
+  .then(function (response) { console.log(response); })
+  .catch(function (error) { console.log(error); });
+
 export default function DataTable() {
   return (
     <div style={{ height: 370, width: '100%' }}>
@@ -36,6 +42,9 @@ export default function DataTable() {
         rowsPerPageOptions={[5]}
         checkboxSelection
       />
+      <div>
+
+      </div>
     </div>
   );
 }
