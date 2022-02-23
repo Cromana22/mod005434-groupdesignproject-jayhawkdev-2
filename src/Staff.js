@@ -13,8 +13,6 @@ const columns = [
   { field: 'six', headerName: 'Permission Level', width: 155, description: 'Displays the permission Level for the staff members' },
 ];
 
-ajaxFunction('stafftable.php', 'ajax');
-
 const rows = [
   { id: 'Hussnain Zafar', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Gadgets', six: 'Sales'},
   { id: 'Lucinda Bradford', two: 'Sales Assistant', three: 'Peterborough', four: 'Sales', five: 'Toys, Gadgets', six: 'Sales'},
@@ -39,6 +37,9 @@ export default function DataTable() {
         checkboxSelection
       />
       <div id="ajax"></div>
+      <div>
+        <button onclick="ajaxFunction('staffTable.php', 'ajax');">Click Me</button>
+      </div>
     </div>
   );
 }
