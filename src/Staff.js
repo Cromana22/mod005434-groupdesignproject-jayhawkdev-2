@@ -2,7 +2,7 @@ import './Table.css';
 import NavBar from './NavBar';
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import './php/ajax.js';
+import ajaxFunction from './php/ajax';
 
 const columns = [
   { field: 'id', headerName: 'Name', width: 125, description: 'Displays the Name of the staff members' },
@@ -37,9 +37,7 @@ export default function DataTable() {
         checkboxSelection
       />
       <div id="ajax"></div>
-      <div>
-        <button onclick="ajaxFunction('staffTable.php', 'ajax');">Click Me</button>
-      </div>
+      <button onClick={() => {ajaxFunction('php/staffTable.php', 'ajax')}}>Click Me</button>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 <?php
 require('databaseTemplate.php');
 
-$sql="SELECT * FROM staff";
+$sql="SELECT * FROM `Staff`";
 $result = $pdo->prepare($sql);
 $result -> execute();
 

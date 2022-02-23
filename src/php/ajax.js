@@ -2,7 +2,7 @@ var ajaxConnection = false;
 
 function ajaxFunction(phpFile, divOutput)
 {
-    ajaxConnection = false;
+	ajaxConnection = false;
 
 	try
 	{
@@ -19,7 +19,8 @@ function ajaxFunction(phpFile, divOutput)
 	ajaxConnection.send(null); // closes the request
 	// Now, the code waits unless the ready state changes.
 
-	return true;
+	console.log(ajaxConnection);
+	return;
 }
 
 function ajaxReply(divOutput) {
@@ -38,3 +39,5 @@ function ajaxReply(divOutput) {
 		}
 	}
 }
+
+export default ajaxFunction;
