@@ -36,8 +36,6 @@ export default function DataTable() {
         rowsPerPageOptions={[5]}
         checkboxSelection
       />
-      <div id="ajax"></div>
-      <button onClick={() => {ajaxFunction('php/staffTable.php', 'ajax')}}>Click Me</button>
     </div>
   );
 }
