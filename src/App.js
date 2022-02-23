@@ -1,5 +1,6 @@
 import './App.css';
 import LoginPage from './LoginPage';
+import Products from './Products';
 import PurchaseOrders from './PurchaseOrders';
 import Staff from './Staff';
 import Layout from './Layout';
@@ -12,7 +13,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />} >                                     
         <Route path="" element={<LoginPage />} />                                       
-        < Route path = "products" element = {<products />}>                         
+        < Route path = "products" element = {<Products />}>                         
             <Route path=":id" element={<productdetail />} />                        
         </Route>
         <Route path="purchaseorders" element={<PurchaseOrders />} >
