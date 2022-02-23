@@ -16,7 +16,7 @@ const navbar = (props) => {
                <div className="navbar">
                     <img id="logo" src={Logo} href="/products" />
                     <h1>{title}</h1>
-                    <Link to='/login'><button>Logout</button></Link>
+                    <Link to="/"><button>Logout</button></Link>
                </div>
                <div className='barmenu'>
                     <Navbar bg="light" expand="lg">
