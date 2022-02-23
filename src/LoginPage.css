@@ -1,9 +1,31 @@
 .LoginPage{
     background-color: #1b1464;
     color:#fff0d8;
-    margin: auto;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    
 }
 .mb-3{
     width: 40%;
     margin: auto;
+}
+
+.loginform{
+   text-align: center;
+}
+
+form{
+    text-align: left;
+}
+
+
+#loginbtn{
+    text-align: center;
+}
+
+.btn-primary{
+    margin-bottom: 2%;
+    border-radius: 20px;
+    font-size: 20px!important;
 }
