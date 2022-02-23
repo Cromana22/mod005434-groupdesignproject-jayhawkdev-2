@@ -1,6 +1,7 @@
 import './App.css';
 import LoginPage from './LoginPage';
 import PurchaseOrders from './PurchaseOrders';
+import Staff from './Staff';
 import Layout from './Layout';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
@@ -17,7 +18,7 @@ function App() {
         <Route path="purchaseorders" element={<PurchaseOrders />} >
           <Route path=":id" element={<purchaseorderdetail />} />
         </Route>
-        <Route path="staff" element={<staff/>} >
+        <Route path="staff" element={<Staff />} >
           <Route path=":id" element={<staffdetail />} />
         </Route>
         <Route path="reports" element={<reports/>} >

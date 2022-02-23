@@ -1,4 +1,4 @@
-import './PurchaseOrders.css';
+import './Table.css';
 import NavBar from './NavBar';
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
