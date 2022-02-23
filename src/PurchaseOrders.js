@@ -1,4 +1,5 @@
 import './PurchaseOrders.css';
+import NavBar from './NavBar';
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
@@ -23,6 +24,7 @@ const rows = [
 export default function DataTable() {
   return (
     <div style={{ height: 370, width: '100%' }}>
+      <NavBar title='Purchase Orders'/>
       <DataGrid
         rows={rows}
         columns={columns}

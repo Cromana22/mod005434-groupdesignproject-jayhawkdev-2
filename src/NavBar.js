@@ -9,8 +9,6 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
-
-
 const navbar = (props) => {
      const { title } = props
      return (
@@ -30,11 +28,11 @@ const navbar = (props) => {
                                         style={{ maxHeight: '100px' }}
                                         navbarScroll
                                    >
-                                        <Nav.Link href="#home">Products</Nav.Link>
-                                        <Nav.Link href="#orders">Purchase Orders</Nav.Link>
-                                        <Nav.Link href="#staff">Staff</Nav.Link>
-                                        <Nav.Link href="#report">Report</Nav.Link>
-                                        <Nav.Link href="#support">Help/Contact Us</Nav.Link>
+                                        <Nav.Link href="/products">Products</Nav.Link>
+                                        <Nav.Link href="/purchaseorders">Purchase Orders</Nav.Link>
+                                        <Nav.Link href="/staff">Staff</Nav.Link>
+                                        <Nav.Link href="/reports">Report</Nav.Link>
+                                        <Nav.Link href="/help">Help/Contact Us</Nav.Link>
                                    </Nav>
                                    <Form className="d-flex">
                                         <FormControl

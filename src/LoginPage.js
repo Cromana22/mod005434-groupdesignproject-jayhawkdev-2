@@ -22,7 +22,7 @@ const LoginPage  = () => {
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Remember me" />
         </Form.Group>
-        <Button className="login" variant="primary" type="submit" href="/products">
+        <Button className="login" variant="primary" type="submit" href="/purchaseorders">
           Log in
         </Button>
       </Form>

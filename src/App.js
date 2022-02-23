@@ -1,23 +1,33 @@
 import './App.css';
-import Navbar from './NavBar';
 import LoginPage from './LoginPage';
 import PurchaseOrders from './PurchaseOrders';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Layout from './Layout';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
-
 
 function App() {
   return (
-      <Router>
-          <div className="App">
-            <Navbar title="Home"/>
-            <div className="content">
-            <Switch>
-            <PurchaseOrders />
-            </Switch>
-            </div>
-          </div>
-        </Router>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout />} >                                     
+        <Route path="" element={<LoginPage />} />                                       
+        < Route path = "products" element = {<products />}>                         
+            <Route path=":id" element={<productdetail />} />                        
+        </Route>
+        <Route path="purchaseorders" element={<PurchaseOrders />} >
+          <Route path=":id" element={<purchaseorderdetail />} />
+        </Route>
+        <Route path="staff" element={<staff/>} >
+          <Route path=":id" element={<staffdetail />} />
+        </Route>
+        <Route path="reports" element={<reports/>} >
+          <Route path=":id" element={<reportdetail />} />
+        </Route>
+        <Route path="help" element={<help />} />
+        <Route path="*" element={<pagenotfound />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
   );
 }
 
