@@ -18,8 +18,8 @@ export default function DataTable() {
   let rows = [];
 
   let content = [];
-  let { response, loading, error }  = useFetch('http://127.0.0.1:80/mod005434-groupdesignproject-jayhawkdev/src/php/staffTable.php');
-  //let { response, loading, error }  = useFetch('https://jaerae.co.uk/GroupDesignProject/src/php/staffTable.php');
+  //let { response, loading, error }  = useFetch('http://127.0.0.1:80/mod005434-groupdesignproject-jayhawkdev/src/php/staffTable.php');
+  let { response, loading, error }  = useFetch('https://jaerae.co.uk/GroupDesignProject/src/php/staffTable.php');
   if (response !== null) { content = response };
 
   content.forEach(staff => {
