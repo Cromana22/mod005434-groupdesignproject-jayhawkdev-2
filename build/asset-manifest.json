@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/jaerae.co.uk/GroupDesignProject/static/css/main.3b7e4697.css",
-    "main.js": "/jaerae.co.uk/GroupDesignProject/static/js/main.40f6cebe.js",
-    "static/media/Logo.png": "/jaerae.co.uk/GroupDesignProject/static/media/Logo.f3e92f68255d1046fda2.png",
-    "index.html": "/jaerae.co.uk/GroupDesignProject/index.html",
-    "main.3b7e4697.css.map": "/jaerae.co.uk/GroupDesignProject/static/css/main.3b7e4697.css.map",
-    "main.40f6cebe.js.map": "/jaerae.co.uk/GroupDesignProject/static/js/main.40f6cebe.js.map"
+    "main.css": "/GroupDesignProject/build/static/css/main.3b7e4697.css",
+    "main.js": "/GroupDesignProject/build/static/js/main.25122be0.js",
+    "static/media/Logo.png": "/GroupDesignProject/build/static/media/Logo.f3e92f68255d1046fda2.png",
+    "index.html": "/GroupDesignProject/build/index.html",
+    "main.3b7e4697.css.map": "/GroupDesignProject/build/static/css/main.3b7e4697.css.map",
+    "main.25122be0.js.map": "/GroupDesignProject/build/static/js/main.25122be0.js.map"
   },
   "entrypoints": [
     "static/css/main.3b7e4697.css",
-    "static/js/main.40f6cebe.js"
+    "static/js/main.25122be0.js"
   ]
 }
