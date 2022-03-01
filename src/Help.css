@@ -1,0 +1,26 @@
+#submit-button{
+    text-align: center;
+}
+
+button{
+    background-color: #fff0d8 !important;
+    color: black !important;
+    border-color: black;
+    border-radius: 20px !important;
+    padding: 5px 30px !important;
+    
+}
+
+button:hover {
+    color: #fff !important;
+    background-color:#1b1464 !important;
+    border-color: #1b1464 !important;
+}
+
+btn-check:focus+.btn-outline-success, .btn-outline-success:focus {
+    box-shadow: 0 0 0 0.25rem #fff0d8 !important;
+}
+
+.form-style{
+    padding-top: 12%;
+}

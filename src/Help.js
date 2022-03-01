@@ -7,6 +7,7 @@ const Help = () => {
     return (
         <div className='help'>
             <NavBar title='Help/Contact us' />
+            <div className='form-style'>
             <Form>
                 <Form.Group className="mb-3" controlId="exampleForm.Textarea1">
                     <Form.Label>Subject:</Form.Label>
@@ -18,8 +19,11 @@ const Help = () => {
                     <Form.Label>Message:</Form.Label>
                     <Form.Control as="textarea" rows={8} />
                 </Form.Group>
+                <div id="submit-button">
                 <Button variant="primary" type="submit">Submit</Button>
+                </div>
             </Form>
+            </div>
         </div>
     );
 }
