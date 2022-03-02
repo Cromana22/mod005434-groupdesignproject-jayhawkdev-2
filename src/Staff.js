@@ -28,10 +28,10 @@ export default function DataTable() {
         { id: staff.staffId,
           name: staff.title+" "+staff.firstName+" "+staff.surname,
           job: staff.jobTitle,
-          store: staff.shopId,
-          dept: staff.deptId,
-          products: 'Hard Code',
-          permissions: 'Hard Code'
+          store: staff.shopName,
+          dept: staff.deptName,
+          products: staff.productTypes,
+          permissions: staff.accessLevel
         }
       );
     });
