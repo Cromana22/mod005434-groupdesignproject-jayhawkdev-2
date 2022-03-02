@@ -20,20 +20,26 @@ export default function DataTable() {
   let content = [];
   let { response, loading, error }  = useFetch('http://127.0.0.1:80/mod005434-groupdesignproject-jayhawkdev/src/php/staffTable.php');
   //let { response, loading, error }  = useFetch('https://jaerae.co.uk/src/php/staffTable.php');
-  if (response !== null) { content = response };
+  
+  if (response !== null) { 
+    content = response;
+    content.forEach(staff => {
+      rows.push(
+        { id: staff.staffId,
+          name: staff.title+" "+staff.firstName+" "+staff.surname,
+          job: staff.jobTitle,
+          store: staff.shopId,
+          dept: staff.deptId,
+          products: 'Hard Code',
+          permissions: 'Hard Code'
+        }
+      );
+    });
+  };
 
-  content.forEach(staff => {
-    rows.push(
-      { id: staff.staffId,
-        name: staff.title+" "+staff.firstName+" "+staff.surname,
-        job: staff.jobTitle,
-        store: staff.shopId,
-        dept: staff.deptId,
-        products: 'Hard Code',
-        permissions: 'Hard Code'
-      },
-    );
-  });
+  if (error !== null) {
+    console.log("There was a problem loading the data.")
+  }
 
   return (
     <div style={{ height: 370, width: '100%' }}>
