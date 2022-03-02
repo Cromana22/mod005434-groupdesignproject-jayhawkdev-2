@@ -14,7 +14,7 @@ const navbar = (props) => {
      return (
           <nav className="menu">
                <div className="navbar">
-                    <img id="logo" src={Logo} href="/products" />
+                   <a id="logo-link" href="/products"><img id="logo" src={Logo} href="/products" /></a>
                     <h1>{title}</h1>
                     <Link to="/"><button id="logout-btn">Logout</button></Link>
                </div>

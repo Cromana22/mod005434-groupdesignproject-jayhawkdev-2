@@ -1,4 +1,8 @@
 #logo{
+    max-width:100%;
+}
+
+#logo-link{
     max-width:25%;
     margin-left: 20px;
 }
