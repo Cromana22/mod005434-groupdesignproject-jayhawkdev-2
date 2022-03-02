@@ -6,6 +6,7 @@ import Staff from './Staff';
 import Help from './Help';
 import Layout from './Layout';
 import PlacedPo from './PlacedPo';
+import Basket from './Basket';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
 
@@ -32,6 +33,10 @@ function App() {
       </Route>
       <Route>
         <Route path="placedpo" element={<PlacedPo />} />
+        <Route path="*" element={<pagenotfound />} />
+      </Route>
+      <Route>
+        <Route path="basket" element={<Basket />} />
         <Route path="*" element={<pagenotfound />} />
       </Route>
     </Routes>
