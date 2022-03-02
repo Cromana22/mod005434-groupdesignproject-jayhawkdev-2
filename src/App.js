@@ -5,6 +5,7 @@ import PurchaseOrders from './PurchaseOrders';
 import Staff from './Staff';
 import Help from './Help';
 import Layout from './Layout';
+import PlacedPo from './PlacedPo';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
 
@@ -27,6 +28,10 @@ function App() {
           <Route path=":id" element={<reportdetail />} />
         </Route>
         <Route path="help" element={<Help />} />
+        <Route path="*" element={<pagenotfound />} />
+      </Route>
+      <Route>
+        <Route path="placedpo" element={<PlacedPo />} />
         <Route path="*" element={<pagenotfound />} />
       </Route>
     </Routes>

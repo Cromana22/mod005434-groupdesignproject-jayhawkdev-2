@@ -1,8 +1,11 @@
 import './Table.css';
 import NavBar from './NavBar';
 import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
-import { PriceChange } from '@mui/icons-material';
+import { DataGrid, GridActionsCellItem  } from '@mui/x-data-grid';
+
+function LinkTo () {
+   window.location="/placedpo";
+  };
 
 const columns = [
   { field: 'id', headerName: 'PO Number', type: 'number', width: 110, description: 'Unique Purchase Order number/ID' },
@@ -11,9 +14,15 @@ const columns = [
   { field: 'supplier', headerName: 'Supplier', width: 120, description: 'The supplier for the order' },
   { field: 'price', headerName: 'Total Value', width: 100, type: 'price',  description: 'The total price excluding VAT?' },
   { field: 'status', headerName: 'Status', width: 100, description: 'Status of the approval or rejection of the Purchase Order' },
+  { field: 'actions', width: 100, type: 'actions', 
+  getActions: (params) => [
+  <GridActionsCellItem 
+  label="PlacedPO"
+  onClick={() => {LinkTo()}}/> 
+] } 
 ];
 
-const rows = [
+const rows = [ 
   { id: '#QB123456', raisedby: 'HussnainZafar', raiseddate: '20/01/2022  10:38AM', supplier: 'Bitmore Inc.', price: 10.67, status: 'Authorised'},
   { id: '#AC789006', raisedby: 'HussnainZafar', raiseddate: '20/01/2022  10:38AM', supplier: 'Bitmore Inc.', price: 690.20, status: 'Authorised'},
   { id: '#TY122156', raisedby: 'HussnainZafar', raiseddate: '20/01/2022  10:38AM', supplier: 'Bitmore Inc.', price: 50.80, status: 'Unauthorised'},
