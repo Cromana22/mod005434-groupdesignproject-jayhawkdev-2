@@ -1,6 +1,7 @@
 import './Basket.css';
 import NavBar from './NavBar';
 import Nerf from './nerf.jpg';
+import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 
 const Basket = () => {
@@ -68,7 +69,7 @@ const Basket = () => {
                         </td>
                     </tr>
 
-                    <button>Checkout</button>
+                    <Link to="/checkout"><button>Checkout</button></Link>
 
                 </table>
             </div>
