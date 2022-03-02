@@ -22,5 +22,9 @@ btn-check:focus+.btn-outline-success, .btn-outline-success:focus {
 }
 
 .form-style{
-    padding-top: 12%;
+    padding-top: 8%;
+}
+
+label{
+    font-weight: bold;
 }
