@@ -33,6 +33,7 @@ const navbar = (props) => {
                                         <Nav.Link href="/staff">Staff</Nav.Link>
                                         <Nav.Link href="/reports">Report</Nav.Link>
                                         <Nav.Link href="/help">Help/Contact Us</Nav.Link>
+                                        <Nav.Link href="/placedpo">Placed Po's</Nav.Link>
                                    </Nav>
                                    <Form className="d-flex">
                                         <FormControl
