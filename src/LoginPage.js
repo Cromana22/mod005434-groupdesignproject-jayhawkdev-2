@@ -7,7 +7,7 @@ const LoginPage  = () => {
     return (
       <div className='LoginPage'>
         <div className='loginform'>
-          <img id="logo" src={Logo}/>
+          <img id="login-logo" src={Logo}/>
           <Form>
 
             <Form.Group className="mb-3" controlId="formBasicUsername">
