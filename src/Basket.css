@@ -1,0 +1,41 @@
+#basket-nav {
+    background-color: #f8f9fa;
+    overflow: hidden;
+    margin: 0;
+  }
+
+#basket-nav th{
+    text-align: center;
+}
+
+ table, td, th{
+    border: 1px solid #1b1464;
+    padding: 0.5rem;
+    text-align: left;
+  }
+
+  table {
+    min-width: 100%;
+    border-collapse: collapse;
+  }
+
+.basket-inp{
+    max-width: 15%;
+}
+
+#checkout-btn{
+      float: right;
+      margin: 3%;
+ }
+
+td{
+    text-align: center;
+}
+
+table input{
+    text-align: center;
+}
+
+tr{
+    border-bottom: 1px solid rgb(0, 0, 0) !important;
+}

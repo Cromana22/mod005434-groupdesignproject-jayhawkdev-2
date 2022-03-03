@@ -10,7 +10,7 @@ const Basket = () => {
             <NavBar title='Basket' />
             <div className="baskettable">
                 <table>
-                    <tr>
+                    <tr id='basket-nav'>
                         <th>Image</th>
                         <th>Product name</th>
                         <th>Quantity Available</th>
@@ -23,7 +23,7 @@ const Basket = () => {
                         <td>Nerf N-Strike</td>
                         <td>100</td>
                         <td>
-                            <input type="number"/>
+                            <input className='basket-inp' type="number"/>
                         </td>
                         <td>
                             <Form.Select aria-label="Default select example">
@@ -40,7 +40,7 @@ const Basket = () => {
                         <td>Lego Classic Bricks</td>
                         <td>124</td>
                         <td>
-                            <input type="number"/>
+                            <input className='basket-inp' type="number"/>
                         </td>
                         <td>
                             <Form.Select aria-label="Default select example">
@@ -57,7 +57,7 @@ const Basket = () => {
                         <td>Polaroid Play 3D Pen</td>
                         <td>90</td>
                         <td>
-                            <input type="number"/>
+                            <input className='basket-inp' type="number"/>
                         </td>
                         <td>
                             <Form.Select aria-label="Default select example">
@@ -69,9 +69,10 @@ const Basket = () => {
                         </td>
                     </tr>
 
-                    <Link to="/checkout"><button>Checkout</button></Link>
+                    
 
                 </table>
+                <Link to="/checkout"><button id='checkout-btn'>Checkout</button></Link>
             </div>
         </div>
 
