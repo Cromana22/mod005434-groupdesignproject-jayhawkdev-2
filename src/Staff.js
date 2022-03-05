@@ -6,13 +6,13 @@ import useFetch from './php/useFetch';
 
 export default function DataTable() {
   const columns = [
-    { field: 'id', headerName: 'Staff Id', type: 'string', width: 125, description: 'Displays staff id numbers'},
-    { field: 'name', headerName: 'Name', type: 'string', width: 125, description: 'Displays staff member names'},
-    { field: 'job', headerName: 'Job Title', type: 'string', width: 125, description: 'Displays staff members job title'},
-    { field: 'store', headerName: 'Store', type: 'string', width: 120, description: 'Displays the store in which the staff members works'},
-    { field: 'dept', headerName: 'Department', type: 'string', width: 110, description: 'Displays the department in which the staff members works'},
-    { field: 'products', headerName: 'Product Permissions', type: 'string', width: 175, description: 'Displays the products the staff members can order'},
-    { field: 'permissions', headerName: 'Permission Level', type: 'string', width: 155, description: 'Displays the staff user access level'},
+    { field: 'id', headerName: 'Staff Id', width: 125, description: 'Displays staff id numbers'},
+    { field: 'name', headerName: 'Name', width: 125, description: 'Displays staff member names'},
+    { field: 'job', headerName: 'Job Title', width: 125, description: 'Displays staff members job title'},
+    { field: 'store', headerName: 'Store', width: 120, description: 'Displays the store in which the staff members works'},
+    { field: 'dept', headerName: 'Department', width: 110, description: 'Displays the department in which the staff members works'},
+    { field: 'products', headerName: 'Product Permissions', width: 175, description: 'Displays the products the staff members can order'},
+    { field: 'permissions', headerName: 'Permission Level', width: 155, description: 'Displays the staff user access level'},
   ];
 
   let rows = [];

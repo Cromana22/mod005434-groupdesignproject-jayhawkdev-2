@@ -18,7 +18,8 @@ LEFT JOIN `Shop` ON Staff.ShopId = Shop.shopId
 LEFT JOIN `Department` ON Staff.deptId = Department.deptId
 LEFT JOIN `StaffProductType` ON Staff.staffId = StaffProductType.staffId
 LEFT JOIN `ProductType` ON StaffProductType.productType = ProductType.productType
-GROUP BY Staff.staffId";
+GROUP BY Staff.staffId
+ORDER BY Staff.staffId ASC";
 
 $result = $pdo->prepare($sql);
 $result -> execute();

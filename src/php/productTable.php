@@ -13,7 +13,8 @@ ShopProduct.maxQuantity AS maxQuantity,
 IF (productsActivePurchaseOrders.poStatus IS NOT NULL, 1, 0) AS activePo
 FROM Product
 LEFT JOIN ShopProduct ON ShopProduct.ProductCode = Product.productCode
-LEFT JOIN productsActivePurchaseOrders ON productsActivePurchaseOrders.productCode = Product.productCode";
+LEFT JOIN productsActivePurchaseOrders ON productsActivePurchaseOrders.productCode = Product.productCode
+ORDER BY Product.productCode ASC";
 
 $result = $pdo->prepare($sql);
 $result -> execute();
