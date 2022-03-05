@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import useFetch from './php/useFetch';
+import phpUrl from './php/phpUrls';
 
 export default function DataTable() {
 
@@ -17,8 +18,7 @@ export default function DataTable() {
   ];
   
   let rows = [];
-  let { response, loading, error }  = useFetch('http://127.0.0.1:80/mod005434-groupdesignproject-jayhawkdev/src/php/productTable.php');
-  //let { response, loading, error }  = useFetch('https://jaerae.co.uk/src/php/productTable.php');
+  let { response, loading, error }  = useFetch(phpUrl+'/productTable.php');
   
   if (response !== null) { 
     response.forEach(product => {

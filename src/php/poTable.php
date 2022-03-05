@@ -3,7 +3,8 @@ header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Headers: *");
 require 'database.php';
 
-$sql="SELECT 	PurchaseOrder.poNumber AS ponumber,
+$sql="SELECT 
+PurchaseOrder.poNumber AS ponumber,
 PurchaseOrder.staffId AS raisedby,
 DATE_FORMAT(PurchaseOrder.dateRaised, '%d-%m-%Y %k:%i') AS raiseddate,
 Supplier.`name` AS supplier,
