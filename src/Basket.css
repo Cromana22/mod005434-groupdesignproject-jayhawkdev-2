@@ -8,19 +8,20 @@
     text-align: center;
 }
 
- table, td, th{
+#basket-table, .basket-tr, th{
     border: 1px solid #1b1464;
     padding: 0.5rem;
-    text-align: left;
+    text-align: center;
   }
 
-  table {
+#basket-table {
     min-width: 100%;
     border-collapse: collapse;
   }
 
 .basket-inp{
     max-width: 15%;
+    text-align: center;
 }
 
 #checkout-btn{
@@ -32,10 +33,10 @@ td{
     text-align: center;
 }
 
-table input{
+#basket-input input{
     text-align: center;
 }
 
-tr{
+#basket-tr{
     border-bottom: 1px solid rgb(0, 0, 0) !important;
 }
