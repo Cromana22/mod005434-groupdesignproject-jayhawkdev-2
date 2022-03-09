@@ -14,19 +14,33 @@ const navbar = (props) => {
      const { title, basketCount } = props;
 
      return (
+     
           <nav className="menu">
+           
+               
                <div className="navbar">
                    <a id="logo-link" href="/products"><img id="logo" src={Logo} href="/products" /></a>
                     <h1>{title}</h1>
+                   
                     <Link to="/basket">
+                    
                          <span id='basketLink'>
                               <FontAwesomeIcon id='basketIcon' icon={faBasketShopping} />
                               <FontAwesomeIcon id='basketCircle' icon={faCircle} />
                               <span id='basketCount'>{basketCount}</span>
                          </span>
+                         
                     </Link>
+                   
+
                     <Link to="/"><button id="logout-btn">Logout</button></Link>
                </div>
+                    
+
+
+
+
+
                <div className='barmenu'>
                     <Navbar bg="light" expand="lg">
                          <Container fluid>
