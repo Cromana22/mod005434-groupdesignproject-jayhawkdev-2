@@ -8,6 +8,7 @@
 
   #ponumber-th-1{
       text-align: center;
+      width: 58%;
   }
 
 .tables{
@@ -16,7 +17,7 @@
 }
 
 #cancel-btn{
-    float: right;
+    margin-left: 2%;
 }
 
 
@@ -33,6 +34,10 @@
     padding: 0.5rem;
     text-align: center;
     border-width: 1px !important;
+}
+
+.postatus{
+    margin-left: 2%;
 }
 
 /* Staff table*/
@@ -63,7 +68,9 @@
 
 .raised-row-tr td{
     border-width: 1px !important;
+
 }
+
 
 .raised-table, .staff-table{
     display: inline-block;
@@ -99,24 +106,18 @@
 }
 
 .supplier-table{
-    /*float: right;*/
-    
-}
-
-.supplier-table th tr{
-    padding-right: 100%;
+    float: left;    
+    width: 50%;
 }
 
 .supplier-rows td{
     border-width: 1px !important;
     width: 29%;
-    padding-bottom: 25%;
-
-
+    padding: 12.5%;
 }
 
 .supplier-table, .product-table {
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 /* Subtotal Table*/
@@ -128,6 +129,14 @@
     border-color: black;
   }
 
+.subtotal-table{
+    margin-bottom: 5%;
+}
+
+#subtotal-th{
+    width: 69%;
+}
+
 #subtotal-th-1{
     text-align: center;
 }
@@ -135,13 +144,14 @@
 .subtotal-table{
     margin-bottom: 1%;
     display: inline-block;
-    float: right;    
+    float: right;
 }
 
 
 
 
 /* vat Table*/
+
 
 .vat-table, .vat-tr, th{
     padding: 0.5rem;
@@ -150,17 +160,83 @@
     border-color: black;
   }
 
+.vat-table{
+    margin-bottom: 1%;
+    margin-top: 0%;
+    /*display: inline-block; */
+    float: right;
+}
+
+#vat-th{
+    width: 69%;
+}
+
 #vat-th-1{
     text-align: center;
 }
-
+/*
 .vat-table{
     margin-top: 5%;
     float: right;
-}
+}*/
 
 .container-div, .product-table{
     display: inline-block;
     margin: 0px;
     
 }
+
+.vat-table, .subtotal-table{
+    display: block;
+    clear: both;
+}
+
+/* Notes table*/
+
+
+.notes-table, .notes-tr, th{
+    padding: 0.5rem;
+    text-align: center;
+    border-width: 1px ;
+    border-color: black;
+  }
+
+
+.notes-table{
+    margin-bottom: 1%;
+    width: 50%;
+    float: left;
+    margin-top: 3%;
+}
+
+.notes-rows td{
+    border-width: 1px !important;
+    padding: 11%;
+    text-align: center;
+}
+
+.notes-table, .supplier-table{
+    clear: both;
+}
+
+/* Container right*/
+
+.container-right{
+    float: right;
+    width: 50%;
+    margin-right: 5%;
+}
+
+/* Buttons*/
+.buttons{
+    text-align: center;
+    margin-top: 5%;
+}
+
+#reject-btn{
+    margin-right: 2%;
+    margin-left: 2%;
+    /*background-color: #9B0000!important;*/
+}
+
+/* MEDIA Queries*/

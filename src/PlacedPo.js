@@ -8,7 +8,7 @@ const PlacedPo = (props) => {
         <div className='page'>
             <NavBar title='Purchase Orders' basketCount={basketCount} />
             <div className='tables'>
-            <button id='cancel-btn'>Cancel</button>
+            
             
                 <table className='po-table'>
                     <tr className='po-table-tr'>
@@ -24,7 +24,7 @@ const PlacedPo = (props) => {
                     </tr>
                 </table>
                 <br></br>
-
+                <div className='container-1'>
                 <table className='staff-table'>
                     <tr className='staff-tr'>
                         <th>Staff ID </th>
@@ -52,6 +52,7 @@ const PlacedPo = (props) => {
                         <td> Php I need you :D </td>
                     </tr>
                 </table>
+                </div>
                 <br></br>
                 <div className='container-div'>
                 <table className='product-table'>
@@ -135,24 +136,14 @@ const PlacedPo = (props) => {
                     </tr>
                 </table>
 
-                <table className='vat-table'>
-                    <tr className='vat-tr'>
-                        <th id='vat-th'>Grand Total</th>
-                        <th id='vat-th-1'>Php</th>
-                    </tr>
-                </table>
-
                 <table className='subtotal-table'>
                     <tr className='subtotal-tr'>
-                        <th id='vat-th'>Notes</th>
-                    </tr>
-                    <tr className='subtotal-tr'>
-                        <td id='vat-th-1'>Php</td>
+                        <th id='subtotal-th'>Grand Total</th>
+                        <th id='subtoal-th-1'>Php</th>
                     </tr>
                 </table>
                 </div>
-
-
+                <div className='container-right'>
                 <table className='supplier-table'>
                     <tr className='supplier-col'>
                         <th>Supplier</th>
@@ -161,16 +152,32 @@ const PlacedPo = (props) => {
                         <td>Supplie us please</td>
                     </tr>
                 </table>
-                       
+
+                
+                <table className='notes-table'>
+                    <tr className='notes-col'>
+                        <th>Notes</th>
+                    </tr>
+                    <tr className='notes-rows'>
+                        <td>Php</td>
+                    </tr>
+                </table>
+
+                </div>    
                 
                 
 
             </div>
-            <button>Authorise</button>
 
-                <button>Reject</button>
+            <div className='buttons'>
+                <button>Authorise</button>
+
+                <button id='reject-btn' >Reject</button>
 
                 <button>Query</button>
+
+                <button id='cancel-btn'>Cancel</button>
+            </div>
         </div>
         
     );
