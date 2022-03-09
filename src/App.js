@@ -8,41 +8,35 @@ import Layout from './Layout';
 import PlacedPo from './PlacedPo';
 import Basket from './Basket';
 import Checkout from './Checkout';
+import Reports from'./Reports';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
+import { useState } from "react";
 
 function App() {
+  const [basket, setBasket] = useState([]);
+  let basketCount = basket.length;
+
   return (
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout />} >                                     
-        <Route path="" element={<LoginPage />} />                                       
-        < Route path = "products" element = {<Products />}>                         
-            <Route path=":id" element={<productdetail />} />                        
+        <Route path="" element={<LoginPage />} />
+        < Route path = "products" element = {<Products basket={basket} setBasket={setBasket} basketCount={basketCount} />} />
+        <Route path="purchaseorders" element={<PurchaseOrders basketCount={basketCount} />} >
+          <Route path=":id" element={<purchaseorderdetail basketCount={basketCount} />} />
         </Route>
-        <Route path="purchaseorders" element={<PurchaseOrders />} >
-          <Route path=":id" element={<purchaseorderdetail />} />
+        <Route path="staff" element={<Staff basketCount={basketCount} />} >
+          <Route path=":id" element={<staffdetail basketCount={basketCount} />} />
         </Route>
-        <Route path="staff" element={<Staff />} >
-          <Route path=":id" element={<staffdetail />} />
+        <Route path="reports" element={<Reports basketCount={basketCount} />} >
+          <Route path=":id" element={<reportdetail basketCount={basketCount} />} />
         </Route>
-        <Route path="reports" element={<reports/>} >
-          <Route path=":id" element={<reportdetail />} />
-        </Route>
-        <Route path="help" element={<Help />} />
-        <Route path="*" element={<pagenotfound />} />
-      </Route>
-      <Route>
-        <Route path="placedpo" element={<PlacedPo />} />
-        <Route path="*" element={<pagenotfound />} />
-      </Route>
-      <Route>
-        <Route path="basket" element={<Basket />} />
-        <Route path="*" element={<pagenotfound />} />
-      </Route>
-      <Route>
-        <Route path="checkout" element={<Checkout />} />
-        <Route path="*" element={<pagenotfound />} />
+        <Route path="help" element={<Help basketCount={basketCount} />} />
+        <Route path="placedpo" element={<PlacedPo basketCount={basketCount} />} />
+        <Route path="basket" element={<Basket basket={basket} setBasket={setBasket} basketCount={basketCount} />} />
+        <Route path="checkout" element={<Checkout basket={basket} setBasket={setBasket} basketCount={basketCount} />} />
+        <Route path="*" element={<pagenotfound basketCount={basketCount} />} />
       </Route>
     </Routes>
   </BrowserRouter>

@@ -1,10 +1,12 @@
 import './PlacedPo.css';
 import NavBar from './NavBar';
 
-const PlacedPo = () => {
+const PlacedPo = (props) => {
+    const {basketCount} = props;
+
     return (
         <div className='page'>
-            <NavBar title='Purchase Orders' />
+            <NavBar title='Purchase Orders' basketCount={basketCount} />
             <div className='tables'>
             <button id='cancel-btn'>Cancel</button>
             

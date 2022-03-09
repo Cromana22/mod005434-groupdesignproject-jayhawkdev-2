@@ -3,10 +3,12 @@ import './Help.css';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-const Help = () => {
+const Help = (props) => {
+    const {basketCount} = props;
+
     return (
         <div className='help'>
-            <NavBar title='Help/Contact us' />
+            <NavBar title='Help/Contact us' basketCount={basketCount} />
             <div className='form-style'>
             <Form>
                 <Form.Group className="mb-3" controlId="exampleForm.Textarea1">

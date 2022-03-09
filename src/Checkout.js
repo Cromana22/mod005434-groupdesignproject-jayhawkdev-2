@@ -4,10 +4,12 @@ import CheckOutComponent from './CheckOutComponent';
 import { Link } from "react-router-dom";
 
 
-const Checkout = () => {
+const Checkout = (props) => {
+    const {basketCount} = props;
+
     return (
         <div className="checkout">
-            <NavBar title='Checkout' />
+            <NavBar title='Checkout' basketCount={basketCount} />
             <div className='checkoutcomponent'>
             <CheckOutComponent/>
             </div>

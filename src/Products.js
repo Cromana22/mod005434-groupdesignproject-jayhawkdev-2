@@ -5,7 +5,8 @@ import { DataGrid } from '@mui/x-data-grid';
 import useFetch from './php/useFetch';
 import phpUrl from './php/phpUrls';
 
-export default function DataTable() {
+export default function DataTable(props) {
+  const {basketCount} = props;
 
   const columns = [
     { field: 'id', headerName: 'Product Code', width: 115, description: 'Displays the product code'},
@@ -49,7 +50,7 @@ export default function DataTable() {
 
   return (
     <div style={{ height: 650, width: '100%' }}>
-      <NavBar title='Products'/>
+      <NavBar title='Products' basketCount={basketCount}/>
       <DataGrid
         rows={rows}
         columns={columns}

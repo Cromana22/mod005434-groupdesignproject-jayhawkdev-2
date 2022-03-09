@@ -11,7 +11,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBasketShopping, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 const navbar = (props) => {
-     const { title } = props
+     const { title, basketCount } = props;
+
      return (
           <nav className="menu">
                <div className="navbar">
@@ -21,7 +22,7 @@ const navbar = (props) => {
                          <span id='basketLink'>
                               <FontAwesomeIcon id='basketIcon' icon={faBasketShopping} />
                               <FontAwesomeIcon id='basketCircle' icon={faCircle} />
-                              <span id='basketCount'>5</span>
+                              <span id='basketCount'>{basketCount}</span>
                          </span>
                     </Link>
                     <Link to="/"><button id="logout-btn">Logout</button></Link>

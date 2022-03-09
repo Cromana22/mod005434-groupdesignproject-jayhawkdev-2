@@ -5,8 +5,10 @@ import { DataGrid } from '@mui/x-data-grid';
 import useFetch from './php/useFetch';
 import phpUrl from './php/phpUrls';
 
-export default function DataTable() {
- const columns = [
+export default function DataTable(props) {
+  const {basketCount} = props;
+
+  const columns = [
    { field: 'id', headerName: 'PO Number', width: 110, description: 'Unique Purchase Order number/ID' },
    { field: 'raisedby', headerName: 'Raised By', width: 120, description: 'Shows which staff created the Purchase Order' },
    { field: 'raiseddate', headerName: 'Raised Date', width: 150, description: 'The date the Purchase Order was raised' },
@@ -38,7 +40,7 @@ export default function DataTable() {
 
   return (
     <div style={{ height: 370, width: '100%' }}>
-      <NavBar title='Purchase Orders'/>
+      <NavBar title='Purchase Orders' basketCount={basketCount}/>
       <DataGrid
         rows={rows}
         columns={columns}
