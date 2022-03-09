@@ -4,10 +4,11 @@ import Logo from './Logo.png';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBasketShopping, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 const navbar = (props) => {
      const { title } = props
@@ -16,6 +17,13 @@ const navbar = (props) => {
                <div className="navbar">
                    <a id="logo-link" href="/products"><img id="logo" src={Logo} href="/products" /></a>
                     <h1>{title}</h1>
+                    <Link to="/basket">
+                         <span id='basketLink'>
+                              <FontAwesomeIcon id='basketIcon' icon={faBasketShopping} />
+                              <FontAwesomeIcon id='basketCircle' icon={faCircle} />
+                              <span id='basketCount'>5</span>
+                         </span>
+                    </Link>
                     <Link to="/"><button id="logout-btn">Logout</button></Link>
                </div>
                <div className='barmenu'>
