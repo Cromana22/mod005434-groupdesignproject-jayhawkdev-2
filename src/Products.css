@@ -1,0 +1,39 @@
+#productsCircle1 {
+    color: red !important;
+    position: absolute;
+    margin-left: -9px;
+    padding-top: 5px;
+    font-size: 16px !important;
+}
+
+#productsCircle2 {
+    color: orange !important;
+    position: absolute;
+    margin-left: -9px;
+    padding-top: 5px;
+    font-size: 16px !important;
+}
+
+#productsCircle3 {
+    color: green !important;
+    position: absolute;
+    margin-left: -9px;
+    padding-top: 5px;
+    font-size: 16px !important;
+}
+
+#productsCircle4 {
+    color: orange !important;
+    position: absolute;
+    margin-left: -9px;
+    padding-top: 5px;
+    font-size: 16px !important;
+}
+
+#productsCircle5 {
+    color: green !important;
+    position: absolute;
+    margin-left: -9px;
+    padding-top: 5px;
+    font-size: 16px !important;
+}
