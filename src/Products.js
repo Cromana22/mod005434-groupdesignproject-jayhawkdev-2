@@ -1,63 +1,94 @@
-import './Table.css';
+import './Products.css';
 import NavBar from './NavBar';
-import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
-import useFetch from './php/useFetch';
-import phpUrl from './php/phpUrls';
+import Nerf from './nerf.jpg';
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
-export default function DataTable(props) {
-  const {basketCount} = props;
+const Products = (props) => {
+    const {basketCount} = props;
 
-  const columns = [
-    { field: 'id', headerName: 'Product Code', width: 115, description: 'Displays the product code'},
-    { field: 'image', headerName: 'Image', width: 115, description: 'Displays an image of the product'},
-    { field: 'productname', headerName: 'Product name', width: 165, description: 'Displays the product name'},
-    { field: 'available', headerName: 'Quantity Available', width: 170, description: 'Displays the stock available'},
-    { field: 'reorderlevel', headerName: 'Reorder Level', width: 140, description: 'Displays the quantity where we need to reorder stock' },
-    { field: 'status', headerName: 'Stock Status', width: 130, description: 'Displays the status of stock' },
-    { field: 'orderamount', headerName: 'Quantity To Order', width: 155, description: 'Displays the selected amount to order' },
-  ];
-  
-  let rows = [];
-  let { response, loading, error }  = useFetch(phpUrl+'/productTable.php');
-  
-  if (response !== null) { 
-    response.forEach(product => {
-      let activePO = ""
-      if (product.activePo == 1) { activePO = " PO"; }
+    return (
+        <div className="products">
+            <NavBar title='Products' basketCount={basketCount} />
+            <div className="productstable">
+                <table id='products-table'>
+                    <thead>
+                        <tr className='products-tr'>
+                            <th>Image</th>
+                            <th>Product name</th>
+                            <th>Quantity Available</th>
+                            <th>Reorder Level</th>
+                            <th>Stock Status</th>
+                            <th>Quantity To Order</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='1' className='products-tr'>
+                            <td><img src={Nerf} /></td>
+                            <td>Nerf N-Strike</td>
+                            <td>100</td>
+                            <td>10</td>
+                            <td><FontAwesomeIcon id='productsCircle1' icon={faCircle} /></td>
+                            <td>
+                                <input className='products-inp' type="number"/>
+                            </td>
+                            <td><button>Checkout</button></td>
+                        </tr>
 
-      let itemStatus = "";
-      if (product.available <= product.reorderLevel) { itemStatus = "Red"; }
-      else if (product.available <= product.reorderLevel*1.1) { itemStatus = "Yellow" }
-      else { itemStatus = "Green" }
-  
-      rows.push(
-        { id: product.productCode,
-          image: product.image,
-          productname: product.name,
-          available: product.available,
-          reorderlevel: product.reorderLevel,
-          status: itemStatus+activePO,
-          orderamount: product.maxQuantity
-        }
-      );
-    });
-  };
-  
-  if (error !== null) {
-    console.log("There was a problem loading the data.")
-  }
+                        <tr id='2' className='products-tr'>
+                            <td><img src={Nerf} /></td>
+                            <td>Lego Classic Bricks</td>
+                            <td>124</td>
+                            <td>20</td>
+                            <td><FontAwesomeIcon id='productsCircle2' icon={faCircle} /></td>
+                            <td>
+                                <input className='products-inp' type="number"/>
+                            </td>
+                            <td><button>Checkout</button></td>
+                        </tr>
 
-  return (
-    <div style={{ height: 650, width: '100%' }}>
-      <NavBar title='Products' basketCount={basketCount}/>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={9}
-        rowsPerPageOptions={[9]}
-        checkboxSelection
-      />
-    </div>
-  );
+                        <tr id='3' className='products-tr'>
+                            <td><img src={Nerf} /></td>
+                            <td>Polaroid Play 3D Pen</td>
+                            <td>90</td>
+                            <td>70</td>
+                            <td><FontAwesomeIcon id='productsCircle3' icon={faCircle} /></td>
+                            <td>
+                                <input className='products-inp' type="number"/>
+                            </td>
+                            <td><button>Checkout</button></td>
+                        </tr>
+
+                        <tr id='4' className='products-tr'>
+                            <td><img src={Nerf} /></td>
+                            <td>USB Power Bank</td>
+                            <td>87</td>
+                            <td>15</td>
+                            <td><FontAwesomeIcon id='productsCircle4' icon={faCircle} /></td>
+                            <td>
+                                <input className='products-inp' type="number"/>
+                            </td>
+                            <td><button>Checkout</button></td>
+                        </tr>
+
+                        <tr id='5' className='products-tr'>
+                            <td><img src={Nerf} /></td>
+                            <td>Spider Catcher</td>
+                            <td>45</td>
+                            <td>5</td>
+                            <td><FontAwesomeIcon id='productsCircle5' icon={faCircle} /></td>
+                            <td>
+                                <input className='products-inp' type="number"/>
+                            </td>
+                            <td><button>Checkout</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <Link to="/checkout"><button id='checkout-btn'>Checkout</button></Link>
+            </div>
+        </div>
+    );
 }
+
+export default Products;

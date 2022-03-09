@@ -6,7 +6,7 @@ const PlacedPo = (props) => {
 
     return (
         <div className='page'>
-            <NavBar title='Purchase Orders' basketCount={basketCount} />
+            <NavBar title='Placed Pos' basketCount={basketCount} />
             <div className='tables'>
             
             
