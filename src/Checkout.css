@@ -1,3 +1,73 @@
-.checkoutcomponent {
-    padding: 15px
+/*box{
+    border: 1px solid #1b1464;
+}*/
+
+.component{
+    margin: 2%;
+    border: 1px solid black;
+}
+
+.checkout-div{
+    margin-right: 2% !important;
+    margin-top: 2% !important;
+}
+
+.supplier-txt #supplier-h3, #notes-txt h6{
+    margin-left: 2% !important;
+    margin-top: 2% !important;
+}
+
+#notes-txt textarea{
+    margin-left: 2% !important;
+}
+
+.checkout-table{
+    width: 100%;
+    text-align: center;
+    border: hidden;
+}
+
+.checkout-table tr{
+    border: 1px solid #1b1464;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.checkout-table{
+    border-top: 1px solid #1b1464;
+}
+
+#notes-txt textarea{
+    width: 65%;
+    margin-bottom: 2%;
+    
+}
+
+#temp-po-txt{
+    float: right;
+
+}
+
+#supplier-h3{
+    margin: 0px !important;
+    display: inline-block !important;
+    margin-bottom: 2% !important;
+}
+
+#total-h3{
+    float: left;
+    display: block;
+    clear: both;
+    
+}
+
+.checkout-div{
+    float: right;
+    display: block;
+    clear: both;
+}
+
+#sendorder{
+    margin-bottom: 2%;
+    margin-left: 90%;
 }
