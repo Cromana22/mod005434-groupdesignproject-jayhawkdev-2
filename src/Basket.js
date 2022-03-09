@@ -9,8 +9,8 @@ const Basket = () => {
         <div className="basket">
             <NavBar title='Basket' />
             <div className="baskettable">
-                <table>
-                    <tr id='basket-nav'>
+                <table id='basket-table'>
+                    <tr className='basket-tr'>
                         <th>Image</th>
                         <th>Product name</th>
                         <th>Quantity Available</th>
@@ -18,7 +18,7 @@ const Basket = () => {
                         <th>Select Supplier</th>
                     </tr>
 
-                    <tr id='1'>
+                    <tr id='1' className='basket-tr'>
                         <td><img src={Nerf} /></td>
                         <td>Nerf N-Strike</td>
                         <td>100</td>
@@ -35,7 +35,7 @@ const Basket = () => {
                         </td>
                     </tr>
 
-                    <tr id='2'>
+                    <tr id='2' className='basket-tr'>
                         <td><img src={Nerf} /></td>
                         <td>Lego Classic Bricks</td>
                         <td>124</td>
@@ -52,7 +52,7 @@ const Basket = () => {
                         </td>
                     </tr>
 
-                    <tr id='2'>
+                    <tr id='2' className='basket-tr'>
                         <td><img src={Nerf} /></td>
                         <td>Polaroid Play 3D Pen</td>
                         <td>90</td>

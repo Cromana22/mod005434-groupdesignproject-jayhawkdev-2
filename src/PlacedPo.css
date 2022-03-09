@@ -1,0 +1,166 @@
+/* PO Number table*/
+.po-table, .po-table-tr, th{
+    /*border: 1px solid #1b1464;*/
+    padding: 0.5rem;
+    text-align: center;
+    border-width: 1px !important;
+  }
+
+  #ponumber-th-1{
+      text-align: center;
+  }
+
+.tables{
+    margin-left: 2%;
+    
+}
+
+#cancel-btn{
+    float: right;
+}
+
+
+
+/*PO Number table and Status table side by side*/
+.po-table,.postatus{
+    display: inline-block;
+    border-color: black;
+}
+
+
+/* Status table*/
+.postatus, .postatus-th{
+    padding: 0.5rem;
+    text-align: center;
+    border-width: 1px !important;
+}
+
+/* Staff table*/
+.staff-table, .staff-tr, .staff-rows{
+    /*border: 1px solid #1b1464;*/
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.staff-rows td{
+    border-width: 1px !important;
+}
+
+.staff-table{
+    min-width: 257px;
+    margin-right: 2%;
+}
+
+/* Raised Table*/
+
+.raised-table, .raised-col-tr, .raised-row-tr{
+    /*border: 1px solid #1b1464;*/
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.raised-row-tr td{
+    border-width: 1px !important;
+}
+
+.raised-table, .staff-table{
+    display: inline-block;
+    border-color: black;
+}
+
+/* Product Table*/
+
+
+.product-table, .product-col, .product-rows{
+    padding: 0.5rem;
+    text-align: center;
+    border-width: 1px ;
+    border-color: black;
+}
+
+.product-rows td{
+    border-width: 1px !important;
+}
+
+.product-table{
+    min-width: 257px !important;
+    margin-right: 2%;
+}
+
+/* Supplier table*/
+
+.supplier-table, .supplier-col, .supplier-rows{
+    padding: 0.5rem;
+    text-align: center;
+    border-width: 1px ;
+    border-color: black;
+}
+
+.supplier-table{
+    /*float: right;*/
+    
+}
+
+.supplier-table th tr{
+    padding-right: 100%;
+}
+
+.supplier-rows td{
+    border-width: 1px !important;
+    width: 29%;
+    padding-bottom: 25%;
+
+
+}
+
+.supplier-table, .product-table {
+    display: inline-block;
+}
+
+/* Subtotal Table*/
+
+.subtotal-table, .subtotal-tr, th{
+    padding: 0.5rem;
+    text-align: center;
+    border-width: 1px ;
+    border-color: black;
+  }
+
+#subtotal-th-1{
+    text-align: center;
+}
+
+.subtotal-table{
+    margin-bottom: 1%;
+    display: inline-block;
+    float: right;    
+}
+
+
+
+
+/* vat Table*/
+
+.vat-table, .vat-tr, th{
+    padding: 0.5rem;
+    text-align: center;
+    border-width: 1px ;
+    border-color: black;
+  }
+
+#vat-th-1{
+    text-align: center;
+}
+
+.vat-table{
+    margin-top: 5%;
+    float: right;
+}
+
+.container-div, .product-table{
+    display: inline-block;
+    margin: 0px;
+    
+}
