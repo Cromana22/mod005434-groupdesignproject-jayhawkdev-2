@@ -7,18 +7,24 @@ const CheckOutComponent = () => {
     return (
         <div className="component">
             <box>
-                <row>
-                <h3>Supplier</h3>
-                <h3>Temp PO Number: 1</h3>
+                
+                <row className='supplier-txt'>
+                
+                <h3 id='supplier-h3'>Supplier</h3>
+                <div className='checkout-div'>
+                <h3 id='temp-po-txt'>Temp PO Number: 1</h3>
+                <h3 id='total-h3'>Total:</h3>
+                </div>
                 </row>
-                <row> 
-                    <a>Notes:</a> 
+                
+                <br></br>
+                <row id='notes-txt'> 
+                    <h6>Notes:</h6> 
                     <br></br>
                     <textarea rows="5" cols="100"></textarea>
-                <h3>Total:</h3>
                 </row>
 
-                <table>
+                <table className='checkout-table'>
                     <tr>
                         <th>Image</th>
                         <th>Product name</th>

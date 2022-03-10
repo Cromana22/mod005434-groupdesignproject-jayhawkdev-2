@@ -1,55 +1,74 @@
-import './Table.css';
+import './Staff.css';
 import NavBar from './NavBar';
-import * as React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
-import useFetch from './php/useFetch';
-import phpUrl from './php/phpUrls';
 
-export default function DataTable(props) {
-  const {basketCount} = props;
-
-  const columns = [
-    { field: 'id', headerName: 'Staff Id', width: 125, description: 'Displays staff id numbers'},
-    { field: 'name', headerName: 'Name', width: 125, description: 'Displays staff member names'},
-    { field: 'job', headerName: 'Job Title', width: 125, description: 'Displays staff members job title'},
-    { field: 'store', headerName: 'Store', width: 120, description: 'Displays the store in which the staff members works'},
-    { field: 'dept', headerName: 'Department', width: 110, description: 'Displays the department in which the staff members works'},
-    { field: 'products', headerName: 'Product Permissions', width: 175, description: 'Displays the products the staff members can order'},
-    { field: 'permissions', headerName: 'Permission Level', width: 155, description: 'Displays the staff user access level'},
-  ];
-
-  let rows = [];
-  let { response, loading, error }  = useFetch(phpUrl+'/staffTable.php');
-  
-  if (response !== null) { 
-    response.forEach(staff => {
-      rows.push(
-        { id: staff.staffId,
-          name: staff.title+" "+staff.firstName+" "+staff.surname,
-          job: staff.jobTitle,
-          store: staff.shopName,
-          dept: staff.deptName,
-          products: staff.productTypes,
-          permissions: staff.accessLevel
-        }
-      );
-    });
-  };
-
-  if (error !== null) {
-    console.log("There was a problem loading the data.")
-  }
+const Staff = (props) => {
+  const { basketCount } = props;
 
   return (
-    <div style={{ height: 370, width: '100%' }}>
-      <NavBar title='Staff' basketCount={basketCount}/>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-      />
+    <div className="staff">
+      <NavBar title='Staff' basketCount={basketCount} />
+      <div className="Stafftable">
+        <table id='Staff-table'>
+          <thead>
+            <tr className='Staff-tr'>
+              <th>Name</th>
+              <th>Job Title</th>
+              <th>Store</th>
+              <th>Department</th>
+              <th>Product Permissions</th>
+              <th>Permission Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id='1' className='Staff-tr'>
+              <td>#QB123456</td>
+              <td>Sales Assistant</td>
+              <td>Peterborough</td>
+              <td>Sales</td>
+              <td>Toys</td>
+              <td>Sales</td>
+            </tr>
+
+            <tr id='2' className='Staff-tr'>
+              <td>#AC789006</td>
+              <td>Sales Assistant</td>
+              <td>Peterborough</td>
+              <td>Sales</td>
+              <td>Toys, Gadgets</td>
+              <td>Senior</td>
+            </tr>
+
+            <tr id='3' className='Staff-tr'>
+              <td>#TY122156</td>
+              <td>Sales Assistant</td>
+              <td>Peterborough</td>
+              <td>Sales</td>
+              <td></td>
+              <td>Sales</td>
+            </tr>
+
+            <tr id='4' className='Staff-tr'>
+              <td>#TY122156</td>
+              <td>Sales Assistant</td>
+              <td>Peterborough</td>
+              <td>Sales</td>
+              <td>Toys</td>
+              <td>Sales</td>
+            </tr>
+
+            <tr id='5' className='Staff-tr'>
+              <td>#TY122156</td>
+              <td>Sales Assistant</td>
+              <td>Peterborough</td>
+              <td>Sales</td>
+              <td>Gadgets</td>
+              <td>Senior</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
+
+export default Staff;

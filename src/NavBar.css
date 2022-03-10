@@ -19,6 +19,10 @@
 #basketLink {
     color: #fff0d8;
     font-size: 28px;
+    position: absolute;
+    right: 10%;
+    bottom: 42%;
+    top: 25%;
 }
 
 #basketCircle {
@@ -43,7 +47,65 @@
         text-align: center;
         margin-right: 10px;
     }
+
+    #basketLink {
+        color: #fff0d8;
+        font-size: 28px;
+        position: absolute;
+        right: 10%;
+        bottom: 42%;
+        top: 25%;
+    }
 }
+
+
+@media only screen and (max-width: 1433px){
+    #basketLink {
+        color: #fff0d8;
+        font-size: 28px;
+        position: absolute;
+        right: 13%;
+        bottom: 42%;
+        top: 25%;
+    }
+}
+
+@media only screen and (max-width: 1097px){
+    #basketLink {
+        color: #fff0d8;
+        font-size: 28px;
+        position: absolute;
+        right: 17%;
+        bottom: 42%;
+        top: 25%;
+    }
+}
+
+
+@media only screen and (max-width: 800px){
+    #basketLink {
+        color: #fff0d8;
+        font-size: 28px;
+        position: absolute;
+        right: 19%;
+        bottom: 42%;
+        top: 21%;
+    }
+}
+
+
+
+@media only screen and (max-width: 487px){
+    #basketLink {
+        color: #fff0d8;
+        font-size: 28px;
+        position: absolute;
+        right: 30%;
+        bottom: 42%;
+        top: 16%;
+    }
+}
+
 
 @media only screen and (max-width: 318px){
     .navbar h1{
