@@ -1,39 +1,40 @@
 import './LoginPage.css';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import Logo from './Logo.png';
+import phpUrl from './php/phpUrls';
+import useFetch from './php/useFetch';
 
 const LoginPage  = () => {
-    return (
-      <div className='LoginPage'>
-        <div className='loginform'>
-          <img id="login-logo" src={Logo}/>
-          <Form>
+  /*let { response, loading, error }  = useFetch(phpUrl+'/getCookies.php');
+  console.log(response);
 
-            <Form.Group className="mb-3" controlId="formBasicUsername">
-              <Form.Label>Username</Form.Label>
-              <Form.Control type="username" placeholder="Enter username" />
-              <Form.Text className="text-muted">
-              </Form.Text>
-            </Form.Group>
-          
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
+  if (response !== null) {
+    if (response.loggedin == "Y") {
+      if (response.homepage !== null) {
+        window.location.href="/"+response.homepage;
+      }
+      else {
+        window.location.href="/products";
+      }
+    }
+  };*/
+  
+  return (
+    <div className='LoginPage'>
+      <div className='loginform'>
+        <img id="login-logo" src={Logo}/>
 
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Remember me" />
-            </Form.Group>
-
-            <div id="loginbtn">
-              <Button className="login" variant="primary" type="submit" href="/products">Log In</Button>
-            </div>
-
-          </Form>
-        </div>
+        <form method='POST' action={phpUrl+"/login.php"} >
+          <label>Staff ID:</label><br />
+          <input type="text" id="staffId" name="staffId" placeholder='e.g ABC01' /><br />
+          <label>Password:</label><br />
+          <input type="password" id="password" name="password" placeholder="Enter your password" /><br />
+          <input type="checkbox" id="remember" name="remember" />
+          <label> Remember Me</label><br />
+          <input type="submit" id="submit" name="submit" value="Log In" />
+        </form>
       </div>
-    );
+    </div>
+  );
 }
-     
-    export default LoginPage;
+
+export default LoginPage;
