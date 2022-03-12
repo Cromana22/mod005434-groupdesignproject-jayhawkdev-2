@@ -32,3 +32,5 @@ const Help = (props) => {
         </div>
     );
 }
+
+export default Help;
