@@ -23,20 +23,12 @@ const Help = (props) => {
                     <Form.Control as="textarea" rows={8} />
                 </Form.Group>
                 <div id="submit-button">
-                <Button variant="primary" type="submit" id="submitbutton" >Submit</Button>
+                    <Button variant="primary" type="button" onClick={() => {
+                        swal({ title: "We successfully received your message", icon: "success" })
+                    }} >Submit</Button>
                 </div>
             </Form>
             </div>
         </div>
     );
 }
-
-<script>
-$("#submitbutton").click(function(){
-    swal({
-        title: "We successfully received your message",
-        icon: "success",
-      })
-});
-</script>;
-export default Help;
