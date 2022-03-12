@@ -5,8 +5,8 @@ header("Access-Control-Allow-Origin: $webUrl");
 header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Credentials: true');
 
-if (isset($_COOKIE['remember'])) { $remember = $_COOKIE['remember']; } else { $remember = "N"; };
-if (isset($_COOKIE['loggedin'])) { $loggedin = $_COOKIE['loggedin']; } else { $loggedin = "N"; };
+if (isset($_COOKIE['remember'])) { $remember = $_COOKIE['remember']; } else { $remember = ""; };
+if (isset($_COOKIE['loggedin'])) { $loggedin = $_COOKIE['loggedin']; } else { $loggedin = ""; };
 if (isset($_COOKIE['staffId'])) { $staffId = $_COOKIE['staffId']; } else { $staffId = ""; };
 if (isset($_COOKIE['homepage'])) { $homepage = $_COOKIE['homepage']; } else { $homepage = ""; };
 if (isset($_COOKIE['accessLevel'])) { $accessLevel = $_COOKIE['accessLevel']; } else { $accessLevel = ""; };

@@ -9,7 +9,7 @@ require 'database.php';
 
 #region - set form variable values
 if (isset($_POST['staffId'])) { $staffId = $_POST['staffId']; } else { $staffId = ""; }
-if (isset($_POST['remember'])) { $rememberState = "checked"; } else { $rememberState = ""; }
+if (isset($_POST['remember'])) { $remember = "Y"; } else { $remember = ""; }
 if (isset($_POST['password'])) { $passwrd = $_POST['password']; } else { $passwrd = ""; }
 #endregion
 
@@ -50,12 +50,9 @@ if (isset($_POST['submit'])) {
             $homepage = $row['homepage'];
         }
         
-        //set cookies if selected
-        if (isset($_POST['remember'])) {
-            setcookie("remember", "Y", time()+3600);
-        }
-
-        setcookie("loggedin", "Y");
+        //set cookies
+        setcookie("remember", $remember, time()+3600*24);
+        setcookie("loggedin", "Y", time()+600);
         setcookie("staffId", $staffId);
         setcookie("homepage", $homepage);
         setcookie("accessLevel", $accessLevel);

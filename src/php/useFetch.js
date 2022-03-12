@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 const useFetch = (url) => {
 
     const [response, setResponse] = useState(null)
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(true);
     
     useEffect(() => 
     {
@@ -12,7 +12,6 @@ const useFetch = (url) => {
         const signal = abortController.signal;
         const doFetch = async () => 
         {
-            setLoading(true);
             try
             {
                 const res = await fetch(url, {method: 'GET', credentials: 'include'});   
@@ -31,7 +30,7 @@ const useFetch = (url) => {
 
         doFetch();
         return () => { abortController.abort(); };
-    }, [url]);
+    }, []);
     
     return { response, error, loading };
 };
