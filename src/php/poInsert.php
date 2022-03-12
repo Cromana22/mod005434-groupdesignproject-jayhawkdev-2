@@ -1,8 +1,10 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: *");
 require 'database.php';
 require 'webUrls.php';
+
+header("Access-Control-Allow-Origin: $webUrl");
+header('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Credentials: true');
 
 if (isset($_POST['staffId'])) { $staffId = $_POST['staffId']; } else { $staffId = "error"; };
 

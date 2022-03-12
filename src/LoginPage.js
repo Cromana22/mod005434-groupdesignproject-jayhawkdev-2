@@ -4,19 +4,8 @@ import phpUrl from './php/phpUrls';
 import useFetch from './php/useFetch';
 
 const LoginPage  = () => {
-  /*let { response, loading, error }  = useFetch(phpUrl+'/getCookies.php');
+  let { response, loading, error }  = useFetch(phpUrl+'/getCookies.php');
   console.log(response);
-
-  if (response !== null) {
-    if (response.loggedin == "Y") {
-      if (response.homepage !== null) {
-        window.location.href="/"+response.homepage;
-      }
-      else {
-        window.location.href="/products";
-      }
-    }
-  };*/
   
   return (
     <div className='LoginPage'>

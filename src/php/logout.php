@@ -1,7 +1,9 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: *");
 require 'webUrls.php';
+
+header("Access-Control-Allow-Origin: $webUrl");
+header('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Credentials: true');
 
 #region - expire all cookies
 setcookie("remember", "N", time()-1);
