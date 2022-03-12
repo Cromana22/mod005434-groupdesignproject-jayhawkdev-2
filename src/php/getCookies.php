@@ -1,9 +1,9 @@
 <?php
+require 'webUrls.php';
+
 header("Access-Control-Allow-Origin: $webUrl");
 header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Credentials: true');
-
-require 'webUrls.php';
 
 if (isset($_COOKIE['remember'])) { $remember = $_COOKIE['remember']; } else { $remember = "N"; };
 if (isset($_COOKIE['loggedin'])) { $loggedin = $_COOKIE['loggedin']; } else { $loggedin = "N"; };

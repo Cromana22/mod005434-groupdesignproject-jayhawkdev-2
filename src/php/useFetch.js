@@ -15,7 +15,7 @@ const useFetch = (url) => {
             setLoading(true);
             try
             {
-                const res = await fetch(url, {credentials: 'include'});   
+                const res = await fetch(url, {method: 'GET', credentials: 'include'});   
                 const json = await res.json();
                 if (!signal.aborted) { setResponse(json); }
             } 

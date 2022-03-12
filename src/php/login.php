@@ -1,10 +1,11 @@
 <?php
-require 'database.php';
 require 'webUrls.php';
 
 header("Access-Control-Allow-Origin: $webUrl");
 header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Credentials: true');
+
+require 'database.php';
 
 #region - set form variable values
 if (isset($_POST['staffId'])) { $staffId = $_POST['staffId']; } else { $staffId = ""; }
