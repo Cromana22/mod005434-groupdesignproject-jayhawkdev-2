@@ -30,7 +30,9 @@ const Help = (props) => {
                     <Form.Control as="textarea" rows={8} />
                 </Form.Group>
                 <div id="submit-button">
-                <Button onClick={submitbutton} variant="primary" type="submit" >Submit</Button>
+                    <Button variant="primary" type="button" onClick={() => {
+                        swal({ title: "We successfully received your message", icon: "success" })
+                    }} >Submit</Button>
                 </div>
             </Form>
             </div>
