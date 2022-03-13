@@ -85,7 +85,6 @@ const Products = (props) => {
                         </tr>
                     </tbody>
                 </table>
-                <Link to="/checkout"><button id='checkout-btn'>Checkout</button></Link>
             </div>
         </div>
     );

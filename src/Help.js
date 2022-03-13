@@ -2,10 +2,17 @@ import NavBar from './NavBar';
 import './Help.css';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import swal from 'sweetalert';
+import Swal from 'sweetalert';
 
 const Help = (props) => {
     const {basketCount} = props;
+
+    function submitbutton(){
+        Swal({
+            title: "We successfully received your message",
+            icon: "success",
+          })
+    }
 
     return (
         <div className='help'>
@@ -23,20 +30,11 @@ const Help = (props) => {
                     <Form.Control as="textarea" rows={8} />
                 </Form.Group>
                 <div id="submit-button">
-                <Button variant="primary" type="submit" id="submitbutton" >Submit</Button>
+                <Button onClick={submitbutton} variant="primary" type="submit" >Submit</Button>
                 </div>
             </Form>
             </div>
         </div>
     );
 }
-
-<script>
-$("#submitbutton").click(function(){
-    swal({
-        title: "We successfully received your message",
-        icon: "success",
-      })
-});
-</script>;
 export default Help;
