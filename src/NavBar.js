@@ -9,6 +9,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBasketShopping, faCircle } from '@fortawesome/free-solid-svg-icons';
+import phpUrl from './php/phpUrls';
 
 const navbar = (props) => {
      const { title, basketCount } = props;
@@ -31,15 +32,8 @@ const navbar = (props) => {
                          </span>
                          
                     </Link>
-                   
-
-                    <Link to="/"><button id="logout-btn">Logout</button></Link>
+                    <button id="logout-btn" onClick={() => {window.location.href=phpUrl+"/logout.php";}}>Logout</button>
                </div>
-                    
-
-
-
-
 
                <div className='barmenu'>
                     <Navbar bg="light" expand="lg">

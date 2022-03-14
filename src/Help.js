@@ -7,13 +7,6 @@ import Swal from 'sweetalert';
 const Help = (props) => {
     const {basketCount} = props;
 
-    function submitbutton(){
-        Swal({
-            title: "We successfully received your message",
-            icon: "success",
-          })
-    }
-
     return (
         <div className='help'>
             <NavBar title='Help/Contact us' basketCount={basketCount} />
@@ -31,7 +24,7 @@ const Help = (props) => {
                 </Form.Group>
                 <div id="submit-button">
                     <Button variant="primary" type="button" onClick={() => {
-                        swal({ title: "We successfully received your message", icon: "success" })
+                        Swal({ title: "We successfully received your message", icon: "success" })
                     }} >Submit</Button>
                 </div>
             </Form>
