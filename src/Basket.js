@@ -10,7 +10,7 @@ const Basket = (props) => {
     return (
         <div className="basket">
             <NavBar title='Basket' basketCount={basketCount} />
-            <div className="baskettable">
+            <div className="baskettable table-responsive">
                 <table id='basket-table'>
                     <thead>
                         <tr className='basket-tr'>
