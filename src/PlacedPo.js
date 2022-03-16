@@ -170,11 +170,11 @@ const PlacedPo = (props) => {
             </div>
 
             <div className='buttons'>
-                <button>Authorise</button>
+                <button id='authorise-btn'>Authorise</button>
 
                 <button id='reject-btn' >Reject</button>
 
-                <button>Query</button>
+                <button id='query-btn'>Query</button>
 
                 <button id='cancel-btn'>Cancel</button>
             </div>
