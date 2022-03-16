@@ -1,4 +1,4 @@
-#productsCircle1 {
+.CircleRed {
     color: red !important;
     position: absolute;
     margin-left: -9px;
@@ -6,7 +6,7 @@
     font-size: 16px !important;
 }
 
-#productsCircle2 {
+.CircleOrange {
     color: orange !important;
     position: absolute;
     margin-left: -9px;
@@ -14,7 +14,7 @@
     font-size: 16px !important;
 }
 
-#productsCircle3 {
+.CircleGreen {
     color: green !important;
     position: absolute;
     margin-left: -9px;
@@ -22,18 +22,13 @@
     font-size: 16px !important;
 }
 
-#productsCircle4 {
-    color: orange !important;
-    position: absolute;
-    margin-left: -9px;
-    padding-top: 5px;
-    font-size: 16px !important;
+.Po {
+    display: inline;
+    background-color: blue;
+    color: white;
 }
 
-#productsCircle5 {
-    color: green !important;
-    position: absolute;
-    margin-left: -9px;
-    padding-top: 5px;
-    font-size: 16px !important;
+
+.Hide {
+    display: none;
 }
