@@ -13,7 +13,7 @@ if (isset($_POST['remember'])) { $remember = "Y"; } else { $remember = ""; }
 if (isset($_POST['password'])) { $passwrd = $_POST['password']; } else { $passwrd = ""; }
 #endregion
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit']) && $staffId !== "" && $passwrd !== "") {
     #region - check login details are valid
     $loginCheck = $pdo->prepare("SELECT 'password' FROM Staff WHERE staffId LIKE :staffId");
     $loginCheck->bindParam(':staffId', $staffId, PDO::PARAM_STR);
@@ -71,6 +71,10 @@ if (isset($_POST['submit'])) {
         </script>";
     }
     #endregion
+}
+else
+{       
+    echo "<script>location.replace('$webUrl')</script>";
 }
 ?>
 
