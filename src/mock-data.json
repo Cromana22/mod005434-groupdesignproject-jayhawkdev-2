@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "staffId": "BRE51",
+      "fullname": "Mr Jasonm Brentwood",
+      "jobTitle": "Senior Sales Person",
+      "shopName": "Peterborough",
+      "deptName": "Peterborough",
+      "productTypes": "Toys and Gadgets",
+      "accessLevel": "Manager"
+    },
+    {
+      "id": 2,
+      "staffId": "DUN02",
+      "fullname": "Ms Sarah Dunkley",
+      "jobTitle": "CEO",
+      "shopName": "Peterborough",
+      "deptName": "Peterborough",
+      "productTypes": "Toys",
+      "accessLevel": "Manager"
+    },
+    {
+      "id": 3,
+      "staffId": "GRE05",
+      "fullname": "Ms Ann Greengold",
+      "jobTitle": "Assistant QA Controller",
+      "shopName": "Peterborough",
+      "deptName": "Peterborough",
+      "productTypes": "Gadgets",
+      "accessLevel": "Manager"
+    },
+    {
+      "id": 4,
+      "staffId": "GRE12",
+      "fullname": "Miss Jennifer Green",
+      "jobTitle": "Sales Assistant",
+      "shopName": "Peterborough",
+      "deptName": "Peterborough",
+      "productTypes": "",
+      "accessLevel": "Manager"
+    },
+    {
+      "id": 5,
+      "staffId": "HID00",
+      "fullname": "Sir Adrian Hidcote-Armstrong",
+      "jobTitle": "MD & Chairman",
+      "shopName": "Peterborough",
+      "deptName": "Peterborough",
+      "productTypes": "Toys",
+      "accessLevel": "Manager"
+    }
+  ]
