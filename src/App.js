@@ -11,18 +11,23 @@ import Checkout from './Checkout';
 import Reports from'./Reports';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
-import { useState } from "react";
+import useFetch from './php/useFetch';
+import phpUrl from './php/phpUrls';
 
 function App() {
-  const [basket, setBasket] = useState([]);
-  let basketCount = basket.length;
+  let { response }  = useFetch(phpUrl+'/getBasketCookie.php');
+  let basketCount = 0;
+
+  if (response !== null) {
+    basketCount = Object.keys(response).length;
+  }
 
   return (
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout />} >                                     
         <Route path="" element={<LoginPage />} />
-        < Route path = "products" element = {<Products basket={basket} setBasket={setBasket} basketCount={basketCount} />} />
+        <Route path = "products" element = {<Products basketCount={basketCount} />} />
         <Route path="purchaseorders" element={<PurchaseOrders basketCount={basketCount} />} >
           <Route path=":id" element={<purchaseorderdetail basketCount={basketCount} />} />
         </Route>
@@ -34,8 +39,8 @@ function App() {
         </Route>
         <Route path="help" element={<Help basketCount={basketCount} />} />
         <Route path="placedpo" element={<PlacedPo basketCount={basketCount} />} />
-        <Route path="basket" element={<Basket basket={basket} setBasket={setBasket} basketCount={basketCount} />} />
-        <Route path="checkout" element={<Checkout basket={basket} setBasket={setBasket} basketCount={basketCount} />} />
+        <Route path="basket" element={<Basket basketCount={basketCount} />} />
+        <Route path="checkout" element={<Checkout basketCount={basketCount} />} />
         <Route path="*" element={<pagenotfound basketCount={basketCount} />} />
       </Route>
     </Routes>

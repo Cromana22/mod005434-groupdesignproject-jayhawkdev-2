@@ -4,7 +4,7 @@ import phpUrl from './php/phpUrls';
 import ProductTableRow from './ProductTableRow';
 
 const Products = (props) => {
-    const {basketCount} = props;
+    const { basketCount } = props;
 
     let rows = [];
     let rowCount = 1;

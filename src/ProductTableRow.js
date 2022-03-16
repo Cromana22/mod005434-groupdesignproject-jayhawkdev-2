@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import './ProductTableRow.css';
+import phpUrl from './php/phpUrls';
 
 function ProductTableRow(props) {
     const { details, rowCount} = props;
-    
+
     if (details !== null) { 
 
         let status = "CircleGreen";
@@ -36,9 +37,10 @@ function ProductTableRow(props) {
                     </span>
                 </td>
                 <td>
-                    <form id={rowCount} className={order} method='POST' action=''>
-                        <input className='products-inp' type="number" min='0' max={maxOrder} name='qtyToOrder' />
-                        &nbsp;<button>Order</button>
+                    <form id={rowCount} className={order} method="POST" action={phpUrl+"/putBasketCookie.php"} >
+                        <input className='Hide' type="text" id={rowCount+"prodToOrder"} name="productCode" value={details.productCode} readOnly/>
+                        <input className='products-inp' type="number" min='0' max={maxOrder} id={rowCount+"qtyToOrder"} name="qtyToOrder"/>
+                        &nbsp;<button type="submit">Order</button>
                     </form>
                 </td>
             </tr>
