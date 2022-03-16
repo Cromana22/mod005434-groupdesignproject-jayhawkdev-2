@@ -1,0 +1,45 @@
+#products-table{
+    width: 100%;
+}
+
+.products-tr{
+    text-align: center;
+}
+
+
+.CircleRed {
+    color: red !important;
+    position: absolute;
+    margin-left: -9px;
+    padding-top: 5px;
+    font-size: 20px !important;
+}
+
+.CircleOrange {
+    color: orange !important;
+    position: absolute;
+    margin-left: -9px;
+    padding-top: 5px;
+    font-size: 20px !important;
+}
+
+.CircleGreen {
+    color: green !important;
+    position: absolute;
+    margin-left: -9px;
+    padding-top: 5px;
+    font-size: 20px !important;
+}
+
+.Hide {
+    display: none;
+}
+
+.poCount {
+    position: absolute;
+    margin-left: -7px;
+    padding-top: 5.5px;
+    font-size: 12px !important;
+    font-weight: bold;
+    color: white;
+}
