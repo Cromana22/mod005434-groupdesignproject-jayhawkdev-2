@@ -240,3 +240,34 @@
 }
 
 /* MEDIA Queries*/
+@media only screen and (max-width: 1800px){
+    .container-right{
+        float: right;
+        width: 45%;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 1620px){
+    .container-right{
+        float: right;
+        width: 40%;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 1474){
+    .container-right{
+        float: right;
+        width: 35%;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 1230){
+    .container-right{
+        float: right;
+        width: 25%;
+        margin-right: 5%;
+    }
+}
