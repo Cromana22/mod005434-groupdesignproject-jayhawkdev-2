@@ -1,4 +1,3 @@
-import './Products.css';
 import NavBar from './NavBar';
 import useFetch from './php/useFetch';
 import phpUrl from './php/phpUrls';
