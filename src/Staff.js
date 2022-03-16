@@ -1,8 +1,24 @@
 import './Staff.css';
 import NavBar from './NavBar';
+import useFetch from './php/useFetch';
+import phpUrl from './php/phpUrls';
+import StaffTableRow from './StaffTableRow';
 
 const Staff = (props) => {
   const { basketCount } = props;
+  
+  let rows = [];
+  let rowCount = 1;
+  let { response }  = useFetch(phpUrl+'/staffTable.php');
+  
+  if (response !== null) { 
+    response.forEach(staff => {
+      rows.push(
+          <StaffTableRow details={staff} rowCount={rowCount} />
+      );
+      rowCount++;
+    });
+  };
 
   return (
     <div className="staff">
@@ -11,6 +27,7 @@ const Staff = (props) => {
         <table id='Staff-table'>
           <thead>
             <tr className='Staff-tr'>
+              <th>Staff ID</th>
               <th>Name</th>
               <th>Job Title</th>
               <th>Store</th>
@@ -20,50 +37,7 @@ const Staff = (props) => {
             </tr>
           </thead>
           <tbody>
-            <tr id='1' className='Staff-tr'>
-              <td>#QB123456</td>
-              <td>Sales Assistant</td>
-              <td>Peterborough</td>
-              <td>Sales</td>
-              <td>Toys</td>
-              <td>Sales</td>
-            </tr>
-
-            <tr id='2' className='Staff-tr'>
-              <td>#AC789006</td>
-              <td>Sales Assistant</td>
-              <td>Peterborough</td>
-              <td>Sales</td>
-              <td>Toys, Gadgets</td>
-              <td>Senior</td>
-            </tr>
-
-            <tr id='3' className='Staff-tr'>
-              <td>#TY122156</td>
-              <td>Sales Assistant</td>
-              <td>Peterborough</td>
-              <td>Sales</td>
-              <td></td>
-              <td>Sales</td>
-            </tr>
-
-            <tr id='4' className='Staff-tr'>
-              <td>#TY122156</td>
-              <td>Sales Assistant</td>
-              <td>Peterborough</td>
-              <td>Sales</td>
-              <td>Toys</td>
-              <td>Sales</td>
-            </tr>
-
-            <tr id='5' className='Staff-tr'>
-              <td>#TY122156</td>
-              <td>Sales Assistant</td>
-              <td>Peterborough</td>
-              <td>Sales</td>
-              <td>Gadgets</td>
-              <td>Senior</td>
-            </tr>
+            {rows}
           </tbody>
         </table>
       </div>
