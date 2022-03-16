@@ -4,9 +4,6 @@ import Logo from './Logo.png';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBasketShopping, faCircle } from '@fortawesome/free-solid-svg-icons';
 import phpUrl from './php/phpUrls';
@@ -53,15 +50,6 @@ const navbar = (props) => {
                                         <Nav.Link href="/placedpo">Placed Po's</Nav.Link>
                                         <Nav.Link href="/basket">Basket</Nav.Link>
                                    </Nav>
-                                   <Form className="d-flex">
-                                        <FormControl
-                                             type="search"
-                                             placeholder="Product, Basket, PO..."
-                                             className="me-2"
-                                             aria-label="Search"
-                                        />
-                                        <Button variant="outline-success">Search</Button>
-                                   </Form>
                               </Navbar.Collapse>
                          </Container>
                     </Navbar>
