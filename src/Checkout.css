@@ -69,6 +69,6 @@
 }
 
 #sendorder{
-    margin-bottom: 2%;
-    margin-left: 90%;
+    float: right;
+    margin-right: 2%;
 }

@@ -7,7 +7,7 @@ const PlacedPo = (props) => {
     return (
         <div className='page'>
             <NavBar title='Placed Pos' basketCount={basketCount} />
-            <div className='tables'>
+            <div className='tables table-responsive'>
             
             
                 <table className='po-table'>

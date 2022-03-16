@@ -81,38 +81,84 @@
     }
 }
 
+@media only screen and (max-width: 850px){
+    #basketLink {
+        color: #fff0d8;
+        font-size: 30px;
+        position: absolute;
+        right: 25%;
+        bottom: 42%;
+        top: 17%;
+    }
+}
 
 @media only screen and (max-width: 800px){
     #basketLink {
         color: #fff0d8;
         font-size: 28px;
         position: absolute;
-        right: 19%;
+        right: 25%;
         bottom: 42%;
         top: 21%;
     }
 }
 
-
-
-@media only screen and (max-width: 487px){
+@media only screen and (max-width: 560px){
     #basketLink {
         color: #fff0d8;
         font-size: 28px;
         position: absolute;
         right: 30%;
         bottom: 42%;
+        top: 21%;
+    }
+}
+
+@media only screen and (max-width: 487px){
+    #basketLink {
+        color: #fff0d8;
+        font-size: 28px;
+        position: absolute;
+        right: 32%;
+        bottom: 42%;
         top: 16%;
     }
 }
 
 
-@media only screen and (max-width: 318px){
+@media only screen and (max-width: 450px){
     .navbar h1{
         color: #fff0d8;
         text-align: center;
         margin-right: 0px;
         font-size: 20px;
+    }
+    
+    #basketLink {
+        color: #fff0d8;
+        font-size: 28px;
+        position: absolute;
+        right: 35%;
+        bottom: 42%;
+        top: 16%;
+    }
+}
+
+@media only screen and (max-width: 437px){
+    .navbar h1{
+        color: #fff0d8;
+        text-align: center;
+        margin-right: -10%;
+        font-size: 25px;
+    }    
+    #basketLink {
+        /*color: #fff0d8;
+        font-size: 25px;
+        position: absolute;
+        right: 38%;
+        bottom: 42%;
+        top: 16%;*/
+        display: none;
     }
 }
 
