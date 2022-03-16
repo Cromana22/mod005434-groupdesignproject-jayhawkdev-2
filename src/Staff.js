@@ -14,7 +14,7 @@ const Staff = (props) => {
   if (response !== null) { 
     response.forEach(staff => {
       rows.push(
-          <StaffTableRow details={staff} rowCount={rowCount} />
+          <StaffTableRow key={rowCount} details={staff} rowCount={rowCount} />
       );
       rowCount++;
     });
