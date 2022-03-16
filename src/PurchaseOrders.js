@@ -21,10 +21,10 @@ const PurchaseOrders = (props) => {
   };
 
   return (
-    <div className="Purchase Orders">
+    <div className="purchase-orders">
       <NavBar title='Purchase Orders' basketCount={basketCount} />
-      <div className="Orderstable">
-        <table id='Orders-table'>
+      <div className="Orderstable table-responsive">
+        <table id='Orders-table' className='table'>
           <thead>
             <tr className='Orders-tr'>
               <th>PO Number</th>
