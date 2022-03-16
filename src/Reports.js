@@ -14,7 +14,7 @@ const Reports = (props) => {
     return (
         <div style={{ textAlign: "center" }}>
             <NavBar title='Reports' basketCount={basketCount} />
-            <div className='chart'>
+            <div className='chart table-responsive'>
                 <h1>Lates Orders</h1>
                 
                     <PieChart width={500} height={500}>

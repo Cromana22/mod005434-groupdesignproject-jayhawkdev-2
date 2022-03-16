@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 
 const CheckOutComponent = () => {
     return (
-        <div className="component">
+        <div className="component table-responsive">
             <box>
                 
                 <row className='supplier-txt'>

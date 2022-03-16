@@ -22,7 +22,7 @@ const Products = (props) => {
     return (
         <div className="products">
             <NavBar title='Products' basketCount={basketCount} />
-            <div className="productstable">
+            <div className="productstable table-responsive">
                 <table id='products-table'>
                     <thead>
                         <tr className='products-tr'>
