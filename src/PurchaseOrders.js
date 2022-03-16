@@ -1,8 +1,24 @@
 import './PurchaseOrders.css';
 import NavBar from './NavBar';
+import useFetch from './php/useFetch';
+import phpUrl from './php/phpUrls';
+import PurchaseOrdersTableRow from './PurchaseOrdersTableRow';
 
 const PurchaseOrders = (props) => {
   const { basketCount } = props;
+
+  let rows = [];
+  let rowCount = 1;
+  let { response } = useFetch(phpUrl + '/poTable.php');
+
+  if (response !== null) {
+    response.forEach(PurchaseOrder => {
+      rows.push(
+        <PurchaseOrdersTableRow details={PurchaseOrder} rowCount={rowCount} />
+      );
+      rowCount++;
+    });
+  };
 
   return (
     <div className="Purchase Orders">
@@ -20,50 +36,7 @@ const PurchaseOrders = (props) => {
             </tr>
           </thead>
           <tbody>
-            <tr id='1' className='Orders-tr'>
-              <td>#QB123456</td>
-              <td>Hussnain Zafar</td>
-              <td>20/01/2022  10:38AM</td>
-              <td>Bitmore Inc.</td>
-              <td>£526.40</td>
-              <td>Authorised</td>
-            </tr>
-
-            <tr id='2' className='Orders-tr'>
-              <td>#AC789006</td>
-              <td>Hussnain Zafar</td>
-              <td>25/01/2022  10:38AM</td>
-              <td>Bitmore Inc.</td>
-              <td>£126.84</td>
-              <td>Unauthorised</td>
-            </tr>
-
-            <tr id='3' className='Orders-tr'>
-              <td>#TY122156</td>
-              <td>Hussnain Zafar</td>
-              <td>20/01/2022  10:38AM</td>
-              <td>Bitmore Inc.</td>
-              <td>£56.48</td>
-              <td>Authorised</td>
-            </tr>
-
-            <tr id='4' className='Orders-tr'>
-              <td>#TY122156</td>
-              <td>Hussnain Zafar</td>
-              <td>20/01/2022  10:38AM</td>
-              <td>Bitmore Inc.</td>
-              <td>£6.94</td>
-              <td>Unauthorised</td>
-            </tr>
-
-            <tr id='5' className='Orders-tr'>
-              <td>#TY122156</td>
-              <td>Hussnain Zafar</td>
-              <td>20/01/2022  10:38AM</td>
-              <td>Bitmore Inc.</td>
-              <td>£52.99</td>
-              <td>Authorised</td>
-            </tr>
+            {rows}
           </tbody>
         </table>
       </div>
