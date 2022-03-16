@@ -1,3 +1,12 @@
+#products-table{
+    width: 100%;
+}
+
+.products-tr{
+    text-align: center;
+}
+
+
 .CircleRed {
     color: red !important;
     position: absolute;
