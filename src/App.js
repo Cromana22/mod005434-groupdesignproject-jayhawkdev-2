@@ -3,6 +3,7 @@ import LoginPage from './LoginPage';
 import Products from './Products';
 import PurchaseOrders from './PurchaseOrders';
 import Staff from './Staff';
+import StaffAdd from './StaffAdd';
 import Help from './Help';
 import Layout from './Layout';
 import PlacedPo from './PlacedPo';
@@ -15,7 +16,7 @@ import useFetch from './php/useFetch';
 import phpUrl from './php/phpUrls';
 
 function App() {
-  let { response }  = useFetch(phpUrl+'/getBasketCookie.php');
+  let { response }  = useFetch(phpUrl+'/getBasket.php');
   let basketCount = 0;
 
   if (response !== null) {
@@ -31,9 +32,8 @@ function App() {
         <Route path="purchaseorders" element={<PurchaseOrders basketCount={basketCount} />} >
           <Route path=":id" element={<purchaseorderdetail basketCount={basketCount} />} />
         </Route>
-        <Route path="staff" element={<Staff basketCount={basketCount} />} >
-          <Route path=":id" element={<staffdetail basketCount={basketCount} />} />
-        </Route>
+        <Route path="staff" element={<Staff basketCount={basketCount} />} />
+        <Route path="addstaff" element={<StaffAdd basketCount={basketCount} />} />
         <Route path="reports" element={<Reports basketCount={basketCount} />} >
           <Route path=":id" element={<reportdetail basketCount={basketCount} />} />
         </Route>

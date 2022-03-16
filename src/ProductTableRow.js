@@ -37,7 +37,7 @@ function ProductTableRow(props) {
                     </span>
                 </td>
                 <td>
-                    <form id={rowCount} className={order} method="POST" action={phpUrl+"/putBasketCookie.php"} >
+                    <form id={rowCount} className={order} method="POST" action={phpUrl+"/addBasket.php"} >
                         <input className='Hide' type="text" id={rowCount+"prodToOrder"} name="productCode" value={details.productCode} readOnly/>
                         <input className='products-inp' type="number" min='0' max={maxOrder} id={rowCount+"qtyToOrder"} name="qtyToOrder"/>
                         &nbsp;<button type="submit">Order</button>

@@ -27,7 +27,7 @@ const Products = (props) => {
                     <thead>
                         <tr className='products-tr'>
                             <th>Image</th>
-                            <th>Product name</th>
+                            <th>Product</th>
                             <th>Quantity Available</th>
                             <th>Reorder Level</th>
                             <th>Stock Status</th>

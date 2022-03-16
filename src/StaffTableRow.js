@@ -11,6 +11,10 @@ function StaffTableRow(props) {
         <td>{details.deptName}</td>
         <td>{details.productTypes}</td>
         <td>{details.accessLevel}</td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
       </tr>
     );
   }
