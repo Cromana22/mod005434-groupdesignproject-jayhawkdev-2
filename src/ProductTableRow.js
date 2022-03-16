@@ -20,8 +20,8 @@ function ProductTableRow(props) {
 
         let maxOrder = details.maxQuantity-details.available;
         
-        let activePo = "Hide";
-        if (details.activePo == 1) { activePo = "Po"; order="Hide"};
+        let activePo = "poCount Hide";
+        if (details.activePo == 1) { activePo = "poCount"; order="Hide"};
 
         return (
             <tr id={rowCount} className='products-tr'>
@@ -30,9 +30,10 @@ function ProductTableRow(props) {
                 <td>{details.available}</td>
                 <td>{details.reorderLevel}</td>
                 <td>
-                    <FontAwesomeIcon className={status} icon={faCircle} />
-                    &nbsp;&nbsp;&nbsp;
-                    <mark className={activePo}>PO</mark>
+                    <span>
+                        <FontAwesomeIcon className={status} icon={faCircle} />
+                        <span className={activePo}>PO</span>
+                    </span>
                 </td>
                 <td>
                     <form id={rowCount} className={order} method='POST' action=''>

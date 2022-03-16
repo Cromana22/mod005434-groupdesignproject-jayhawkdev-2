@@ -12,7 +12,7 @@
     position: absolute;
     margin-left: -9px;
     padding-top: 5px;
-    font-size: 16px !important;
+    font-size: 20px !important;
 }
 
 .CircleOrange {
@@ -20,7 +20,7 @@
     position: absolute;
     margin-left: -9px;
     padding-top: 5px;
-    font-size: 16px !important;
+    font-size: 20px !important;
 }
 
 .CircleGreen {
@@ -28,16 +28,18 @@
     position: absolute;
     margin-left: -9px;
     padding-top: 5px;
-    font-size: 16px !important;
+    font-size: 20px !important;
 }
-
-.Po {
-    display: inline;
-    background-color: blue;
-    color: white;
-}
-
 
 .Hide {
     display: none;
+}
+
+.poCount {
+    position: absolute;
+    margin-left: -7px;
+    padding-top: 5.5px;
+    font-size: 12px !important;
+    font-weight: bold;
+    color: white;
 }
