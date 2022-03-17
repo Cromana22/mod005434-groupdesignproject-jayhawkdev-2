@@ -1,3 +1,13 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPen, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import phpUrl from './php/phpUrls';
+
+function deleteStaff(staffId, firstname, surname){
+  if (confirm("Are you sure you want to delete "+firstname + " " + surname+"? This is irreversible.") == true) { 
+    window.location.href = phpUrl+"/staffdelete.php?staffId="+staffId;
+  }
+}
+
 function StaffTableRow(props) {
   const { details, rowCount } = props;
 
@@ -12,8 +22,12 @@ function StaffTableRow(props) {
         <td>{details.productTypes}</td>
         <td>{details.accessLevel}</td>
         <td>
-          <button>Edit</button>
-          <button>Delete</button>
+          <button>
+            <FontAwesomeIcon id={"edit"+rowCount} icon={faPen} />
+          </button>
+          <button>
+            <FontAwesomeIcon id={"delete"+rowCount} icon={faTrashCan} onClick={() => deleteStaff(details.staffId, details.firstName, details.surname)} />
+          </button>
         </td>
       </tr>
     );
