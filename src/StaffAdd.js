@@ -1,6 +1,7 @@
 import NavBar from './NavBar';
 import phpUrl from './php/phpUrls';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 
 const StaffAdd = (props) => {
   const { basketCount } = props;
@@ -11,12 +12,14 @@ const StaffAdd = (props) => {
       <div className="AddStaffForm">
         <form method="POST" action={phpUrl + "/staffadd.php"}>
           <label>Staff ID: </label><input type='text' name='staffId' required></input><br />
-          <label>Title: </label><Form.Select aria-label="Default select example">
-            <option>Choose Title</option>
-            <option value="1">Mr</option>
-            <option value="2">Ms</option>
-            <option value="3">Miss</option>
-            <option value="4">Sir</option>
+          <label>Title: </label><Form.Select aria-label="Default select example" name='title' required>
+          <option value="">--Title--</option>
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Miss">Miss</option>
+            <option value="Mx">Mx</option>
+            <option value="Sir">Sir</option>
+            <option value="Ms">Ms</option>
           </Form.Select><br />
           <label>First Name: </label><input type='text' name='firstName' required></input><br />
           <label>Surname: </label><input type='text' name='surname' required></input><br />
@@ -24,22 +27,22 @@ const StaffAdd = (props) => {
           <label>Job Title: </label><input type='text' name='jobTitle' required></input><br />
           <label>Shop: </label><input type='text' name='shopName'></input><br />
           <label>Department: </label><input type='text' name='deptName'></input><br />
-          <label>Product Responsibilities: </label><Form.Select aria-label="Default select Product Type">
-            <option>Choose Product Type</option>
-            <option value="1">Toys</option>
-            <option value="2">Gadgets</option>
-            <option value="3">Toys and Gadgets</option>
-            <option value="3">Up to comment</option>
-          </Form.Select><br /><br /><br />
-          <label>Access Level: </label><Form.Select aria-label="Default select Access Level">
-            <option>Choose Access Level</option>
-            <option value="1">Senior Sales</option>
-            <option value="2">Manager</option>
-            <option value="3">Finance</option>
-            <option value="3">Sales</option>
-          </Form.Select><br /><br />
-          <label>Password: </label><input type='text' name='password' required></input><br />
+          <label>Product Responsibilities: </label><Form.Select multiple aria-label="Default select Product Type" name='productTypes[]' >
+            <option value="T">Toys</option>
+            <option value="G">Gadgets</option>
+          </Form.Select><br />
+          <label>Access Level: </label><Form.Select aria-label="Default select Access Level" name='accessLevel' required>
+            <option value="">--Access Level--</option>
+            <option value="Sales">Sales</option>
+            <option value="Senior Sales">Senior Sales</option>
+            <option value="Manager">Manager</option>
+            <option value="Finance">Finance</option>
+          </Form.Select><br />
+          <label>Password: </label><input type='password' name='password' required></input><br />
           <button type='submit'>Submit</button>
+          <Link to="/staff" >
+              <button>Cancel</button>
+          </Link>
         </form>
       </div>
     </div>

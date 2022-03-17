@@ -4,6 +4,7 @@ import Products from './Products';
 import PurchaseOrders from './PurchaseOrders';
 import Staff from './Staff';
 import StaffAdd from './StaffAdd';
+import StaffEdit from './StaffEdit';
 import Help from './Help';
 import Layout from './Layout';
 import PlacedPo from './PlacedPo';
@@ -34,6 +35,7 @@ function App() {
         </Route>
         <Route path="staff" element={<Staff basketCount={basketCount} />} />
         <Route path="addstaff" element={<StaffAdd basketCount={basketCount} />} />
+        <Route path="editstaff" element={<StaffEdit basketCount={basketCount} />} />
         <Route path="reports" element={<Reports basketCount={basketCount} />} >
           <Route path=":id" element={<reportdetail basketCount={basketCount} />} />
         </Route>

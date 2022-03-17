@@ -12,8 +12,8 @@ if (isset($_POST['firstName'])) { $firstName = $_POST['firstName']; } else { $fi
 if (isset($_POST['surname'])) { $surname = $_POST['surname']; } else { $surname = "deleteme"; };
 if (isset($_POST['email'])) { $email = $_POST['email']; } else { $email = "deleteme"; };
 if (isset($_POST['jobTitle'])) { $jobTitle = $_POST['jobTitle']; } else { $jobTitle = "deleteme"; };
-if (isset($_POST['shopName'])) { $shopName = $_POST['shopName']; } else { $shopName = "null"; };
-if (isset($_POST['deptName'])) { $deptName = $_POST['deptName']; } else { $deptName = "null"; };
+if (isset($_POST['shopName'])) { $shopName = "PG4U"; } else { $shopName = "null"; };
+if (isset($_POST['deptName'])) { $deptName = "GT"; } else { $deptName = "null"; };
 if (isset($_POST['accessLevel'])) { $accessLevel = $_POST['accessLevel']; } else { $accessLevel = "deleteme"; };
 if (isset($_POST['password'])) { $password = $_POST['password']; } else { $password = "deleteme"; };
 if ($accessLevel == "Sales" || $accessLevel == "Senior Sales") { $homepage = "products"; } else { $homepage = "purchaseorders"; };
@@ -36,13 +36,12 @@ $insert1->execute();
 if (isset($_POST['productTypes'])) { 
     $productTypes = $_POST['productTypes'];
 
-    //foreach ($productTypes as $productType) {
-        $productTypes = substr($productTypes, 0, 1);
+    foreach ($productTypes as $productType) {
         $insert2 = $pdo->prepare("INSERT INTO `StaffProductType` (`staffId`, `productType`) VALUES (:staffId, :productType)");
         $insert2->bindParam(':staffId', $staffId, PDO::PARAM_STR);
-        $insert2->bindParam(':productType', $productTypes, PDO::PARAM_STR);
+        $insert2->bindParam(':productType', $productType, PDO::PARAM_STR);
         $insert2->execute();
-    //}
+    }
 };
 
 
