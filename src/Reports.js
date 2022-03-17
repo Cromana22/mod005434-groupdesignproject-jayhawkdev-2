@@ -1,6 +1,6 @@
 import './Reports.css';
 import NavBar from './NavBar';
-import { PieChart, Pie, Tooltip, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Tooltip } from 'recharts';
 
 const Reports = (props) => {
     const { basketCount } = props;
@@ -22,7 +22,7 @@ const Reports = (props) => {
                             dataKey="value"
                             isAnimationActive={true}
                             data={data}
-                            outerRadius={125}
+                            outerRadius={155}
                             fill="#1b1464"
                             label
                         />
