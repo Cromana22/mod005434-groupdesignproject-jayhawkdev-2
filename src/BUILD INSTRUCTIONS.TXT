@@ -1,6 +1,3 @@
 Swap the php file urls to the live versions.
 npm run build.
 upload the build folder entirely, and the src/php folder.
-
-
-test

@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function deleteStaff(staffId, firstname, surname){
-  if (confirm("Are you sure you want to delete "+firstname + " " + surname+"? This is irreversible.") == true) { 
+  if (window.confirm("Are you sure you want to delete "+firstname + " " + surname+"? This is irreversible.") == true) { 
     window.location.href = phpUrl+"/staffdelete.php?staffId="+staffId;
   }
 }
@@ -29,8 +29,8 @@ function StaffTableRow(props) {
               <FontAwesomeIcon id={"edit"+rowCount} icon={faPen} />
             </button>
           </Link>
-          <button>
-            <FontAwesomeIcon id={"delete"+rowCount} icon={faTrashCan} onClick={() => deleteStaff(details.staffId, details.firstName, details.surname)} />
+          <button onClick={() => deleteStaff(details.staffId, details.firstName, details.surname)}>
+            <FontAwesomeIcon id={"delete"+rowCount} icon={faTrashCan}  />
           </button>
         </td>
       </tr>
