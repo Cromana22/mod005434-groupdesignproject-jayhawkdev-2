@@ -22,12 +22,13 @@ const Basket = (props) => {
             );
             rowCount++;
         });
-      };
+    };
 
     return (
         <div className="basket">
             <NavBar title='Basket' basketCount={basketCount} />
             <div className="baskettable table-responsive">
+                <form method="POST" action={phpUrl+'/generateCheckout.php'}>
                     <table id='basket-table'>
                         <thead>
                             <tr className='basket-tr'>
@@ -42,7 +43,9 @@ const Basket = (props) => {
                                 {rows}
                         </tbody>
                     </table>
+                    <button type='submit' name='submit'>Checkout Form</button>
                     <Link to="/checkout"><button id='checkout-btn'>Checkout</button></Link>
+                </form>
             </div>
         </div>
     );

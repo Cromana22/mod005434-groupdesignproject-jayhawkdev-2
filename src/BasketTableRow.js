@@ -33,13 +33,16 @@ function BasketTableRow(props) {
     return (
       <tr id={rowCount} className='Basket-tr'>
         <td>{image}</td>
-        <td>{productName}</td>
+        <td>
+          <input className="Hide" type="text" id={rowCount+"productCode"} name={rowCount+"productCode"} defaultValue={product} />
+          {productName}
+        </td>
         <td>{qtyAvailable}</td>
           <td>
-            <input type="number" min='0' max={maxOrder} id={rowCount+"qtyToOrder"} name="qtyToOrder" defaultValue={qtyToOrder}/>
+            <input type="number" min='1' max={maxOrder} id={rowCount+"qtyToOrder"} name={rowCount+"qtyToOrder"} defaultValue={qtyToOrder}/>
           </td>
           <td>
-            <select id={rowCount+"supplier"} name='supplier' >
+            <select id={rowCount+"supplier"} name={rowCount+"supplier"} required >
               <option value="">--Supplier--</option>
               {supplierOptions}
             </select>
