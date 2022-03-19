@@ -16,12 +16,6 @@ $basket = $_COOKIE['basket'];
 $newBasket = str_replace($removeValue1, "", $basket);
 $newBasket = str_replace($removeValue2, "", $newBasket);
 $newBasket = str_replace($removeValue3, "", $newBasket);
-echo $basket."<br>";
-echo $removeValue1."<br>";
-echo $removeValue2."<br>";
-echo $removeValue3."<br>";
-echo $newBasket."<br>";
-
 setcookie("basket", $newBasket);
 
 echo "<script>location.replace('$webUrl/basket')</script>";
