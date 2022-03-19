@@ -44,7 +44,6 @@ const Basket = (props) => {
                         </tbody>
                     </table>
                     <button type='submit' name='submit'>Checkout Form</button>
-                    <Link to="/checkout"><button id='checkout-btn'>Checkout</button></Link>
                 </form>
             </div>
         </div>
