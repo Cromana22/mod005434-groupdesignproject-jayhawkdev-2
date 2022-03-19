@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import phpUrl from './php/phpUrls';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function deleteStaff(staffId, firstname, surname){
