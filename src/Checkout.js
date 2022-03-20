@@ -39,10 +39,13 @@ const Checkout = (props) => {
             <div className='container-checkout'>
             <div className="checkout">
                 <NavBar title='Checkout' basketCount={basketCount} />
-                <div className='checkoutcomponent'>
-                    {checkoutComponents}
-                </div>
-                <Link to="/products"><button id='sendorder'>Send Order</button></Link>
+
+                <form>
+                    <div className='checkoutcomponent'>
+                        {checkoutComponents}
+                    </div>
+                    <Link to="/products"><button id='sendorder'>Send Order</button></Link>
+                </form>
             </div>
             </div>
         );
