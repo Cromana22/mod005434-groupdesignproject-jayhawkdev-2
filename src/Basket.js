@@ -43,7 +43,7 @@ const Basket = (props) => {
                                 {rows}
                         </tbody>
                     </table>
-                    <button type='submit' name='submit'>Checkout Form</button>
+                    <button type='submit' name='submit'>Checkout</button>
                 </form>
             </div>
         </div>

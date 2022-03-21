@@ -40,10 +40,11 @@ const Checkout = (props) => {
             <div className="checkout">
                 <NavBar title='Checkout' basketCount={basketCount} />
 
-                <form>
+                <form method="POST" action={phpUrl+"/submitPurchaseOrder.php"}>
                     <div className='checkoutcomponent'>
                         {checkoutComponents}
                     </div>
+                    <button type='submit' name='submit'>Submit Order</button>
                     <Link to="/products"><button id='sendorder'>Send Order</button></Link>
                 </form>
             </div>

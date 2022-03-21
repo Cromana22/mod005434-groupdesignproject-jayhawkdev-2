@@ -24,7 +24,7 @@ const CheckOutComponent = (props) => {
             <div>
                 <div className='supplier-txt'>
                     <h3 id='supplier-h3'>Order From: </h3><br />
-                    <input className="Hide" type="text" id={poRequest+"supplierId"} name={poRequest+"supplierId"} defaultValue={supplierOrderLines[0].supplierId} />
+                    <input className="Hide" type="text" id={"supplierId"+poRequest} name={"supplierId"+poRequest} defaultValue={supplierOrderLines[0].supplierId} />
                     <p>{supplierOrderLines[0].supplierName}</p>
 
                     <div className='checkout-div'>

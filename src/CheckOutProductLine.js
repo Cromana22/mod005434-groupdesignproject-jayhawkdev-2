@@ -21,11 +21,11 @@ function CheckOutProductLine(props) {
             {image}
         </td>
         <td>
-          <input className="Hide" type="text" id={rowCount+"productCode"} name={rowCount+"productCode"} defaultValue={product} />
+          <input className="Hide" type="text" id={supplierId+"productCode"+rowCount} name={supplierId+"productCode"+rowCount} defaultValue={product} />
           {productName}
         </td>
         <td>
-            <input type="number" id={rowCount+"qtyToOrder"} name={rowCount+"qtyToOrder"} defaultValue={qtyToOrder} readOnly/>
+            <input type="number" id={supplierId+"qtyToOrder"+rowCount} name={supplierId+"qtyToOrder"+rowCount} defaultValue={qtyToOrder} readOnly/>
         </td>
         <td>
             £{unitCost}
