@@ -45,7 +45,6 @@ const Checkout = (props) => {
                         {checkoutComponents}
                     </div>
                     <button type='submit' name='submit'>Submit Order</button>
-                    <Link to="/products"><button id='sendorder'>Send Order</button></Link>
                 </form>
             </div>
             </div>

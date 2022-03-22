@@ -14,7 +14,7 @@ const PurchaseOrders = (props) => {
   if (response !== null) {
     response.forEach(PurchaseOrder => {
       rows.push(
-        <PurchaseOrdersTableRow details={PurchaseOrder} rowCount={rowCount} />
+        <PurchaseOrdersTableRow key={rowCount} details={PurchaseOrder} rowCount={rowCount} />
       );
       rowCount++;
     });
