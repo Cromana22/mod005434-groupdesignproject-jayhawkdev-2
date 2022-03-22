@@ -1,3 +1,4 @@
 Swap the php file urls to the live versions.
 npm run build.
 upload the build folder entirely, and the src/php folder.
+make sure the .htaccess file is uploaded to main public folder
