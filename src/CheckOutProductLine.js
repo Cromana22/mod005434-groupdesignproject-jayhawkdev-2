@@ -12,7 +12,7 @@ function CheckOutProductLine(props) {
   if (response !== null) {
     image = response[0].image;
     productName = response[0].productName;
-    unitCost = response[0].cost;
+    unitCost = Number(response[0].cost);
     deliveryTime = response[0].deliveryTime;
 
     return (
@@ -28,10 +28,10 @@ function CheckOutProductLine(props) {
             <input type="number" id={supplierId+"qtyToOrder"+rowCount} name={supplierId+"qtyToOrder"+rowCount} defaultValue={qtyToOrder} readOnly/>
         </td>
         <td>
-            £{unitCost}
+            £{unitCost.toFixed(2)}
         </td>   
         <td>
-            £{unitCost*qtyToOrder}
+            £{(unitCost*qtyToOrder).toFixed(2)}
         </td>
         <td>
             {deliveryTime} Business Days

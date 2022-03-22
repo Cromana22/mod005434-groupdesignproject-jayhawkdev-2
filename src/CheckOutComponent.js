@@ -7,7 +7,7 @@ const CheckOutComponent = (props) => {
 
     let orderTotal = 0;
     supplierOrderLines.forEach(product => {
-        orderTotal = orderTotal + (product.cost*product.qtyToOrder);
+        orderTotal = Number(orderTotal + (product.cost*product.qtyToOrder));
     });
 
     let productRows = [];
@@ -31,7 +31,7 @@ const CheckOutComponent = (props) => {
                         <h3 id='temp-po-txt'>Purchase Request: </h3>
                         <p> {poRequest} of {requestTotal}</p>
                         <h3 id='total-h3'>Total: </h3>
-                        <p>£{orderTotal}</p>
+                        <p>£{orderTotal.toFixed(2)}</p>
                     </div>
                 </div>
                 
