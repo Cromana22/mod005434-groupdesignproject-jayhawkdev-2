@@ -13,10 +13,10 @@ const navbar = (props) => {
 
      return (
      
-          <nav className="menu">
+          <nav className="menu sticky-top">
            
                
-               <div className="navbar">
+               <div className="navbar sticky-top">
                    <a id="logo-link" href="/products"><img id="logo" src={Logo} href="/products" /></a>
                     <h1>{title}</h1>
                    
