@@ -1,80 +1,50 @@
 import './Basket.css';
 import NavBar from './NavBar';
-import Nerf from './nerf.jpg';
+import useFetch from './php/useFetch';
 import { Link } from "react-router-dom";
-import Form from 'react-bootstrap/Form';
+import phpUrl from './php/phpUrls';
+import BasketTableRow from './BasketTableRow';
 
 const Basket = (props) => {
     const {basketCount} = props;
+
+    let { response }  = useFetch(phpUrl+'/getBasket.php');
+    let rows = [];
+    let rowCount = 1;
+    
+    if (response !== null) { 
+        Object.entries(response).forEach(item => {
+            let product = item[0];
+            let qtyToOrder = item[1];
+
+            rows.push(
+                <BasketTableRow key={rowCount} product={product} qtyToOrder={qtyToOrder} rowCount={rowCount} />
+            );
+            rowCount++;
+        });
+    };
 
     return (
         <div className="basket">
             <NavBar title='Basket' basketCount={basketCount} />
             <div className="baskettable table-responsive">
-                <table id='basket-table'>
-                    <thead>
-                        <tr className='basket-tr'>
-                            <th>Image</th>
-                            <th>Product name</th>
-                            <th>Quantity Available</th>
-                            <th>Quantity To Order</th>
-                            <th>Select Supplier</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id='1' className='basket-tr'>
-                            <td><img src={Nerf} /></td>
-                            <td>Nerf N-Strike</td>
-                            <td>100</td>
-                            <td>
-                                <input className='basket-inp' type="number"/>
-                            </td>
-                            <td>
-                                <Form.Select aria-label="Default select example">
-                                    <option>Choose Supplier</option>
-                                    <option value="1">Yoan Kirilov</option>
-                                    <option value="2">Jennifer Rae-Clarke</option>
-                                    <option value="3">Hussnain Zafar</option>
-                                </Form.Select>
-                            </td>
-                        </tr>
-
-                        <tr id='2' className='basket-tr'>
-                            <td><img src={Nerf} /></td>
-                            <td>Lego Classic Bricks</td>
-                            <td>124</td>
-                            <td>
-                                <input className='basket-inp' type="number"/>
-                            </td>
-                            <td>
-                                <Form.Select aria-label="Default select example">
-                                    <option>Choose Supplier</option>
-                                    <option value="1">Yoan Kirilov</option>
-                                    <option value="2">Jennifer Rae-Clarke</option>
-                                    <option value="3">Hussnain Zafar</option>
-                                </Form.Select>
-                            </td>
-                        </tr>
-
-                        <tr id='2' className='basket-tr'>
-                            <td><img src={Nerf} /></td>
-                            <td>Polaroid Play 3D Pen</td>
-                            <td>90</td>
-                            <td>
-                                <input className='basket-inp' type="number"/>
-                            </td>
-                            <td>
-                                <Form.Select aria-label="Default select example">
-                                    <option>Choose Supplier</option>
-                                    <option value="1">Yoan Kirilov</option>
-                                    <option value="2">Jennifer Rae-Clarke</option>
-                                    <option value="3">Hussnain Zafar</option>
-                                </Form.Select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <Link to="/checkout"><button id='checkout-btn'>Checkout</button></Link>
+                <form method="POST" action={phpUrl+'/generateCheckout.php'}>
+                    <table id='basket-table'>
+                        <thead>
+                            <tr className='basket-tr'>
+                                <th>Image</th>
+                                <th>Product name</th>
+                                <th>Quantity Available</th>
+                                <th>Quantity To Order</th>
+                                <th>Select Supplier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                {rows}
+                        </tbody>
+                    </table>
+                    <button type='submit' name='submit'>Checkout</button>
+                </form>
             </div>
         </div>
     );
