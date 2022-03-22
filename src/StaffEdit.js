@@ -9,9 +9,9 @@ const StaffEdit = (props) => {
   const location = useLocation()
   const { details } = location.state;
   const prod = details.productTypes;
-  const prodArray = [];
+  let prodArray = [];
 
-  if (prod !== null && prod.isArray() == true) {
+  if (prod !== null) {
     prodArray = prod.split(', ');
   }
   let products = []
