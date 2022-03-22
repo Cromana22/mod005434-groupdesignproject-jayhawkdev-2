@@ -1,3 +1,4 @@
+
 #logo{
     max-width:100%;
 }
@@ -16,6 +17,26 @@
     text-align: center;
 }
 
+#basketCircle {
+    color: red !important;
+    position: absolute;
+    margin-left: -9px;
+    padding-top: 5px;
+    font-size: 16px !important;
+}
+
+#basketCount {
+    position: absolute;
+    margin-left: -5px;
+    padding-top: 3px;
+    font-size: 12px !important;
+    font-weight: bold;
+}
+#basketLink {
+    color: #fff0d8;
+    font-size: 28px;
+}
+/*
 #basketLink {
     color: #fff0d8;
     font-size: 28px;
@@ -40,7 +61,7 @@
     font-size: 12px !important;
     font-weight: bold;
 }
-
+/*
 @media only screen and (max-width: 600px) {
     .navbar h1{
         color: #fff0d8;
@@ -58,7 +79,7 @@
     }
 }
 
-
+/*
 @media only screen and (max-width: 1433px){
     #basketLink {
         color: #fff0d8;
@@ -158,10 +179,10 @@
         right: 38%;
         bottom: 42%;
         top: 16%;*/
-        display: none;
+        /*display: none;
     }
 }
-
+*/
 .navbar button{
   background-color: #fff0d8;
   border-radius: 20px;
@@ -177,6 +198,10 @@
 #logout-btn:hover{
     border-color: #fff !important;
     color: #fff !important;
+}
+
+#logout-btn{
+    margin-left: 2%;
 }
 
 .links a{
@@ -236,7 +261,26 @@ input{
     vertical-align: top;
     margin: 25px;
 }
+/* 
+.navbar-light .navbar-nav .nav-link{
+    color: #1b1464 !important;
+}
 
+.btn-outline-success:hover {
+    color: #fff !important;
+    background-color:#1b1464 !important;
+    border-color: #1b1464 !important;
+}
+
+.btn-outline-success{
+    border-color: #1b1464 !important;
+    color: #1b1464 !important;
+}
+
+btn-check:focus+.btn-outline-success, .btn-outline-success:focus {
+    box-shadow: 0 0 0 0.25rem #fff0d8 !important;
+}
+*/
 .navbar-light .navbar-nav .nav-link{
     color: #1b1464 !important;
 }
