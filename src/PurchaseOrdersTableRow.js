@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
+
 function PurchaseOrdersTableRow(props) {
     const { details, rowCount } = props;
 
     if (details !== null) {
+        const link = "/purchaseorders/"+details.ponumber;
+
         return (
             <tr id={rowCount} className='Po-tr'>
-                <td>{details.ponumber}</td>
+                <td><Link to={link}>{details.ponumber}</Link></td>
                 <td>{details.raisedby}</td>
                 <td>{details.raiseddate}</td>
                 <td>{details.supplier}</td>

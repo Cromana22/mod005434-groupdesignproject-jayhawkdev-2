@@ -1,181 +1,230 @@
 import './PlacedPo.css';
 import NavBar from './NavBar';
+import useFetch from './php/useFetch';
+import phpUrl from './php/phpUrls';
+import { useParams } from 'react-router';
+import PlacedPoProductRow from './PlacedPoProductRow';
 
 const PlacedPo = (props) => {
     const {basketCount} = props;
+    let {id} = useParams();
+    let { response }  = useFetch(phpUrl+'/getPurchaseOrderDetail.php?poNumber='+id);
+
+    let poNumber = "";
+    let poStatus = "";
+    let staffId = "";
+    let staffName = "";
+    let raisedDate = "";
+    let authManagerName = "";
+    let authManagerDate = "";
+    let authFinanceName = "";
+    let authFinanceDate = "";
+    let subTotal = "";
+    let vatTotal = "";
+    let grandTotal = "";
+    let notes = "";
+    let supplierName = "";
+    let supplierAddress1 = "";
+    let supplierAddress2 = "";
+    let supplierTown = "";
+    let supplierCountry = "";
+    let supplierPostcode = "";
+    let supplierTelephone = "";
+    let supplierEmail = "";
+
+    let productLineRows = [];
+
+    if (response !== null) {
+        const supplier = response['supplier'];
+        const productLines = response['productLines'];
+
+        poNumber = supplier[0].poNumber;
+        poStatus = supplier[0].status;
+        staffId = supplier[0].staffId;
+        staffName = supplier[0].staffName;
+        raisedDate = supplier[0].raisedDate;
+        authManagerName = supplier[0].authorisedByName;
+        authManagerDate = supplier[0].authorisedDate;
+        authFinanceName = supplier[0].financeAuthorisedName;
+        authFinanceDate = supplier[0].financeDate;
+        subTotal = supplier[0].subTotal;
+        vatTotal = supplier[0].vatTotal;
+        grandTotal = supplier[0].grandTotal;
+        notes = supplier[0].notes;
+        supplierName = supplier[0].supplierName;
+        supplierAddress1 = supplier[0].address1;
+        supplierAddress2 = supplier[0].address2;
+        supplierTown = supplier[0].town;
+        supplierCountry = supplier[0].country;
+        supplierPostcode = supplier[0].postcode;
+        supplierTelephone = supplier[0].telephone;
+        supplierEmail = supplier[0].email;
+
+        let rowCount = 1;
+        productLines.forEach(productLine => {
+            productLineRows.push(
+                <PlacedPoProductRow key={rowCount} product={productLine} finalAuthDate={authFinanceDate} />
+            );
+            rowCount++;
+        });
+
+
+    }
 
     return (
         <div className='page'>
             <NavBar title='Placed Pos' basketCount={basketCount} />
             <div className='tables table-responsive'>
-            
-            
                 <table className='po-table'>
-                    <tr className='po-table-tr'>
-                        <th id='ponumber-th'>Po Number:</th>
-                        <th id='ponumber-th-1'> #123456789</th>
-                    </tr>
+                    <thead>
+                        <tr className='po-table-tr'>
+                            <th id='ponumber-th'>Po Number:</th>
+                            <th id='ponumber-th-1'>{poNumber}</th>
+                        </tr>
+                    </thead>
                 </table>
 
                 <table className='postatus'>
-                    <tr>
-                        <th id='postatus-th'>Status: </th>
-                        <th id='postatus-th'>Pending</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th id='postatus-th'>Status:</th>
+                            <th id='postatus-th'>{poStatus}</th>
+                        </tr>
+                    </thead>
                 </table>
+
                 <br></br>
+
                 <div className='container-1'>
-                <table className='staff-table'>
-                    <tr className='staff-tr'>
-                        <th>Staff ID </th>
-                        <th>Staff Name </th>
-                    </tr>
-                    <tr className='staff-rows'>
-                        <td> Php I need you :D </td>
-                        <td> Php I need you :D </td>
-                    </tr>
-                </table>
+                    <table className='staff-table'>
+                        <thead>
+                            <tr className='staff-tr'>
+                                <th>Staff ID</th>
+                                <th>Staff Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className='staff-rows'>
+                                <td>{staffId}</td>
+                                <td>{staffName}</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <table className='raised-table'>
-                    <tr className='raised-col-tr'>
-                        <th>Raised Date </th>
-                        <th>Authorised By </th>
-                        <th>Authorised Date </th>
-                        <th>Finance Authorised </th>
-                        <th>Finance Date </th>
-                    </tr>
-                    <tr className='raised-row-tr'>
-                        <td> Php I need you :D </td>
-                        <td> Php I need you :D </td>
-                        <td> Php I need you :D </td>
-                        <td> Php I need you :D </td>
-                        <td> Php I need you :D </td>
-                    </tr>
-                </table>
+                    <table className='raised-table'>
+                        <thead>
+                            <tr className='raised-col-tr'>
+                                <th>Raised Date</th>
+                                <th>Authorised By</th>
+                                <th>Authorised Date</th>
+                                <th>Finance Authorised</th>
+                                <th>Finance Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className='raised-row-tr'>
+                                <td>{raisedDate}</td>
+                                <td>{authManagerName}</td>
+                                <td>{authManagerDate}</td>
+                                <td>{authFinanceName}</td>
+                                <td>{authFinanceDate}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+
                 <br></br>
+
                 <div className='container-div'>
-                <table className='product-table'>
-                    <tr className='product-col'>
-                        <th>Product Name </th>
-                        <th>Order Qty </th>
-                        <th>Price pet Unit </th>
-                        <th>VAT Rate </th>
-                        <th>Line TOT </th>
-                        <th>Line VAT </th>
-                        <th>Expected Delivery Date </th>
-                    </tr>
-                    <tr className='product-rows'>
-                        <td> Hussnain </td>
-                        <td> please  </td>
-                        <td> style us </td>
-                        <td> we want to </td>
-                        <td> loook  </td>
-                        <td> gooooood </td>
-                        <td> Php I need you :D </td>
-                    </tr>
+                    <table className='product-table'>
+                        <thead>
+                            <tr className='product-col'>
+                                <th>Product Name</th>
+                                <th>Order Qty</th>
+                                <th>Unit Price</th>
+                                <th>VAT Rate</th>
+                                <th>Line Total</th>
+                                <th>Line Total VAT</th>
+                                <th>Expected Delivery Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {productLineRows}
+                        </tbody>
+                    </table>
 
-                    <tr className='product-rows'>
-                        <td> Hussnain </td>
-                        <td> please  </td>
-                        <td> style us </td>
-                        <td> we want to </td>
-                        <td> loook  </td>
-                        <td> gooooood </td>
-                        <td> Php I need you :D </td>
-                    </tr>
+                    <br></br>
+                    
+                    <table className='subtotal-table'>
+                        <thead>
+                            <tr className='subtotal-tr'>
+                                <th id='subtotal-th'>Sub-Total</th>
+                                <th id='subtotal-th-1'>£{subTotal}</th>
+                            </tr>
+                        </thead>
+                    </table>
 
-                    <tr className='product-rows'>
-                        <td> Hussnain </td>
-                        <td> please  </td>
-                        <td> style us </td>
-                        <td> we want to </td>
-                        <td> loook  </td>
-                        <td> gooooood </td>
-                        <td> Php I need you :D </td>
-                    </tr>
+                    <br></br>
 
-                    <tr className='product-rows'>
-                        <td> Hussnain </td>
-                        <td> please  </td>
-                        <td> style us </td>
-                        <td> we want to </td>
-                        <td> loook  </td>
-                        <td> gooooood </td>
-                        <td> Php I need you :D </td>
-                    </tr>
+                    <table className='vat-table'>
+                        <thead>
+                            <tr className='vat-tr'>
+                                <th id='vat-th'>VAT Total</th>
+                                <th id='vat-th-1'>£{vatTotal}</th>
+                            </tr>
+                        </thead>
+                    </table>
 
-                    <tr className='product-rows'>
-                        <td> Hussnain </td>
-                        <td> please  </td>
-                        <td> style us </td>
-                        <td> we want to </td>
-                        <td> loook  </td>
-                        <td> gooooood </td>
-                        <td> Php I need you :D </td>
-                    </tr>
-
-                </table>
-                
-                
-                
-                
-                <br></br>
-                
-                <table className='subtotal-table'>
-                    <tr className='subtotal-tr'>
-                        <th id='subtotal-th'>Sub Total</th>
-                        <th id='subtotal-th-1'>Php</th>
-                    </tr>
-                </table>
-                <br></br>
-                <table className='vat-table'>
-                    <tr className='vat-tr'>
-                        <th id='vat-th'>VAT Total</th>
-                        <th id='vat-th-1'>Php</th>
-                    </tr>
-                </table>
-
-                <table className='subtotal-table'>
-                    <tr className='subtotal-tr'>
-                        <th id='subtotal-th'>Grand Total</th>
-                        <th id='subtoal-th-1'>Php</th>
-                    </tr>
-                </table>
+                    <table className='grandtotal-table'>
+                        <thead>
+                            <tr className='grandtotal-tr'>
+                                <th id='grandtotal-th'>Grand Total</th>
+                                <th id='grandtotal-th-1'>£{grandTotal}</th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
+
                 <div className='container-right'>
-                <table className='supplier-table'>
-                    <tr className='supplier-col'>
-                        <th>Supplier</th>
-                    </tr>
-                    <tr className='supplier-rows'>
-                        <td>Supplie us please</td>
-                    </tr>
-                </table>
-
-                
-                <table className='notes-table'>
-                    <tr className='notes-col'>
-                        <th>Notes</th>
-                    </tr>
-                    <tr className='notes-rows'>
-                        <td>Php</td>
-                    </tr>
-                </table>
-
+                    <table className='supplier-table'>
+                        <thead>
+                            <tr className='supplier-col'>
+                                <th>Supplier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className='supplier-rows'>
+                                <td>
+                                    {supplierName} ({supplierCountry})<br />
+                                    {supplierAddress1}<br />
+                                    {supplierAddress2}<br />
+                                    {supplierTown}, {supplierPostcode} <br /><br />
+                                    Telephone: {supplierTelephone}<br />
+                                    Email: {supplierEmail}<br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table className='notes-table'>
+                        <thead>
+                            <tr className='notes-col'>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className='notes-rows'>
+                                <td>{notes}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>    
-                
-                
-
             </div>
 
             <div className='buttons'>
                 <button id='authorise-btn'>Authorise</button>
-
                 <button id='reject-btn' >Reject</button>
-
                 <button id='query-btn'>Query</button>
-
                 <button id='cancel-btn'>Cancel</button>
             </div>
         </div>

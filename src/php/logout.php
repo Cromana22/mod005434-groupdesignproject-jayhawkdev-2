@@ -19,4 +19,3 @@ setcookie("productTypes", "", time()-1);
 //redirect to login page
 echo "<script>location.replace('$webUrl');</script>";
 ?>
-

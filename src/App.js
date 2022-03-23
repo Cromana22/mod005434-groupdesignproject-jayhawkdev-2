@@ -30,15 +30,12 @@ function App() {
       <Route path="/" element={<Layout />} >                                     
         <Route path="" element={<LoginPage />} />
         <Route path = "products" element = {<Products basketCount={basketCount} />} />
-        <Route path="purchaseorders" element={<PurchaseOrders basketCount={basketCount} />} >
-          <Route path=":id" element={<purchaseorderdetail basketCount={basketCount} />} />
-        </Route>
+        <Route path="purchaseorders/:id" element={<PlacedPo basketCount={basketCount} />} />
+        <Route path="purchaseorders" element={<PurchaseOrders basketCount={basketCount} />} />
         <Route path="staff" element={<Staff basketCount={basketCount} />} />
         <Route path="addstaff" element={<StaffAdd basketCount={basketCount} />} />
         <Route path="editstaff" element={<StaffEdit basketCount={basketCount} />} />
-        <Route path="reports" element={<Reports basketCount={basketCount} />} >
-          <Route path=":id" element={<reportdetail basketCount={basketCount} />} />
-        </Route>
+        <Route path="reports" element={<Reports basketCount={basketCount} />} />
         <Route path="help" element={<Help basketCount={basketCount} />} />
         <Route path="placedpo" element={<PlacedPo basketCount={basketCount} />} />
         <Route path="basket" element={<Basket basketCount={basketCount} />} />

@@ -1,5 +1,4 @@
 import './CheckOutComponent.css';
-import Nerf from './nerf.jpg';
 import CheckOutProductLine from './CheckOutProductLine';
 
 const CheckOutComponent = (props) => {
