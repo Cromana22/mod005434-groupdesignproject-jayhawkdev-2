@@ -4,6 +4,30 @@ import useFetch from './php/useFetch';
 import phpUrl from './php/phpUrls';
 import { useParams } from 'react-router';
 import PlacedPoProductRow from './PlacedPoProductRow';
+import { Link } from 'react-router-dom';
+
+function authPo(poNumber) {
+    window.location.href = phpUrl+"/authorisePo.php?poNumber="+poNumber;
+}
+
+function rejectPo(poNumber) {
+    window.location.href = phpUrl+"/rejectPo.php?poNumber="+poNumber;
+}
+
+function cancelPo(poNumber) {
+    window.location.href = phpUrl+"/cancelPo.php?poNumber="+poNumber;
+}
+
+function queryPo(poNumber) {
+    let query = window.prompt("Please enter your query:");
+    window.location.href = phpUrl+"/queryPo.php?poNumber="+poNumber+"&notes="+query;
+}
+
+function deletePo(poNumber) {
+    if (window.confirm("Are you sure you want to delete this purchase order? This is irreversible.") == true) { 
+        window.location.href = phpUrl+"/deletePo.php?poNumber="+poNumber;
+    }
+}
 
 const PlacedPo = (props) => {
     const {basketCount} = props;
@@ -31,7 +55,6 @@ const PlacedPo = (props) => {
     let supplierPostcode = "";
     let supplierTelephone = "";
     let supplierEmail = "";
-
     let productLineRows = [];
 
     if (response !== null) {
@@ -222,10 +245,12 @@ const PlacedPo = (props) => {
             </div>
 
             <div className='buttons'>
-                <button id='authorise-btn'>Authorise</button>
-                <button id='reject-btn' >Reject</button>
-                <button id='query-btn'>Query</button>
-                <button id='cancel-btn'>Cancel</button>
+                <button id='authorise-btn' onClick={() => authPo(poNumber)}>Authorise</button>
+                <button id='reject-btn' onClick={() => rejectPo(poNumber)}>Reject</button>
+                <button id='query-btn' onClick={() => queryPo(poNumber)}>Query</button>
+                <button id='reject-btn' onClick={() => deletePo(poNumber)}>Delete</button>
+                <button id='reject-btn' onClick={() => cancelPo(poNumber)}>Withdraw PO</button>
+                <Link to="/purchaseorders" ><button id='back-btn'>Back</button></Link>
             </div>
         </div>
         

@@ -4,12 +4,12 @@
     padding: 0.5rem;
     text-align: center;
     border-width: 1px !important;
-  }
+}
 
-  #ponumber-th-1{
-      text-align: center;
-      width: 58%;
-  }
+#ponumber-th-1{
+    text-align: center;
+    width: 58%;
+}
 
 .tables{
     margin-left: 2%;
@@ -19,8 +19,6 @@
 #cancel-btn{
     margin-left: 2%;
 }
-
-
 
 /*PO Number table and Status table side by side*/
 .po-table,.postatus{
