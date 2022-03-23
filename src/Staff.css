@@ -1,0 +1,71 @@
+.Staff-tr{
+    border: 1px solid black;
+}
+
+#Staff-table{
+    margin-bottom: 2%;
+}
+
+.edit-remove-btn{
+    display: flex;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.add-staff{
+    text-align: center;
+    margin: 5vh;
+}
+
+.add-staff button{
+    background-color: #047A10 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.delete-btn{
+    background-color: #9B0000 !important;
+    color: white !important;
+}
+
+/* Add New Staff */
+.AddStaffForm{
+    padding: 1vh;
+}
+
+#add-staff-inp{
+    float: right;
+}
+
+#title-inp{
+    max-width: 37vh;
+    float: right;
+    margin-bottom: 0px;
+}
+
+label{
+    margin-bottom: 3vh;
+}
+
+#product-resp-inp{
+    max-width: 30vh;
+    float: right;
+    max-height: 10vh;
+}
+
+label span{
+    display: block;
+}
+
+
+#title-inp-p{
+    max-width: 35vh;
+    float: right;
+    margin-bottom: 0px;;
+}
+
+#submit-btn{
+    margin-right: 5vh;
+    background-color: #047A10 !important;
+    color: white !important;
+}

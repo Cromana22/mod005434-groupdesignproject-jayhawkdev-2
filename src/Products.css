@@ -1,9 +1,8 @@
 #products-table{
     width: 100%;
 }
-
-.products-tr{
-    text-align: center;
+.products-tr-table td{
+    font-size: 500px !important;
 }
 
 

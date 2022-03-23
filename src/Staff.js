@@ -4,6 +4,7 @@ import useFetch from './php/useFetch';
 import phpUrl from './php/phpUrls';
 import StaffTableRow from "./StaffTableRow";
 import { Link } from "react-router-dom";
+import './Staff.css';
 
 const Staff = (props) => {
   const { basketCount } = props;
@@ -43,7 +44,7 @@ const Staff = (props) => {
           </tbody>
         </table>
       </div>
-      <div>
+      <div className="add-staff">
       <Link to="/addstaff"><button>Add New Staff</button></Link>
       </div>
     </div>

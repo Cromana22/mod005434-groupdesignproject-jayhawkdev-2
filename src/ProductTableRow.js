@@ -30,18 +30,20 @@ function ProductTableRow(props) {
                 <td>{details.name}</td>
                 <td>{details.available}</td>
                 <td>{details.reorderLevel}</td>
-                <td>
+                <td className='po-circle'>
                     <span>
                         <FontAwesomeIcon className={status} icon={faCircle} />
                         <span className={activePo}>PO</span>
                     </span>
                 </td>
-                <td>
+                <td className='order-form'>
+                    
                     <form id={rowCount} className={order} method="POST" action={phpUrl+"/addBasket.php"} >
                         <input className='Hide' type="text" id={rowCount+"prodToOrder"} name="productCode" value={details.productCode} readOnly/>
                         <input className='products-inp' type="number" min='1' max={maxOrder} id={rowCount+"qtyToOrder"} name="qtyToOrder"/>
-                        &nbsp;<button type="submit">Order</button>
+                        &nbsp;<button className='order-form-btn' type="submit">Order</button>
                     </form>
+                    
                 </td>
             </tr>
         );

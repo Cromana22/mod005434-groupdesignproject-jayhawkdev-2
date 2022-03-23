@@ -3,6 +3,7 @@ import { faPen, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import phpUrl from './php/phpUrls';
 import { Link } from 'react-router-dom';
 
+
 function deleteStaff(staffId, firstname, surname){
   if (window.confirm("Are you sure you want to delete "+firstname + " " + surname+"? This is irreversible.") == true) { 
     window.location.href = phpUrl+"/staffdelete.php?staffId="+staffId;
@@ -22,13 +23,13 @@ function StaffTableRow(props) {
         <td>{details.deptName}</td>
         <td>{details.productTypes}</td>
         <td>{details.accessLevel}</td>
-        <td>
+        <td className='edit-remove-btn'>
           <Link to="/editstaff" state={{ details: details }} >
             <button>
               <FontAwesomeIcon id={"edit"+rowCount} icon={faPen} />
             </button>
           </Link>
-          <button onClick={() => deleteStaff(details.staffId, details.firstName, details.surname)}>
+          <button className='delete-btn' onClick={() => deleteStaff(details.staffId, details.firstName, details.surname)}>
             <FontAwesomeIcon id={"delete"+rowCount} icon={faTrashCan}  />
           </button>
         </td>
