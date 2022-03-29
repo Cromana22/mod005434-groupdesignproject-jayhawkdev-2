@@ -19,7 +19,7 @@ const ReportBarChart = (props) => {
     };
 
     return (
-        <div className='chart table-responsive'>
+        <div>
             <h1>{title}</h1>
             <BarChart
                 width={500 }
