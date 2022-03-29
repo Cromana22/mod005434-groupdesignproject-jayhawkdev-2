@@ -2,6 +2,7 @@ import './Reports.css';
 import NavBar from './NavBar';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, LineChart, Line, AreaChart, Area, } from 'recharts';
 import ReportPieChart from './ReportPieChart';
+import ReportBarChart from './ReportBarChart'; 
 
 const Reports = (props) => {
     const { basketCount } = props;
@@ -146,26 +147,9 @@ const Reports = (props) => {
             <NavBar title='Reports' basketCount={basketCount} />
             <div className='chart table-responsive'>
                 <ReportPieChart url="/reportProdStatus.php" title="Stock Levels" />
+                <ReportPieChart url="/reportProdTypeOrders.php" title="Orders by Product Type" />
+                <ReportBarChart url="/reportPoPerPerson.php" title="Purchase Orders Per Person" />
 
-                <BarChart
-                    width={500}
-                    height={300}
-                    data={data2}
-                    margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5,
-                    }}
-                >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="pv" fill="#1b1464" />
-                    <Bar dataKey="uv" fill="#fff0d8" />
-                </BarChart>
 
                 <LineChart
                     width={500}
