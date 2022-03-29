@@ -150,7 +150,6 @@ const Reports = (props) => {
                 <ReportPieChart url="/reportProdTypeOrders.php" title="Orders by Product Type" />
                 <ReportBarChart url="/reportPoPerPerson.php" title="Purchase Orders Per Person" />
 
-
                 <LineChart
                     width={500}
                     height={300}
