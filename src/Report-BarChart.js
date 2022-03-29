@@ -1,10 +1,18 @@
 import './Reports.css';
 import NavBar from './NavBar';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, LineChart, Line, AreaChart, Area, } from 'recharts';
-import ReportPieChart from './ReportPieChart';
+import { PieChart, Pie, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, LineChart, Line, AreaChart, Area, } from 'recharts';
+import useFetch from './php/useFetch';
 
 const Reports = (props) => {
     const { basketCount } = props;
+
+    let { response }  = useFetch(phpUrl+'/staffTable.php');
+
+    const data = [
+        { name: 'Group A', value: 400 },
+        { name: 'Group B', value: 600 },
+        { name: 'Group C', value: 400 },
+    ];
 
     const data2 = [
         {
@@ -145,7 +153,19 @@ const Reports = (props) => {
         <div style={{ textAlign: "center" }}>
             <NavBar title='Reports' basketCount={basketCount} />
             <div className='chart table-responsive'>
-                <ReportPieChart url="/reportProdStatus.php" title="Stock Levels" />
+                <h1>Lates Orders</h1>
+
+                <PieChart width={500} height={500}>
+                    <Pie
+                        dataKey="value"
+                        isAnimationActive={true}
+                        data={data}
+                        outerRadius={155}
+                        fill="#1b1464"
+                        label
+                    />
+                    <Tooltip />
+                </PieChart>
 
                 <BarChart
                     width={500}
@@ -166,6 +186,7 @@ const Reports = (props) => {
                     <Bar dataKey="pv" fill="#1b1464" />
                     <Bar dataKey="uv" fill="#fff0d8" />
                 </BarChart>
+
                 <LineChart
                     width={500}
                     height={300}
