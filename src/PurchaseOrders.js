@@ -26,7 +26,7 @@ const PurchaseOrders = (props) => {
       <div className="Orderstable table-responsive">
         <table id='Orders-table' className='table'>
           <thead>
-            <tr className='Orders-tr'>
+            <tr className='Orders-tr Po-tr'>
               <th>PO Number</th>
               <th>Raised By</th>
               <th>Raised Date</th>

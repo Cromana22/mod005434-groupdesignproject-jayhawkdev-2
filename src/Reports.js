@@ -152,7 +152,6 @@ const Reports = (props) => {
             <NavBar title='Reports' basketCount={basketCount} />
             <div className='chart table-responsive'>
                 <h1>Lates Orders</h1>
-
                 <PieChart width={500} height={500}>
                     <Pie
                         dataKey="value"
@@ -163,8 +162,7 @@ const Reports = (props) => {
                         label
                     />
                     <Tooltip />
-                </PieChart>
-
+                </PieChart>       
                 <BarChart
                     width={500}
                     height={300}
@@ -184,7 +182,6 @@ const Reports = (props) => {
                     <Bar dataKey="pv" fill="#1b1464" />
                     <Bar dataKey="uv" fill="#fff0d8" />
                 </BarChart>
-
                 <LineChart
                     width={500}
                     height={300}
