@@ -21,10 +21,11 @@ const StaffEdit = (props) => {
   return (
     <div className="staff">
       <NavBar title='Edit Staff' basketCount={basketCount} />
-      <div className="EditStaffForm">
+      <div className="EditStaffForm AddStaffForm d-flex add-staff-container">
+        <div className='d-flex add-staff-container'>
         <form method="POST" action={phpUrl + "/staffedit.php"}>
-          <label>Staff ID: </label><input type='text' name='staffId' defaultValue={details.staffId} required readOnly></input><br />
-          <label>Title: </label><Form.Select aria-label="Default select example" defaultValue={details.title} name='title' required >
+          <label>Staff ID: </label><input id='add-staff-inp' type='text' name='staffId' defaultValue={details.staffId} required readOnly></input><br />
+          <label>Title: </label><Form.Select id='add-staff-inp' aria-label="Default select example" defaultValue={details.title} name='title' required >
             <option value="">--Title--</option>
             <option value="Mr">Mr</option>
             <option value="Mrs">Mrs</option>
@@ -33,28 +34,31 @@ const StaffEdit = (props) => {
             <option value="Sir">Sir</option>
             <option value="Ms">Ms</option>
           </Form.Select><br />
-          <label>First Name: </label><input type='text' name='firstName' defaultValue={details.firstName} required></input><br />
-          <label>Surname: </label><input type='text' name='surname' defaultValue={details.surname} required></input><br />
-          <label>Job Title: </label><input type='text' name='jobTitle' defaultValue={details.jobTitle} required></input><br />
-          <label>Shop: </label><input type='text' name='shopName' defaultValue={details.shopName} ></input><br />
-          <label>Department: </label><input type='text' name='deptName' defaultValue={details.deptName} ></input><br />
-          <label>Product Responsibilities: </label><Form.Select multiple aria-label="Default select Product Type" name='productTypes[]' defaultValue={products}>
+          <label>First Name: </label><input id='add-staff-inp' type='text' name='firstName' defaultValue={details.firstName} required></input><br />
+          <label>Surname: </label><input id='add-staff-inp' type='text' name='surname' defaultValue={details.surname} required></input><br />
+          <label>Job Title: </label><input id='add-staff-inp' type='text' name='jobTitle' defaultValue={details.jobTitle} required></input><br />
+          <label>Shop: </label><input id='add-staff-inp' type='text' name='shopName' defaultValue={details.shopName} ></input><br />
+          <label>Department: </label><input id='add-staff-inp' type='text' name='deptName' defaultValue={details.deptName} ></input><br />
+          <label>Product<span>Responsibilities: </span></label><Form.Select id='product-resp-inp' multiple aria-label="Default select Product Type" name='productTypes[]' defaultValue={products}>
             <option value="T" >Toys</option>
             <option value="G" >Gadgets</option>
           </Form.Select><br />
-          <label>Access Level: </label><Form.Select aria-label="Default select Access Level" defaultValue={details.accessLevel} name='accessLevel' required >
+          <label>Access Level: </label><Form.Select id='title-inp-p' aria-label="Default select Access Level" defaultValue={details.accessLevel} name='accessLevel' required >
             <option value="">--Access Level--</option>
             <option value="Sales">Sales</option>
             <option value="Senior Sales">Senior Sales</option>
             <option value="Manager">Manager</option>
             <option value="Finance">Finance</option>
           </Form.Select><br /><br />
-          <button type='submit'>Submit</button>
+          <div className='submit-cancel-btn'>
+          <button id='submit-btn' type='submit'>Submit</button>
           <Link to="/staff" >
-              <button>Cancel</button>
+              <button id='cancel-btn'>Cancel</button>
           </Link>
+          </div>
         </form>
       </div>
+    </div>
     </div>
   );
 }

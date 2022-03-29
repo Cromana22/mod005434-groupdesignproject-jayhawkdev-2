@@ -17,10 +17,8 @@ const navbar = (props) => {
                          <Navbar.Brand id="logo-link" href="/products">
                               <img id="logo" src={Logo} href="/products"/>
                          </Navbar.Brand>
-                         <Navbar.Toggle aria-controls="navbarScroll" />
-                         
                          <Navbar.Collapse className='align-items-center justify-content-center' id="navbarScroll">
-                         <h1>{title}</h1>                                        
+                         <h1>{title}</h1>                             
                          </Navbar.Collapse>
                          <Link to="/basket">
                               <span id='basketLink'>

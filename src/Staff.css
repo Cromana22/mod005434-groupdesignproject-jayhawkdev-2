@@ -3,11 +3,13 @@
 }
 
 #Staff-table{
+    width: 100%;
     margin-bottom: 2%;
 }
 
 .edit-remove-btn{
     display: flex;
+    justify-content: center;
     padding-top: 10%;
     padding-bottom: 10%;
 }
@@ -29,18 +31,24 @@
 }
 
 /* Add New Staff */
+
+.add-staff-container{
+    justify-content: center;
+    width: 100%;
+}
+
 .AddStaffForm{
-    padding: 1vh;
+    padding-top: 3vh; /*Form padding from top*/
 }
 
 #add-staff-inp{
-    float: right;
+   float: right;
+   width: 240px;
 }
 
 #title-inp{
-    max-width: 37vh;
+    width: 240px;
     float: right;
-    margin-bottom: 0px;
 }
 
 label{
@@ -48,9 +56,9 @@ label{
 }
 
 #product-resp-inp{
-    max-width: 30vh;
+    width: 240px/*26vh*/;
     float: right;
-    max-height: 10vh;
+    height: 6vh;
 }
 
 label span{
@@ -59,7 +67,7 @@ label span{
 
 
 #title-inp-p{
-    max-width: 35vh;
+    max-width: 240px;
     float: right;
     margin-bottom: 0px;;
 }
@@ -68,4 +76,15 @@ label span{
     margin-right: 5vh;
     background-color: #047A10 !important;
     color: white !important;
+}
+
+#submit-btn:hover{
+    background-color: #1b1464 !important;
+}
+
+.submit-cancel-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
