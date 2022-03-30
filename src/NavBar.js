@@ -48,8 +48,15 @@ const navbar = (props) => {
                          <Link to="/basket">
                               <span id='basketLink'>
                                    <FontAwesomeIcon id='basketIcon' icon={faBasketShopping} />
-                                   <FontAwesomeIcon id='basketCircle' icon={faCircle} />
-                                   <span id='basketCount'>{basketCount}</span>
+                                   {
+                                        basketCount > 0 &&
+                                        <FontAwesomeIcon id='basketCircle' icon={faCircle} />
+                                   }
+                                   
+                                   {
+                                        basketCount > 0 &&
+                                        <span id='basketCount'>{basketCount}</span>
+                                   }
                               </span>
                          </Link>
                     </div>
