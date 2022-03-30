@@ -31,10 +31,8 @@ function ProductTableRow(props) {
                 <td>{details.available}</td>
                 <td>{details.reorderLevel}</td>
                 <td className='po-circle'>
-                    <span>
                         <FontAwesomeIcon className={status} icon={faCircle} />
                         <span className={activePo}>PO</span>
-                    </span>
                 </td>
                 <td className='order-form'>
                     {

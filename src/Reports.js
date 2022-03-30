@@ -8,7 +8,10 @@ import webUrl from './php/webUrls';
 const Reports = (props) => {
     const { basketCount, loggedin, accessLevel } = props;
     if (loggedin !== 'Y') { window.location.replace(webUrl)};
-    if (accessLevel !== "Manager" || accessLevel !== "Finance")  { window.location.replace(webUrl+'/products')};
+    console.log(accessLevel)
+    if (accessLevel !== "Manager") {
+        if (accessLevel !== "Finance") { window.location.replace(webUrl+'/products')};
+    }
   
     return (
         <div style={{ textAlign: "center" }}>
