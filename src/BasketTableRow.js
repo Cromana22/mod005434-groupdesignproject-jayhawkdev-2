@@ -56,8 +56,13 @@ function BasketTableRow(props) {
     );
   }
   
-  else { return null }
-  
+  else { 
+    return (
+      <tr id={rowCount} className='products-tr'>
+        <td>No Data</td>    
+      </tr>
+    )
+  }
 }
 
 export default BasketTableRow;

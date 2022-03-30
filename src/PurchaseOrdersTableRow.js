@@ -18,7 +18,11 @@ function PurchaseOrdersTableRow(props) {
         );
     }
     else {
-        return (null)
+        return (
+            <tr id={rowCount} className='products-tr'>
+                <td>No Data</td>    
+            </tr>
+        )
     }
 }
 

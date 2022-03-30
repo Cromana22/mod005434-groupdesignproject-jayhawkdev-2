@@ -13,16 +13,18 @@ const Basket = (props) => {
     let rows = [];
     let rowCount = 1;
     
-    if (response !== null) { 
-        Object.entries(response.basket).forEach(item => {
-            let product = item[0];
-            let qtyToOrder = item[1];
+    if (response !== null) {
+        if (basketCount > 0) {
+            Object.entries(response.basket).forEach(item => {
+                let product = item[0];  
+                let qtyToOrder = item[1];
 
-            rows.push(
-                <BasketTableRow key={rowCount} product={product} qtyToOrder={qtyToOrder} rowCount={rowCount} />
-            );
-            rowCount++;
-        });
+                rows.push(
+                    <BasketTableRow key={rowCount} product={product} qtyToOrder={qtyToOrder} rowCount={rowCount} />
+                );
+                rowCount++;
+            });
+        }
     };
 
     return (
@@ -42,9 +44,18 @@ const Basket = (props) => {
                         </thead>
                         <tbody>
                                 {rows}
+                                {
+                                    basketCount == 0 &&
+                                    <tr>
+                                        <td className="noItems" colSpan={5}>You have no items in your basket.</td>
+                                    </tr>
+                                }
                         </tbody>
                     </table>
-                    <button type='submit' name='submit'>Checkout</button>
+                    {
+                        basketCount > 0 &&
+                        <button type='submit' name='submit'>Checkout</button>
+                    }
                 </form>
             </div>
         </div>
