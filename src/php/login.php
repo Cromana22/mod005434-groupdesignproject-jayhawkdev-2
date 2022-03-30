@@ -51,8 +51,8 @@ if (isset($_POST['submit']) && $staffId !== "" && $passwrd !== "") {
         }
         
         //set cookies
-        setcookie("remember", $remember, time()+3600*24);
-        setcookie("loggedin", "Y", time()+600);
+        setcookie("remember", $remember);
+        setcookie("loggedin", "Y", time()+3600);
         setcookie("staffId", $staffId);
         setcookie("homepage", $homepage);
         setcookie("accessLevel", $accessLevel);
