@@ -17,9 +17,10 @@ const navbar = (props) => {
                          <Navbar.Brand id="logo-link" href="/products">
                               <img id="logo" src={Logo} href="/products"/>
                          </Navbar.Brand>
-                         <Navbar.Collapse className='align-items-center justify-content-center' id="navbarScroll">
+                         <Navbar.Collapse className='align-items-center justify-content-center collapse show' id="navbarScroll">
                          <h1>{title}</h1>                             
                          </Navbar.Collapse>
+                         <div className='basket-icon'>
                          <Link to="/basket">
                               <span id='basketLink'>
                                    <FontAwesomeIcon id='basketIcon' icon={faBasketShopping} />
@@ -27,6 +28,7 @@ const navbar = (props) => {
                                    <span id='basketCount'>{basketCount}</span>
                               </span>
                          </Link>
+                         </div>
                          <button id="logout-btn" onClick={() => {window.location.href=phpUrl+"/logout.php";}}>Logout</button>   
                          </Container>
                          </Navbar>

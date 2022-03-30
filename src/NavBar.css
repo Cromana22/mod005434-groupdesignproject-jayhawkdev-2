@@ -134,3 +134,58 @@ input{
 btn-check:focus+.btn-outline-success, .btn-outline-success:focus {
     box-shadow: 0 0 0 0.25rem #fff0d8 !important;
 }
+
+/*Navbar media queries*/
+@media (max-width: 375px){
+    .navbar-collapse{
+        flex-basis: 1% !important;
+    }
+    .navbar-nav, .navbar-nav-scroll{
+        max-height: 100% !important;
+    }
+}
+
+@media (max-width: 576px){
+    .navbar-collapse{
+        flex-basis: 1% !important;
+    }
+    .navbar-nav, .navbar-nav-scroll{
+        max-height: 100% !important;
+    }
+}
+@media (max-width: 768px) { 
+    .navbar-collapse{
+        flex-basis: 1% !important;
+    }
+    .navbar-nav, .navbar-nav-scroll{
+        max-height: 100% !important;
+    }
+}
+@media (max-width: 992px) {
+    .navbar-collapse{
+        flex-basis: 1% !important;
+    }
+    .navbar-nav, .navbar-nav-scroll{
+        max-height: 100% !important;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+    .navbar-collapse{
+        flex-basis: 1% !important;
+    }
+    .navbar-nav, .navbar-nav-scroll{
+        max-height: 100% !important;
+    }
+ }
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (max-width: 1400px) { 
+    .navbar-collapse{
+        flex-basis: 1% !important;
+    }
+    .navbar-nav, .navbar-nav-scroll{
+        max-height: 100% !important;
+    }
+ }
