@@ -3,9 +3,13 @@ import phpUrl from './php/phpUrls';
 import Form from 'react-bootstrap/Form';
 import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom';
+import webUrl from './php/webUrls';
 
 const StaffEdit = (props) => {
-  const { basketCount } = props;
+  const { basketCount, loggedin, accessLevel } = props;
+  if (loggedin !== 'Y') { window.location.replace(webUrl)};
+  if (accessLevel !== "Manager")  { window.location.replace(webUrl+'/products')};
+  
   const location = useLocation()
   const { details } = location.state;
   const prod = details.productTypes;
@@ -20,7 +24,7 @@ const StaffEdit = (props) => {
   
   return (
     <div className="staff">
-      <NavBar title='Edit Staff' basketCount={basketCount} />
+      <NavBar title='Edit Staff' basketCount={basketCount} accessLevel={accessLevel} />
       <div className="EditStaffForm AddStaffForm d-flex add-staff-container">
         <div className='d-flex add-staff-container'>
         <form method="POST" action={phpUrl + "/staffedit.php"}>

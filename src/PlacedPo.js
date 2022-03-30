@@ -30,7 +30,9 @@ function deletePo(poNumber) {
 }
 
 const PlacedPo = (props) => {
-    const {basketCount} = props;
+    const { basketCount, loggedin, accessLevel, staffIdButton } = props;
+    if (loggedin !== 'Y') { window.location.replace(webUrl)};
+
     let {id} = useParams();
     let { response }  = useFetch(phpUrl+'/getPurchaseOrderDetail.php?poNumber='+id);
 
@@ -96,7 +98,7 @@ const PlacedPo = (props) => {
 
     return (
         <div className='page'>
-            <NavBar title='Placed Pos' basketCount={basketCount} />
+            <NavBar title='Placed Pos' basketCount={basketCount} accessLevel={accessLevel} />
             <div className='tables table-responsive'>
                 <table className='po-table'>
                     <thead>
@@ -245,11 +247,26 @@ const PlacedPo = (props) => {
             </div>
 
             <div className='buttons'>
-                <button id='authorise-btn' onClick={() => authPo(poNumber)}>Authorise</button>
-                <button id='reject-btn' onClick={() => rejectPo(poNumber)}>Reject</button>
-                <button id='query-btn' onClick={() => queryPo(poNumber)}>Query</button>
-                <button id='reject-btn' onClick={() => deletePo(poNumber)}>Delete</button>
-                <button id='reject-btn' onClick={() => cancelPo(poNumber)}>Withdraw PO</button>
+                {
+                    accessLevel !== "Sales" &&
+                    <button id='authorise-btn' onClick={() => authPo(poNumber)}>Authorise</button>
+                }
+                {
+                    accessLevel !== "Sales" &&
+                    <button id='reject-btn' onClick={() => rejectPo(poNumber)}>Reject</button>
+                }
+                {
+                    <button id='query-btn' onClick={() => queryPo(poNumber)}>Query</button>
+                }
+                {
+                    (accessLevel == "Manager" || accessLevel == "Finance") &&
+                    <button id='reject-btn' onClick={() => deletePo(poNumber)}>Delete</button>
+                }
+                
+                {
+                    staffIdButton == staffId &&
+                    <button id='reject-btn' onClick={() => cancelPo(poNumber)}>Withdraw PO</button>
+                }
                 <Link to="/purchaseorders" ><button id='back-btn'>Back</button></Link>
             </div>
         </div>

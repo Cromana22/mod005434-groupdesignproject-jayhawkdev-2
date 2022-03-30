@@ -19,32 +19,44 @@ import phpUrl from './php/phpUrls';
 function App() {
   let { response }  = useFetch(phpUrl+'/getBasket.php');
   let basketCount = 0;
+  let loggedin = 0;
+  let accessLevel = 0;
+  let productTypes = 0;
+  let staffId = "";
 
   if (response !== null) {
-    basketCount = Object.keys(response).length;
+    basketCount = Object.keys(response.basket).length;
+    loggedin = response.loggedin;
+    accessLevel = response.accessLevel;
+    productTypes = response.productTypes;
+    staffId = response.staffId;
+
+    return (
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />} >                                 
+          <Route path="" element={<LoginPage />} />
+          <Route path = "products" element = {<Products basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} productTypes={productTypes} />} />
+          <Route path="purchaseorders/:id" element={<PlacedPo basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} staffIdButton={staffId} />} />
+          <Route path="purchaseorders" element={<PurchaseOrders basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
+          <Route path="staff" element={<Staff basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
+          <Route path="addstaff" element={<StaffAdd basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
+          <Route path="editstaff" element={<StaffEdit basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
+          <Route path="reports" element={<Reports basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
+          <Route path="help" element={<Help basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
+          <Route path="placedpo" element={<PlacedPo basketCount={basketCount} accessLevel={accessLevel} />} />
+          <Route path="basket" element={<Basket basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />}  />
+          <Route path="checkout" element={<Checkout basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
+          <Route path="*" element={<Products basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} productTypes={productTypes} />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
+    );
   }
 
-  return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout />} >                                     
-        <Route path="" element={<LoginPage />} />
-        <Route path = "products" element = {<Products basketCount={basketCount} />} />
-        <Route path="purchaseorders/:id" element={<PlacedPo basketCount={basketCount} />} />
-        <Route path="purchaseorders" element={<PurchaseOrders basketCount={basketCount} />} />
-        <Route path="staff" element={<Staff basketCount={basketCount} />} />
-        <Route path="addstaff" element={<StaffAdd basketCount={basketCount} />} />
-        <Route path="editstaff" element={<StaffEdit basketCount={basketCount} />} />
-        <Route path="reports" element={<Reports basketCount={basketCount} />} />
-        <Route path="help" element={<Help basketCount={basketCount} />} />
-        <Route path="placedpo" element={<PlacedPo basketCount={basketCount} />} />
-        <Route path="basket" element={<Basket basketCount={basketCount} />} />
-        <Route path="checkout" element={<Checkout basketCount={basketCount} />} />
-        <Route path="*" element={<pagenotfound basketCount={basketCount} />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
-  );
+  else {
+    return null
+  }
 }
 
 export default App;

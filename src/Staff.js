@@ -5,9 +5,12 @@ import phpUrl from './php/phpUrls';
 import StaffTableRow from "./StaffTableRow";
 import { Link } from "react-router-dom";
 import './Staff.css';
+import webUrl from "./php/webUrls";
 
 const Staff = (props) => {
-  const { basketCount } = props;
+  const { basketCount, loggedin, accessLevel } = props;
+  if (loggedin !== 'Y') { window.location.replace(webUrl)};
+  if (accessLevel !== "Manager")  { window.location.replace(webUrl+'/products')};
 
   let rows = [];
   let rowCount = 1;
@@ -24,7 +27,7 @@ const Staff = (props) => {
 
   return (
     <div className="staff">
-      <NavBar title='Staff' basketCount={basketCount} />
+      <NavBar title='Staff' basketCount={basketCount} accessLevel={accessLevel} />
       <div className="Stafftable">
         <table id='Staff-table'>
           <thead>

@@ -4,7 +4,7 @@ import './ProductTableRow.css';
 import phpUrl from './php/phpUrls';
 
 function ProductTableRow(props) {
-    const { details, rowCount} = props;
+    const { details, rowCount, accessLevel, productTypes } = props;
 
     if (details !== null) { 
 
@@ -37,13 +37,17 @@ function ProductTableRow(props) {
                     </span>
                 </td>
                 <td className='order-form'>
-                    
-                    <form id={rowCount} className={order} method="POST" action={phpUrl+"/addBasket.php"} >
-                        <input className='Hide' type="text" id={rowCount+"prodToOrder"} name="productCode" value={details.productCode} readOnly/>
-                        <input className='products-inp' type="number" min='1' max={maxOrder} id={rowCount+"qtyToOrder"} name="qtyToOrder"/>
-                        &nbsp;<button className='order-form-btn' type="submit">Order</button>
-                    </form>
-                    
+                    {
+                        accessLevel !== "Finance" &&
+                        productTypes.includes(details.productType) &&
+                        details.available < details.reorderLevel*1.1 &&
+
+                        <form id={rowCount} className={order} method="POST" action={phpUrl+"/addBasket.php"} >
+                            <input className='Hide' type="text" id={rowCount+"prodToOrder"} name="productCode" value={details.productCode} readOnly/>
+                            <input className='products-inp' type="number" min='1' max={maxOrder} id={rowCount+"qtyToOrder"} name="qtyToOrder"/>
+                            &nbsp;<button className='order-form-btn' type="submit">Order</button>
+                        </form>
+                    }
                 </td>
             </tr>
         );

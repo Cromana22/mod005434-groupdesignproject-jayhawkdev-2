@@ -2,9 +2,11 @@ import NavBar from './NavBar';
 import useFetch from './php/useFetch';
 import phpUrl from './php/phpUrls';
 import ProductTableRow from './ProductTableRow';
+import webUrl from './php/webUrls';
 
 const Products = (props) => {
-    const { basketCount } = props;
+    const { basketCount, loggedin, accessLevel, productTypes } = props;
+    if (loggedin !== 'Y') { window.location.replace(webUrl)};
 
     let rows = [];
     let rowCount = 1;
@@ -13,7 +15,7 @@ const Products = (props) => {
     if (response !== null) { 
         response.forEach(product => {
         rows.push(
-            <ProductTableRow key={rowCount} details={product} rowCount={rowCount} />
+            <ProductTableRow key={rowCount} details={product} rowCount={rowCount} accessLevel={accessLevel} productTypes={productTypes} />
         );
         rowCount++;
         });
@@ -21,7 +23,7 @@ const Products = (props) => {
 
     return (
         <div className="products">
-            <NavBar title='Products' basketCount={basketCount} />
+            <NavBar title='Products' basketCount={basketCount} accessLevel={accessLevel} />
             <div className="productstable table-responsive">
                 <table id='products-table'>
                     <thead>
@@ -31,7 +33,10 @@ const Products = (props) => {
                             <th>Quantity Available</th>
                             <th>Reorder Level</th>
                             <th>Stock Status</th>
-                            <th>Quantity To Order</th>
+                            {
+                                accessLevel !== "Finance" && 
+                                <th>Order</th>
+                            }
                         </tr>
                     </thead>
                     <tbody>

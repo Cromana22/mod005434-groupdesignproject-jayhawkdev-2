@@ -10,7 +10,7 @@ import {Navbar, Nav,  Container } from 'react-bootstrap';
 import useFetch from './php/useFetch';
 
 const navbar = (props) => {
-     const { title, basketCount } = props;
+     const { title, basketCount, accessLevel } = props;
      let { response }  = useFetch(phpUrl+'/getNotifications.php');
      let notificationCount = 0;
      
@@ -69,8 +69,14 @@ const navbar = (props) => {
                               >
                                    <Nav.Link href="/products">Products</Nav.Link>
                                    <Nav.Link href="/purchaseorders">Purchase Orders</Nav.Link>
-                                   <Nav.Link href="/staff">Staff</Nav.Link>
-                                   <Nav.Link href="/reports">Report</Nav.Link>
+                                   {
+                                        accessLevel == "Manager" &&
+                                        <Nav.Link href="/staff">Staff</Nav.Link>
+                                   }
+                                   {
+                                        (accessLevel == "Manager" || accessLevel == "Finance") &&
+                                        <Nav.Link href="/reports">Report</Nav.Link>
+                                   }
                                    <Nav.Link href="/help">Help/Contact Us</Nav.Link>
                               </Nav>
                          </Navbar.Collapse>

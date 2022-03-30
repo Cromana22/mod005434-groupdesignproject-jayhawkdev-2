@@ -3,13 +3,15 @@ import './Help.css';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Swal from 'sweetalert';
+import webUrl from './php/webUrls';
 
 const Help = (props) => {
-    const {basketCount} = props;
+    const {basketCount, loggedin, accessLevel } = props;
+    if (loggedin !== 'Y') { window.location.replace(webUrl)};
 
     return (
         <div className='help'>
-            <NavBar title='Help/Contact us' basketCount={basketCount} />
+            <NavBar title='Help/Contact us' basketCount={basketCount} accessLevel={accessLevel} />
             <div className='form-style'>
             <Form>
                 <Form.Group className="mb-3" controlId="exampleForm.Textarea1">

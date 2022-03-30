@@ -3,13 +3,16 @@ import NavBar from './NavBar';
 import ReportPieChart from './ReportPieChart';
 import ReportBarChart from './ReportBarChart'; 
 import ReportLineChart from './ReportLineChart';
+import webUrl from './php/webUrls';
 
 const Reports = (props) => {
-    const { basketCount } = props;
-
+    const { basketCount, loggedin, accessLevel } = props;
+    if (loggedin !== 'Y') { window.location.replace(webUrl)};
+    if (accessLevel !== "Manager" || accessLevel !== "Finance")  { window.location.replace(webUrl+'/products')};
+  
     return (
         <div style={{ textAlign: "center" }}>
-            <NavBar title='Reports' basketCount={basketCount} />
+            <NavBar title='Reports' basketCount={basketCount} accessLevel={accessLevel} />
             <div className='chart table-responsive'>
                 <ReportPieChart url="/reportProdStatus.php" title="Stock Levels" />
                 <ReportPieChart url="/reportProdTypeOrders.php" title="Orders by Product Type" />

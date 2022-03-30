@@ -3,9 +3,11 @@ import NavBar from './NavBar';
 import useFetch from './php/useFetch';
 import phpUrl from './php/phpUrls';
 import PurchaseOrdersTableRow from './PurchaseOrdersTableRow';
+import webUrl from './php/webUrls';
 
 const PurchaseOrders = (props) => {
-  const { basketCount } = props;
+  const { basketCount, loggedin, accessLevel } = props;
+  if (loggedin !== 'Y') { window.location.replace(webUrl)};
 
   let rows = [];
   let rowCount = 1;
@@ -22,7 +24,7 @@ const PurchaseOrders = (props) => {
 
   return (
     <div className="purchase-orders">
-      <NavBar title='Purchase Orders' basketCount={basketCount} />
+      <NavBar title='Purchase Orders' basketCount={basketCount} accessLevel={accessLevel} />
       <div className="Orderstable table-responsive">
         <table id='Orders-table' className='table'>
           <thead>

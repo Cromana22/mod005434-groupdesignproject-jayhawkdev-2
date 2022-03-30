@@ -2,13 +2,16 @@ import NavBar from './NavBar';
 import phpUrl from './php/phpUrls';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
+import webUrl from './php/webUrls';
 
 const StaffAdd = (props) => {
-  const { basketCount } = props;
+  const { basketCount, loggedin, accessLevel } = props;
+  if (loggedin !== 'Y') { window.location.replace(webUrl)};
+  if (accessLevel !== "Manager")  { window.location.replace(webUrl+'/products')};
 
   return (
     <div className="staff">
-      <NavBar title='Add New Staff' basketCount={basketCount} />
+      <NavBar title='Add New Staff' basketCount={basketCount} accessLevel={accessLevel} />
       <div className="AddStaffForm">
         <form method="POST" action={phpUrl + "/staffadd.php"}>
           <div className='d-flex add-staff-container'>

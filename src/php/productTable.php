@@ -9,6 +9,7 @@ header('Access-Control-Allow-Credentials: true');
 $sql="SELECT
 Product.image AS image,
 Product.`name` AS `name`,
+Product.productType AS productType,
 Product.productCode AS productCode,
 ShopProduct.quantity AS available,
 ShopProduct.reorderLevel AS reorderLevel,

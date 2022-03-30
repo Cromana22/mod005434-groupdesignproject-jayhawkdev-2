@@ -1,19 +1,20 @@
 import './Basket.css';
 import NavBar from './NavBar';
 import useFetch from './php/useFetch';
-import { Link } from "react-router-dom";
 import phpUrl from './php/phpUrls';
 import BasketTableRow from './BasketTableRow';
+import webUrl from './php/webUrls';
 
 const Basket = (props) => {
-    const {basketCount} = props;
+    const { basketCount, loggedin, accessLevel } = props;
+    if (loggedin !== 'Y') { window.location.replace(webUrl)};
 
     let { response }  = useFetch(phpUrl+'/getBasket.php');
     let rows = [];
     let rowCount = 1;
     
     if (response !== null) { 
-        Object.entries(response).forEach(item => {
+        Object.entries(response.basket).forEach(item => {
             let product = item[0];
             let qtyToOrder = item[1];
 
@@ -26,7 +27,7 @@ const Basket = (props) => {
 
     return (
         <div className="basket">
-            <NavBar title='Basket' basketCount={basketCount} />
+            <NavBar title='Basket' basketCount={basketCount} accessLevel={accessLevel} />
             <div className="baskettable table-responsive">
                 <form method="POST" action={phpUrl+'/generateCheckout.php'}>
                     <table id='basket-table'>
