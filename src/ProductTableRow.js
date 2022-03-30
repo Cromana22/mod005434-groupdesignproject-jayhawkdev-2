@@ -22,7 +22,7 @@ function ProductTableRow(props) {
         let maxOrder = details.maxQuantity-details.available;
         
         let activePo = "poCount Hide";
-        if (details.activePo == 1) { activePo = "poCount"; order="Hide"};
+        if (details.activePo == 1) { activePo = "poCount"; };
 
         return (
             <tr id={rowCount} className='products-tr'>
@@ -39,8 +39,9 @@ function ProductTableRow(props) {
                         accessLevel !== "Finance" &&
                         productTypes.includes(details.productType) &&
                         details.available < details.reorderLevel*1.1 &&
+                        details.activePo !== 1 &&
 
-                        <form id={rowCount} className={order} method="POST" action={phpUrl+"/addBasket.php"} >
+                        <form id={rowCount} method="POST" action={phpUrl+"/addBasket.php"} >
                             <input className='Hide' type="text" id={rowCount+"prodToOrder"} name="productCode" value={details.productCode} readOnly/>
                             <input className='products-inp' type="number" min='1' max={maxOrder} id={rowCount+"qtyToOrder"} name="qtyToOrder"/>
                             &nbsp;<button className='order-form-btn' type="submit">Order</button>
