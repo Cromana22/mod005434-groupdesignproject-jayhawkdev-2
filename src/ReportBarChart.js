@@ -11,7 +11,6 @@ const ReportBarChart = (props) => {
 
     if (response !== null) { 
         response.forEach(dataLine => {
-            console.log(dataLine.xaxis);
             data.push(
                 { name: dataLine.xaxis, value: dataLine.yaxis }
             );
@@ -19,7 +18,7 @@ const ReportBarChart = (props) => {
     };
 
     return (
-        <div>
+        <div className="chartContainer">
             <h1>{title}</h1>
             <BarChart
                 width={500 }
