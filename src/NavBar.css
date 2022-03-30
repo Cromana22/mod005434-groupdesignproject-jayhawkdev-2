@@ -17,6 +17,30 @@
     text-align: center;
 }
 
+.notification-icon {
+    padding-right: 20px;
+}
+
+#notificationCircle {
+    color: red !important;
+    position: absolute;
+    margin-left: -9px;
+    padding-top: 5px;
+    font-size: 16px !important;
+}
+
+#notificationCount {
+    position: absolute;
+    margin-left: -5px;
+    padding-top: 3px;
+    font-size: 12px !important;
+    font-weight: bold;
+}
+#notificationLink {
+    color: #fff0d8;
+    font-size: 28px;
+}
+
 #basketCircle {
     color: red !important;
     position: absolute;
