@@ -29,21 +29,17 @@
 
 .CircleOrange {
     color: orange !important;
-    /*
     position: absolute;
     margin-left: -9px;
     padding-top: 5px;
-    */
     font-size: 4vh !important;
 }
 
 .CircleGreen {
     color: green !important;
-    /*
     position: absolute;
     margin-left: -9px;
     padding-top: 5px;
-    */
     font-size: 4vh !important;
 }
 
@@ -66,7 +62,6 @@
 }
 
 .order-form input{
-    /*max-width: 20%;*/
     margin-right: 5%;
 }
 

@@ -1,4 +1,3 @@
-import './CheckOutComponent.css';
 import CheckOutProductLine from './CheckOutProductLine';
 
 const CheckOutComponent = (props) => {

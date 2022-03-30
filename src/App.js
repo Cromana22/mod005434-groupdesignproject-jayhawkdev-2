@@ -1,4 +1,3 @@
-import './App.css';
 import LoginPage from './LoginPage';
 import Products from './Products';
 import PurchaseOrders from './PurchaseOrders';

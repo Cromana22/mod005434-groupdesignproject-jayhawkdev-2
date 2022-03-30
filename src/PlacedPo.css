@@ -1,6 +1,5 @@
 /* PO Number table*/
 .po-table, .po-table-tr, th{
-    /*border: 1px solid #1b1464;*/
     padding: 0.5rem;
     text-align: center;
     border-width: 1px !important;
@@ -40,7 +39,6 @@
 
 /* Staff table*/
 .staff-table, .staff-tr, .staff-rows{
-    /*border: 1px solid #1b1464;*/
     padding: 0.5rem;
     text-align: center;
     margin-bottom: 1%;
@@ -58,7 +56,6 @@
 /* Raised Table*/
 
 .raised-table, .raised-col-tr, .raised-row-tr{
-    /*border: 1px solid #1b1464;*/
     padding: 0.5rem;
     text-align: center;
     margin-bottom: 1%;
@@ -90,13 +87,11 @@
 }
 
 .product-table{
-    /*min-width: 257px !important;*/
     margin-right: 2%;
     width: 100% !important;
 }
 
 /* Supplier table*/
-
 .supplier-table, .supplier-col, .supplier-rows{
     padding: 0.5rem;
     text-align: center;
@@ -115,12 +110,7 @@
     padding: 12.5%;
 }
 
-.supplier-table, .product-table {
-    /*display: inline-block;*/
-}
-
 /* Subtotal Table*/
-
 .subtotal-table, .subtotal-tr, th{
     padding: 0.5rem;
     text-align: center;
@@ -142,16 +132,11 @@
 
 .subtotal-table{
     margin-bottom: 1%;
-    display: inline-block;
     float: right;
 }
 
 
-
-
 /* vat Table*/
-
-
 .vat-table, .vat-tr, th{
     padding: 0.5rem;
     text-align: center;
@@ -162,7 +147,6 @@
 .vat-table{
     margin-bottom: 1%;
     margin-top: 0%;
-    /*display: inline-block; */
     float: right;
 }
 
@@ -173,18 +157,10 @@
 #vat-th-1{
     text-align: center;
 }
-/*
-.vat-table{
-    margin-top: 5%;
-    float: right;
-}*/
 
 .container-div, .product-table{
     display: inline-block;
     margin: 0px;
-    /*min-width: 71.5%;*/
-
-    
 }
 
 .vat-table, .subtotal-table{
@@ -193,15 +169,12 @@
 }
 
 /* Notes table*/
-
-
 .notes-table, .notes-tr, th{
     padding: 0.5rem;
     text-align: center;
     border-width: 1px ;
     border-color: black;
-  }
-
+}
 
 .notes-table{
     margin-bottom: 1%;
@@ -222,7 +195,6 @@
 }
 
 /* Container right*/
-
 .container-right{
     
     float: right;
@@ -240,7 +212,6 @@
     background-color: #047A10 !important;
     color: white !important;
     border: none !important;
-        
 }
 
 #authorise-btn:hover{
