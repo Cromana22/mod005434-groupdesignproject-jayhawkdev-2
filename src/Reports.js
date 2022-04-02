@@ -17,12 +17,17 @@ const Reports = (props) => {
         <div style={{ textAlign: "center" }}>
             <NavBar title='Reports' basketCount={basketCount} accessLevel={accessLevel} />
             <div className='chart table-responsive'>
-                <ReportPieChart url="/reportProdStatus.php" title="Stock Levels" />
+                <div id='pie-chart'>
+                <ReportPieChart  url="/reportProdStatus.php" title="Stock Levels" />
                 <ReportPieChart url="/reportProdTypeOrders.php" title="Orders by Product Type" />
                 <ReportPieChart url="/reportProdOrders.php" title="Orders by Product" />
+                </div>
+                <br/>
+                <div id='line-bar-chart'>
                 <ReportBarChart url="/reportPoPerPerson.php" title="Purchase Orders Per Person" />
                 <ReportLineChart url="/reportWeeklyOrders.php" title="Weekly Order Totals Per Supplier" />
                 <ReportLineChart url="/reportMonthlyOrders.php" title="Monthly Order Totals Per Supplier" />
+                </div>
             </div>
         </div>
     );
