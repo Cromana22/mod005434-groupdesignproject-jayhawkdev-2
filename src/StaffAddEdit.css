@@ -1,0 +1,15 @@
+.wider {
+    width: 300px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.product-resp-inp {
+    height: 4em;
+}
+
+#product-resp-inp {
+    height: 4em;
+}

@@ -3,6 +3,7 @@ import phpUrl from './php/phpUrls';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import webUrl from './php/webUrls';
+import './StaffAddEdit.css';
 
 const StaffAdd = (props) => {
   const { basketCount, loggedin, accessLevel } = props;
@@ -16,9 +17,11 @@ const StaffAdd = (props) => {
         <form method="POST" action={phpUrl + "/staffadd.php"}>
           <div className='d-flex add-staff-container'>
             <div>
-          <label>Staff ID: </label><input id='add-staff-inp' type='text' name='staffId' required></input><br />
+          <label>Staff ID: </label>
+          <input className="wider" id='add-staff-inp' type='text' name='staffId' required></input><br />
           
-          <label>Title: </label><Form.Select id='title-inp' aria-label="Default select example" name='title' required>
+          <label>Title: </label>
+          <Form.Select className="wider" id='title-inp' aria-label="Default select example" name='title' required>
           <option value="">--Title--</option>
             <option value="Mr">Mr</option>
             <option value="Mrs">Mrs</option>
@@ -29,24 +32,33 @@ const StaffAdd = (props) => {
           </Form.Select><br />
           
           
-          <label>First Name: </label><input id='add-staff-inp' type='text' name='firstName' required></input><br />
-          <label>Surname: </label><input id='add-staff-inp'  type='text' name='surname' required></input><br />
-          <label>Email: </label><input id='add-staff-inp'  type='text' name='email' required></input><br />
-          <label>Job Title: </label><input id='add-staff-inp'  type='text' name='jobTitle' required></input><br />
-          <label>Shop: </label><input id='add-staff-inp'  type='text' name='shopName'></input><br />
-          <label>Department: </label><input id='add-staff-inp'  type='text' name='deptName'></input><br />
-          <label>Product<span>Responsibilities:</span></label><Form.Select id='product-resp-inp'  multiple aria-label="Default select Product Type" name='productTypes[]' >
+          <label>First Name: </label>
+          <input className="wider" id='add-staff-inp' type='text' name='firstName' required></input><br />
+          <label>Surname: </label>
+          <input className="wider" id='add-staff-inp'  type='text' name='surname' required></input><br />
+          <label>Email: </label>
+          <input className="wider" id='add-staff-inp' type='text' name='email' required></input><br />
+          <label>Job Title: </label>
+          <input className="wider" id='add-staff-inp'  type='text' name='jobTitle' required></input><br />
+          <label>Shop: </label>
+          <input className="wider" id='add-staff-inp'  type='text' name='shopName'></input><br />
+          <label>Department: </label>
+          <input className="wider" id='add-staff-inp'  type='text' name='deptName'></input><br />
+          <label className="product-resp-inp">Product Responsibilities:</label>
+          <Form.Select className="wider product-resp-inp" id='product-resp-inp' multiple aria-label="Default select Product Type" name='productTypes[]'>
             <option value="T">Toys</option>
             <option value="G">Gadgets</option>
           </Form.Select><br />
-          <label>Access Level: </label><Form.Select id='title-inp-p'  aria-label="Default select Access Level" name='accessLevel' required>
+          <label>Access Level: </label>
+          <Form.Select className="wider" id='title-inp-p'  aria-label="Default select Access Level" name='accessLevel' required>
             <option value="">--Access Level--</option>
             <option value="Sales">Sales</option>
             <option value="Senior Sales">Senior Sales</option>
             <option value="Manager">Manager</option>
             <option value="Finance">Finance</option>
           </Form.Select><br />
-          <label>Password: </label><input id='title-inp'  type='password' name='password' required></input><br />
+          <label>Password: </label>
+          <input className="wider" id='title-inp'  type='password' name='password' required></input><br />
           <div className='submit-cancel-btn'>
           <button id='submit-btn' type='submit'>Submit</button>
           <Link to="/staff" >
