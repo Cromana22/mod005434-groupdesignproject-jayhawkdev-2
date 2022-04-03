@@ -98,7 +98,7 @@ const PlacedPo = (props) => {
 
     return (
         <div className='page'>
-            <NavBar title='Placed Pos' basketCount={basketCount} accessLevel={accessLevel} />
+            <NavBar title='Purchase Order Detail' basketCount={basketCount} accessLevel={accessLevel} />
             <div className='tables table-responsive'>
                 <div id="mainrow">
                     <div className="container-left">
