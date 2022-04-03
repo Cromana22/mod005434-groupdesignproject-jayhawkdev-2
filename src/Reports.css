@@ -1,7 +1,24 @@
-.rechart-wrapper{
-    float: right !important;
+/*.table-responsive h2{
+    display: flex;
+    justify-content: center;
+}
+*/
+
+.table-responsive #pie-chart{
+    display: flex;
+    float: left;
+    margin-top: 2%;
 }
 
-.recharts-cartesian-axis-tick {    
-    font-size: 0.8rem;
+.table-responsive #line-bar-chart{
+    display: flex;
+    float: left;
+}
+
+.table-responsive h1{
+    margin-left: 2%;
+}
+
+#line-bar-chart{
+    margin-bottom: 4%;
 }
