@@ -100,150 +100,154 @@ const PlacedPo = (props) => {
         <div className='page'>
             <NavBar title='Placed Pos' basketCount={basketCount} accessLevel={accessLevel} />
             <div className='tables table-responsive'>
-                <table className='po-table'>
-                    <thead>
-                        <tr className='po-table-tr'>
-                            <th id='ponumber-th'>Po Number:</th>
-                            <th id='ponumber-th-1'>{poNumber}</th>
-                        </tr>
-                    </thead>
-                </table>
+                <div id="mainrow">
+                    <div className="container-left">
+                        <table className='po-table'>
+                            <thead>
+                                <tr className='po-table-tr'>
+                                    <th id='ponumber-th'>Po Number:</th>
+                                    <th id='ponumber-th-1'>{poNumber}</th>
+                                </tr>
+                            </thead>
+                        </table>
 
-                <table className='postatus'>
-                    <thead>
-                        <tr>
-                            <th id='postatus-th'>Status:</th>
-                            <th id='postatus-th'>{poStatus}</th>
-                        </tr>
-                    </thead>
-                </table>
+                        <table className='postatus'>
+                            <thead>
+                                <tr>
+                                    <th id='postatus-th'>Status:</th>
+                                    <th id='postatus-th'>{poStatus}</th>
+                                </tr>
+                            </thead>
+                        </table>
 
-                <br></br>
+                        <br></br>
 
-                <div className='container-1'>
-                    <table className='staff-table'>
-                        <thead>
-                            <tr className='staff-tr'>
-                                <th>Staff ID</th>
-                                <th>Staff Name</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className='staff-rows'>
-                                <td>{staffId}</td>
-                                <td>{staffName}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <div className='container-1'>
+                            <table className='staff-table'>
+                                <thead>
+                                    <tr className='staff-tr'>
+                                        <th>Staff ID</th>
+                                        <th>Staff Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className='staff-rows'>
+                                        <td>{staffId}</td>
+                                        <td>{staffName}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                    <table className='raised-table'>
-                        <thead>
-                            <tr className='raised-col-tr'>
-                                <th>Raised Date</th>
-                                <th>Authorised By</th>
-                                <th>Authorised Date</th>
-                                <th>Finance Authorised</th>
-                                <th>Finance Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className='raised-row-tr'>
-                                <td>{raisedDate}</td>
-                                <td>{authManagerName}</td>
-                                <td>{authManagerDate}</td>
-                                <td>{authFinanceName}</td>
-                                <td>{authFinanceDate}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            <table className='raised-table'>
+                                <thead>
+                                    <tr className='raised-col-tr'>
+                                        <th>Raised Date</th>
+                                        <th>Authorised By</th>
+                                        <th>Authorised Date</th>
+                                        <th>Finance Authorised</th>
+                                        <th>Finance Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className='raised-row-tr'>
+                                        <td>{raisedDate}</td>
+                                        <td>{authManagerName}</td>
+                                        <td>{authManagerDate}</td>
+                                        <td>{authFinanceName}</td>
+                                        <td>{authFinanceDate}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <br></br>
+
+                        <div className='container-div'>
+                            <table className='product-table'>
+                                <thead>
+                                    <tr className='product-col'>
+                                        <th>Product Name</th>
+                                        <th>Order Qty</th>
+                                        <th>Unit Price</th>
+                                        <th>VAT Rate</th>
+                                        <th>Line Total</th>
+                                        <th>Line Total VAT</th>
+                                        <th>Expected Delivery Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {productLineRows}
+                                </tbody>
+                            </table>
+
+                            <br></br>
+                            
+                            <table className='subtotal-table'>
+                                <thead>
+                                    <tr className='subtotal-tr'>
+                                        <th id='subtotal-th'>Sub-Total</th>
+                                        <th id='subtotal-th-1'>£{subTotal}</th>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                            <br></br>
+
+                            <table className='vat-table'>
+                                <thead>
+                                    <tr className='vat-tr'>
+                                        <th id='vat-th'>VAT Total</th>
+                                        <th id='vat-th-1'>£{vatTotal}</th>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                            <table className='grandtotal-table'>
+                                <thead>
+                                    <tr className='grandtotal-tr'>
+                                        <th id='grandtotal-th'>Grand Total</th>
+                                        <th id='grandtotal-th-1'>£{grandTotal}</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div className='container-right'>
+                        <table className='supplier-table'>
+                            <thead>
+                                <tr className='supplier-col'>
+                                    <th>Supplier</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className='supplier-rows'>
+                                    <td>
+                                        {supplierName} ({supplierCountry})<br />
+                                        {supplierAddress1}<br />
+                                        {supplierAddress2}<br />
+                                        {supplierTown}, {supplierPostcode} <br /><br />
+                                        Telephone: {supplierTelephone}<br />
+                                        Email: {supplierEmail}<br />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <table className='notes-table'>
+                            <thead>
+                                <tr className='notes-col'>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className='notes-rows'>
+                                    <td>{notes}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>    
                 </div>
-
-                <br></br>
-
-                <div className='container-div'>
-                    <table className='product-table'>
-                        <thead>
-                            <tr className='product-col'>
-                                <th>Product Name</th>
-                                <th>Order Qty</th>
-                                <th>Unit Price</th>
-                                <th>VAT Rate</th>
-                                <th>Line Total</th>
-                                <th>Line Total VAT</th>
-                                <th>Expected Delivery Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {productLineRows}
-                        </tbody>
-                    </table>
-
-                    <br></br>
-                    
-                    <table className='subtotal-table'>
-                        <thead>
-                            <tr className='subtotal-tr'>
-                                <th id='subtotal-th'>Sub-Total</th>
-                                <th id='subtotal-th-1'>£{subTotal}</th>
-                            </tr>
-                        </thead>
-                    </table>
-
-                    <br></br>
-
-                    <table className='vat-table'>
-                        <thead>
-                            <tr className='vat-tr'>
-                                <th id='vat-th'>VAT Total</th>
-                                <th id='vat-th-1'>£{vatTotal}</th>
-                            </tr>
-                        </thead>
-                    </table>
-
-                    <table className='grandtotal-table'>
-                        <thead>
-                            <tr className='grandtotal-tr'>
-                                <th id='grandtotal-th'>Grand Total</th>
-                                <th id='grandtotal-th-1'>£{grandTotal}</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-
-                <div className='container-right'>
-                    <table className='supplier-table'>
-                        <thead>
-                            <tr className='supplier-col'>
-                                <th>Supplier</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className='supplier-rows'>
-                                <td>
-                                    {supplierName} ({supplierCountry})<br />
-                                    {supplierAddress1}<br />
-                                    {supplierAddress2}<br />
-                                    {supplierTown}, {supplierPostcode} <br /><br />
-                                    Telephone: {supplierTelephone}<br />
-                                    Email: {supplierEmail}<br />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <table className='notes-table'>
-                        <thead>
-                            <tr className='notes-col'>
-                                <th>Notes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className='notes-rows'>
-                                <td>{notes}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>    
             </div>
 
             <div className='buttons'>

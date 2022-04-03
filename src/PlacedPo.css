@@ -49,7 +49,6 @@
 }
 
 .staff-table{
-    min-width: 257px;
     margin-right: 2%;
 }
 
@@ -158,14 +157,25 @@
     text-align: center;
 }
 
-.container-div, .product-table{
+.container-left {
     display: inline-block;
-    margin: 0px;
+    width: 75%;
+}
+
+#mainrow {
+    margin-right: 2%;
 }
 
 .vat-table, .subtotal-table{
     display: block;
     clear: both;
+}
+
+/* Container right*/
+.container-right {
+    float: right;
+    width: 23%;
+    margin-left: 2%;
 }
 
 /* Notes table*/
@@ -192,14 +202,6 @@
 
 .notes-table, .supplier-table{
     clear: both;
-}
-
-/* Container right*/
-.container-right{
-    
-    float: right;
-    width: 25%;
-    margin-right: 25%;
 }
 
 /* Buttons*/
@@ -244,7 +246,7 @@
 
 /* MEDIA Queries*/
 
-@media only screen and (max-width: 1800px){
+/*@media only screen and (max-width: 1800px){
     .container-right{
         float: right;
         width: 35%;
@@ -252,10 +254,6 @@
         margin-top: 0.5%;
     }
 }
-
-
-
-
 
 @media only screen and (max-width: 1360px){
     .container-right{
@@ -330,6 +328,7 @@
         margin-right: 0;
         float: none;
     }
+
     body{
         overflow-x: hidden  ;
     }
@@ -338,14 +337,22 @@
         margin-top: 80%;
         margin-bottom: 5%;
     }
-}
+}*/
 
 @media only screen and (max-width: 900px){
+    .container-left {
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    
     .container-right{
-        width: 99%;
-        margin-right: 0;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
         float: none;
     }
+
     body{
         overflow-x: hidden  ;
     }
