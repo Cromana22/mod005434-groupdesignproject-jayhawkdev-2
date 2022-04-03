@@ -24,7 +24,8 @@ function App() {
   let staffId = "";
 
   if (response !== null) {
-    basketCount = Object.keys(response.basket).length;
+    let basket = JSON.parse(response.basket);
+    basketCount = Object.keys(basket).length;
     loggedin = response.loggedin;
     accessLevel = response.accessLevel;
     productTypes = response.productTypes;

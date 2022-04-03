@@ -15,7 +15,7 @@ const Basket = (props) => {
     
     if (response !== null) {
         if (basketCount > 0) {
-            Object.entries(response.basket).forEach(item => {
+            Object.entries(JSON.parse(response.basket)).forEach(item => {
                 let product = item[0];  
                 let qtyToOrder = item[1];
 
