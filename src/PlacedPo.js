@@ -5,6 +5,7 @@ import phpUrl from './php/phpUrls';
 import { useParams } from 'react-router';
 import PlacedPoProductRow from './PlacedPoProductRow';
 import { Link } from 'react-router-dom';
+import webUrl from './php/webUrls.js';
 
 function authPo(poNumber) {
     window.location.href = phpUrl+"/authorisePo.php?poNumber="+poNumber;
