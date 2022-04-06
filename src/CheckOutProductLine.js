@@ -1,5 +1,6 @@
 import phpUrl from './php/phpUrls';
 import useFetch from './php/useFetch';
+import './CheckOutProductLine.css';
 
 function CheckOutProductLine(props) {
   const { rowCount, product, qtyToOrder, supplierId } = props;
@@ -17,8 +18,8 @@ function CheckOutProductLine(props) {
 
     return (
       <tr id={rowCount} className='Basket-tr'>
-        <td>
-            {image}
+        <td id='image'>
+          <img src={require("./images/"+image)} alt={image}></img>
         </td>
         <td>
           <input className="Hide" type="text" id={supplierId+"productCode"+rowCount} name={supplierId+"productCode"+rowCount} defaultValue={product} />

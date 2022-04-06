@@ -26,7 +26,7 @@ function ProductTableRow(props) {
 
         return (
             <tr id={rowCount} className='products-tr'>
-                <td>{details.image}</td>
+                <td id='image'><img src={require("./images/"+details.image)} alt={details.image}></img></td>
                 <td>{details.name}</td>
                 <td>{details.available}</td>
                 <td>{details.reorderLevel}</td>

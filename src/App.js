@@ -24,7 +24,6 @@ function App() {
   let staffId = "";
 
   if (response !== null) {
-    console.log(response.basket.length);
     let basket = {};
     if (response.basket.length !== 0) {
       basket = JSON.parse(response.basket);
