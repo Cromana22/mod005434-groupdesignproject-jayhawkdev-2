@@ -8,7 +8,6 @@ import webUrl from './php/webUrls';
 const Reports = (props) => {
     const { basketCount, loggedin, accessLevel } = props;
     if (loggedin !== 'Y') { window.location.replace(webUrl)};
-    console.log(accessLevel)
     if (accessLevel !== "Manager") {
         if (accessLevel !== "Finance") { window.location.replace(webUrl+'/products')};
     }

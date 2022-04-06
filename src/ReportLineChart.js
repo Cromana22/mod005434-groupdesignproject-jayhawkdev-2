@@ -1,6 +1,5 @@
 import './Reports.css';
-import NavBar from './NavBar';
-import { PieChart, Pie, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, LineChart, Line, AreaChart, Area, } from 'recharts';
+import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, LineChart, Line } from 'recharts';
 import useFetch from './php/useFetch';
 import phpUrl from './php/phpUrls';
 import React from 'react';
