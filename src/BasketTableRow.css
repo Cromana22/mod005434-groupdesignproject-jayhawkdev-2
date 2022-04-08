@@ -1,0 +1,9 @@
+img {
+    height: auto;
+    width: 100%;
+    max-width: 100px;
+}
+
+#image {
+    padding: 5px !important;
+}

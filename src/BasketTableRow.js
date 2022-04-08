@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import phpUrl from './php/phpUrls';
 import useFetch from './php/useFetch';
+import './BasketTableRow.css';
 
 function removeProduct(product, qtyToOrder) {
   window.location.href = phpUrl+"/removeFromBasket.php?productCode="+product+"&qty="+qtyToOrder;
@@ -33,7 +34,9 @@ function BasketTableRow(props) {
 
     return (
       <tr id={rowCount} className='Basket-tr'>
-        <td>{image}</td>
+        <td id='image'>
+          <img src={require("./images/"+image)} alt={image}></img>
+        </td>
         <td>
           <input className="Hide" type="text" id={rowCount+"productCode"} name={rowCount+"productCode"} defaultValue={product} />
           {productName}
