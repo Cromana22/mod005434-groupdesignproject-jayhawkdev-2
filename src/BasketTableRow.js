@@ -18,7 +18,6 @@ function BasketTableRow(props) {
 
   let { response } = useFetch(phpUrl+'/getBasketItem.php?productCode='+product);
   if (response !== null) {
-    console.log(response);
     image = response[0].image;
     productName = response[0].productName;
     qtyAvailable = response[0].qtyAvailable;

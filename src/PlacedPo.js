@@ -93,8 +93,6 @@ const PlacedPo = (props) => {
             );
             rowCount++;
         });
-        console.log(staffIdButton);
-        console.log(staffId);
     }
 
     return (

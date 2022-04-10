@@ -7,15 +7,15 @@ header('Access-Control-Allow-Credentials: true');
 
 $productCode = $_GET['productCode'];
 $qty = $_GET['qty'];
-$removeValue1 = '"'.$productCode.'":'.$qty.','; //this catches item in the first or main of list
-$removeValue2 = ',"'.$productCode.'":'.$qty; //this catches item at the end of list
-$removeValue3 = '"'.$productCode.'":'.$qty; //this catches item when only one in the list   
+$removeValue = '"'.$productCode.'":'.$qty;
 
 $basket = $_COOKIE['basket'];
 
-$newBasket = str_replace($removeValue1, "", $basket);
-$newBasket = str_replace($removeValue2, "", $newBasket);
-$newBasket = str_replace($removeValue3, "", $newBasket);
+$newBasket = str_replace($removeValue, "", $basket);
+$newBasket = str_replace("{,", "{", $newBasket);
+$newBasket = str_replace(",}", "}", $newBasket);
+$newBasket = str_replace(",,", ",", $newBasket);
+
 setcookie("basket", $newBasket);
 
 echo "<script>location.replace('$webUrl/basket')</script>";
