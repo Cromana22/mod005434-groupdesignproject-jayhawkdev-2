@@ -5,6 +5,7 @@ import phpUrl from './php/phpUrls';
 import { useParams } from 'react-router';
 import PlacedPoProductRow from './PlacedPoProductRow';
 import { Link } from 'react-router-dom';
+import webUrl from './php/webUrls.js';
 
 function authPo(poNumber) {
     window.location.href = phpUrl+"/authorisePo.php?poNumber="+poNumber;
@@ -127,7 +128,7 @@ const PlacedPo = (props) => {
                                 <thead>
                                     <tr className='staff-tr'>
                                         <th>Staff ID</th>
-                                        <th>Staff Name</th>
+                                        <th >Staff Name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -262,17 +263,20 @@ const PlacedPo = (props) => {
                 {
                     <button id='query-btn' onClick={() => queryPo(poNumber)}>Query</button>
                 }
+            </div>
+            <div className='more-buttons'>
                 {
                     (accessLevel == "Manager" || accessLevel == "Finance") &&
-                    <button id='reject-btn' onClick={() => deletePo(poNumber)}>Delete</button>
+                    <button id='delete-btn' onClick={() => deletePo(poNumber)}>Delete</button>
                 }
                 
                 {
                     staffIdButton == staffId &&
-                    <button id='reject-btn' onClick={() => cancelPo(poNumber)}>Withdraw PO</button>
+                    <button id='withdraw-btn' onClick={() => cancelPo(poNumber)}>Withdraw PO</button>
                 }
                 <Link to="/purchaseorders" ><button id='back-btn'>Back</button></Link>
             </div>
+            
         </div>
         
     );

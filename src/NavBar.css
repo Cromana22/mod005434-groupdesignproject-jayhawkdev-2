@@ -170,6 +170,10 @@ btn-check:focus+.btn-outline-success, .btn-outline-success:focus {
 }
 
 @media (max-width: 576px){
+    .navbar h1{
+        font-size: 20px;
+        margin: 0px 5px;
+    }
     .navbar-collapse{
         flex-basis: 1% !important;
     }
