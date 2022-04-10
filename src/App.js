@@ -47,7 +47,7 @@ function App() {
           <Route path="editstaff" element={<StaffEdit basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
           <Route path="reports" element={<Reports basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
           <Route path="help" element={<Help basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
-          <Route path="placedpo" element={<PlacedPo basketCount={basketCount} accessLevel={accessLevel} />} />
+          <Route path="placedpo" element={<PlacedPo basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} staffIdButton={staffId} />} />
           <Route path="basket" element={<Basket basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />}  />
           <Route path="checkout" element={<Checkout basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} />} />
           <Route path="*" element={<Products basketCount={basketCount} loggedin={loggedin} accessLevel={accessLevel} productTypes={productTypes} />} />

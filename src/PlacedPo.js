@@ -93,8 +93,8 @@ const PlacedPo = (props) => {
             );
             rowCount++;
         });
-
-
+        console.log(staffIdButton);
+        console.log(staffId);
     }
 
     return (
@@ -253,14 +253,15 @@ const PlacedPo = (props) => {
 
             <div className='buttons'>
                 {
-                    accessLevel !== "Sales" &&
+                    accessLevel !== "Sales" && (poStatus == "Queried" || poStatus == "Raised" || poStatus == "Checked") &&
                     <button id='authorise-btn' onClick={() => authPo(poNumber)}>Authorise</button>
                 }
                 {
-                    accessLevel !== "Sales" &&
+                    accessLevel !== "Sales" && poStatus !== "Confirmed" && poStatus !== "Delivered" && poStatus !== "Cancelled" && poStatus !== "Rejected" &&
                     <button id='reject-btn' onClick={() => rejectPo(poNumber)}>Reject</button>
                 }
                 {
+                    poStatus !== "Confirmed" && poStatus !== "Delivered" && poStatus !== "Cancelled" && poStatus !== "Rejected" &&
                     <button id='query-btn' onClick={() => queryPo(poNumber)}>Query</button>
                 }
             </div>
@@ -269,9 +270,8 @@ const PlacedPo = (props) => {
                     (accessLevel == "Manager" || accessLevel == "Finance") &&
                     <button id='delete-btn' onClick={() => deletePo(poNumber)}>Delete</button>
                 }
-                
                 {
-                    staffIdButton == staffId &&
+                    staffIdButton == staffId && poStatus !== "Cancelled" && poStatus !== "Confirmed" && poStatus !== "Delivered" &&
                     <button id='withdraw-btn' onClick={() => cancelPo(poNumber)}>Withdraw PO</button>
                 }
                 <Link to="/purchaseorders" ><button id='back-btn'>Back</button></Link>
