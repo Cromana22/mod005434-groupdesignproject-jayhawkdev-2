@@ -10,10 +10,10 @@ $sql="SELECT (@cnt := @cnt + 1) AS `index`,
     a.`name` AS 'pieSection',
     COUNT(c.poNumber) AS 'count',
     CASE
-        WHEN (@cnt) < 10 THEN CONCAT('#', (@cnt),(@cnt),(@cnt),(@cnt),(@cnt),(@cnt))
-        WHEN (@cnt) = 10 THEN '#AAAAAA'
-        WHEN (@cnt) = 11 THEN '#BBBBBB'
-        WHEN (@cnt) = 12 THEN '#CCCCCC'
+        WHEN (@cnt) < 10 THEN CONCAT('#', (@cnt),(@cnt), 'AA66')
+        WHEN (@cnt) = 10 THEN '#AAAA66'
+        WHEN (@cnt) = 11 THEN '#BBAA66'
+        WHEN (@cnt) = 12 THEN '#CCAA66'
         ELSE 'Dark Blue'
     END AS 'colour'
     FROM Product AS a

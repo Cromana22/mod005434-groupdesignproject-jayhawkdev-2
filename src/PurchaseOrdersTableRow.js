@@ -12,7 +12,7 @@ function PurchaseOrdersTableRow(props) {
                 <td>{details.raisedby}</td>
                 <td>{details.raiseddate}</td>
                 <td>{details.supplier}</td>
-                <td>{details.total}</td>
+                <td>£{details.total}</td>
                 <td>{details.status}</td>
             </tr>
         );

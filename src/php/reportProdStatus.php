@@ -9,12 +9,12 @@ header('Access-Control-Allow-Credentials: true');
 $sql="SELECT count(quantity) as 'count',
     CASE
         WHEN quantity < reorderLevel THEN 'Red'
-        WHEN quantity = reorderLevel THEN 'Orange'
+        WHEN quantity <= reorderLevel*1.1 THEN 'Orange'
         ELSE 'Green'
     END AS 'pieSection',
     CASE
         WHEN quantity < reorderLevel THEN 'Red'
-        WHEN quantity = reorderLevel THEN 'Orange'
+        WHEN quantity <= reorderLevel*1.1 THEN 'Orange'
         ELSE 'Green'
     END AS 'colour'
     FROM ShopProduct
