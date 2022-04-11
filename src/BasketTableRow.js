@@ -45,13 +45,13 @@ function BasketTableRow(props) {
             <input type="number" min='1' max={maxOrder} id={rowCount+"qtyToOrder"} name={rowCount+"qtyToOrder"} defaultValue={qtyToOrder}/>
           </td>
           <td>
-            <select id={rowCount+"supplier"} name={rowCount+"supplier"} required >
+            <select className='select-supplier' id={rowCount+"supplier"} name={rowCount+"supplier"} required >
               <option value="">--Supplier--</option>
               {supplierOptions}
             </select>
           </td>
-        <td>
-          <button onClick={() => removeProduct(product, qtyToOrder)}>
+        <td className='delete-col'>
+          <button className='delete-btn' onClick={() => removeProduct(product, qtyToOrder)}>
             <FontAwesomeIcon id={"delete"+rowCount} icon={faTrashCan}  />
           </button>
         </td>

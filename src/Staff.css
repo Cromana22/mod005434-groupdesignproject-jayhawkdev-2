@@ -23,11 +23,13 @@
     background-color: #047A10 !important;
     color: white !important;
     border: none !important;
+    height: 38px;
 }
 
 .delete-btn{
     background-color: #9B0000 !important;
     color: white !important;
+    margin: 0px 5%;
 }
 
 /* Add New Staff */

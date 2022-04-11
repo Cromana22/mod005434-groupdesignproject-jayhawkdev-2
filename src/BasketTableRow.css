@@ -7,3 +7,16 @@ img {
 #image {
     padding: 5px !important;
 }
+
+.select-supplier{
+    width: 100% !important;
+}
+
+.delete-col{
+    padding: 0px 20px !important;
+}
+
+input{
+    text-align: center;
+}
+

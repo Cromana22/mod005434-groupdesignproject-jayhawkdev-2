@@ -52,10 +52,12 @@ const Basket = (props) => {
                                 }
                         </tbody>
                     </table>
+                    <div className='checkout-btn'>
                     {
                         basketCount > 0 &&
-                        <button type='submit' name='submit'>Checkout</button>
+                        <button  type='submit' name='submit'>Checkout</button>
                     }
+                    </div>
                 </form>
             </div>
         </div>

@@ -15,10 +15,11 @@
     float: left;
 }
 
-.table-responsive h1{
-    margin-left: 2%;
+.table-responsive h1, h2{
+    font-size: 1.7rem !important;
 }
 
 #line-bar-chart{
     margin-bottom: 4%;
 }
+

@@ -45,3 +45,16 @@ td{
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+.checkout-btn button{
+    background-color: #047A10 !important;
+    color:#f8f9fa !important;
+    border: 0px;
+    margin: 4vh 0px;
+    height: 38px;
+}
+
+.checkout-btn{
+    width: 100%;
+    text-align: center;
+}
