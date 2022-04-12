@@ -262,8 +262,7 @@ const PlacedPo = (props) => {
                     poStatus !== "Confirmed" && poStatus !== "Delivered" && poStatus !== "Cancelled" && poStatus !== "Rejected" &&
                     <button id='query-btn' onClick={() => queryPo(poNumber)}>Query</button>
                 }
-            </div>
-            <div className='more-buttons'>
+            
                 {
                     (accessLevel == "Manager" || accessLevel == "Finance") &&
                     <button id='delete-btn' onClick={() => deletePo(poNumber)}>Delete</button>

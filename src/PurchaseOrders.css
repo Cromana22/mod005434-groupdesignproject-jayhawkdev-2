@@ -16,3 +16,7 @@
 .Po-tr td{
     padding: 2.5% !important;
 }
+
+#Orders-table tbody{
+    border: 0px !important;
+}

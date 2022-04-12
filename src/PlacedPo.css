@@ -163,13 +163,24 @@
 }
 
 #vat-th{
-    width: 129px;
+    width: 121px;
 }
 
 #vat-th-1{
     text-align: center;
 }
-
+/*Grand total*/
+.grandtotal-table {
+    float: right;
+}
+#grandtotal-th{
+    width: 112px;
+}
+.grandtotal-table, .grandtotal-tr, th{
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px;
+}
 .container-left {
     display: inline-block;
     width: 75%;
@@ -179,7 +190,7 @@
     margin-right: 2%;
 }
 
-.vat-table, .subtotal-table{
+.vat-table, .subtotal-table, .grandtotal-table{
     display: block;
     clear: both;
 }
@@ -372,6 +383,17 @@
     .buttons{
         margin-top: 5%;
     }
+
+    #delete-btn{
+        background-color: #9B0000 !important;
+        border: none;
+        color: white !important;
+        margin: 0px 4%;
+    }
+
+    #delete-btn:hover{
+        background-color: #1b1464 !important;
+    }
 }
 
 @media only screen and (max-width: 576px){
@@ -405,6 +427,11 @@
         background-color: #9B0000 !important;
         border: none;
         color: white !important;
+        margin: 0px 4%;
+    }
+
+    #delete-btn:hover{
+        background-color: #1b1464 !important;
     }
 
     #withdraw-btn{
@@ -423,7 +450,7 @@
         overflow-x: hidden  ;
     }
     .buttons {
-        margin-top: 5%;
+        margin-top: 1%;
     }
     
     .more-buttons{
@@ -436,6 +463,11 @@
         background-color: #9B0000 !important;
         border: none;
         color: white !important;
+        margin: 0px 4%;
+    }
+
+    #delete-btn:hover{
+        background-color: #1b1464 !important;
     }
 
     #withdraw-btn{

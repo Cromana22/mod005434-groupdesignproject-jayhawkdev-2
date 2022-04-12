@@ -1,7 +1,9 @@
 .Staff-tr{
     border: 1px solid black;
 }
-
+.Staff-tr th{
+    text-align: center;
+}
 #Staff-table{
     width: 100%;
     margin-bottom: 2%;
