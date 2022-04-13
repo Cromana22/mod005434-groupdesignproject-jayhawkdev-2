@@ -41,3 +41,24 @@ img {
     margin-top: 2%;
     margin-left: 2vh;
 }
+
+.chartContainer h1{
+    margin-bottom: 10%;
+}
+
+/* Small 576px*/
+
+@media only screen and (max-width: 576px){
+    .chart{
+        margin-right: 0px;
+    }
+    #pie-chart{
+        display: block !important;
+    }
+    #line-bar-chart{
+        display: block !important;
+    }
+    .chartContainer svg, .recharts-tooltip-wrapper{
+        width: 85% !important;
+    }
+}
