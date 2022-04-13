@@ -25,7 +25,7 @@ $update1->bindParam(':firstName', $firstName, PDO::PARAM_STR);
 $update1->bindParam(':surname', $surname, PDO::PARAM_STR);
 $update1->bindParam(':jobTitle', $jobTitle, PDO::PARAM_STR);
 $update1->bindParam(':shopName', $shopName, PDO::PARAM_STR);
-$update1->bindParam(':deptName', $deptId, PDO::PARAM_STR);
+$update1->bindParam(':deptName', $deptName, PDO::PARAM_STR);
 $update1->bindParam(':accessLevel', $accessLevel, PDO::PARAM_STR);
 $update1->bindParam(':homepage', $homepage, PDO::PARAM_STR);
 $update1->bindParam(':staffId', $staffId, PDO::PARAM_STR);
