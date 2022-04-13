@@ -46,10 +46,10 @@ const CheckOutComponent = (props) => {
                 
                 <br></br>
 
-                <div id={"notes-txt"+poRequest}> 
+                <div className='notes-text' id={"notes-txt"+poRequest}> 
                     <h6>Notes:</h6> 
                     <br></br>
-                    <textarea id={"notes"+poRequest} name={"notes"+poRequest} rows="5" cols="100"></textarea>
+                    <textarea className='notess' id={"notes"+poRequest} name={"notes"+poRequest} rows="5" cols="100"></textarea>
                 </div>
 
                 <table className='checkout-table'>
