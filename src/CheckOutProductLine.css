@@ -7,3 +7,37 @@ img {
 #image {
     padding: 5px !important;
 }
+
+.supplier-div1, .supplier-div2{
+    display: inline-block;
+    clear: both;
+}
+
+#supplier-h3{
+    width: 100%;
+    margin-left: 20px !important;
+    margin-right: 2vh !important;
+}
+
+.temp-div1, .temp-div2{
+    display: inline-block;
+    clear: both;
+}
+
+.temp-div1{
+    margin-right: 2vh !important;
+}
+
+.total-div1, .total-div2{
+    display: inline-block;
+    clear: both;
+}
+
+.total-div1{
+    display: block;
+}
+
+.total-div2{
+    margin-top: 2%;
+    margin-left: 2vh;
+}

@@ -21,15 +21,26 @@ const CheckOutComponent = (props) => {
         <div className="component table-responsive">
             <div>
                 <div className='supplier-txt'>
+                    <div className='supplier-div1'>
                     <h3 id='supplier-h3'>Order From: </h3><br />
-                    <input className="Hide" type="text" id={"supplierId"+poRequest} name={"supplierId"+poRequest} defaultValue={supplierOrderLines[0].supplierId} />
+                    </div>
+                    <input className="Hide" type="text" id={"supplierId"+poRequest} name={"supplierId"+poRequest} defaultValue={supplierOrderLines[0].supplierId} /> 
+                    <div className='supplier-div2'>
                     <p>{supplierOrderLines[0].supplierName}</p>
-
+                    </div>
                     <div className='checkout-div'>
+                        <div className='temp-div1'>
                         <h3 id='temp-po-txt'>Purchase Request: </h3>
+                        </div>
+                        <div className='temp-div2'>
                         <p> {poRequest} of {requestTotal}</p>
+                        </div>
+                        <div className='total-div1'>
                         <h3 id='total-h3'>Total: </h3>
+                        </div>
+                        <div className='total-div2'>
                         <p>£{orderTotal.toFixed(2)}</p>
+                        </div>
                     </div>
                 </div>
                 

@@ -9,13 +9,18 @@
 }
 
 .supplier-txt #supplier-h3, #notes-txt h6{
-    margin-left: 2% !important;
-    margin-top: 2% !important;
+    margin-top: 15% !important;
 }
 
+#notes-txt1 h6, #notes1{
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+/*
 #notes-txt textarea{
     margin-left: 2% !important;
 }
+*/
 
 .checkout-table{
     width: 100%;
@@ -40,10 +45,7 @@
     
 }
 
-#temp-po-txt{
-    float: right;
 
-}
 
 #supplier-h3{
     margin: 0px !important;
@@ -53,8 +55,6 @@
 
 #total-h3{
     float: left;
-    display: block;
-    clear: both;
     
 }
 
