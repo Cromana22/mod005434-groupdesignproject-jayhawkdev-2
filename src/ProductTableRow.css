@@ -79,3 +79,7 @@ img {
 #image {
     padding: 5px !important;
 }
+
+.order-form input{
+    text-align: center !important;
+}

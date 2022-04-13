@@ -32,7 +32,7 @@ const ReportPieChart = (props) => {
     return (
         <div className="chartContainer">
             <h2>{title}</h2>
-            <PieChart width={500} height={500}>
+            <PieChart width={500} height={400}>
                 <Pie
                     dataKey="value"
                     isAnimationActive={false}
