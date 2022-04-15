@@ -1,14 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5ba9070.css",
-    "main.js": "/static/js/main.ddfcbf0c.js",
+    "main.css": "/static/css/main.c6a7933b.css",
+    "main.js": "/static/js/main.8ad07e9c.js",
+    "static/media/funko-olaf.jpg": "/static/media/funko-olaf.2063e775527b45c45fc7.jpg",
+    "static/media/play3dpen.jpg": "/static/media/play3dpen.886f5417d34eee5a6462.jpg",
     "static/media/Logo.png": "/static/media/Logo.f3e92f68255d1046fda2.png",
+    "static/media/starwars-usbcupholder.jpg": "/static/media/starwars-usbcupholder.30aa5a8a12edf433d061.jpg",
+    "static/media/klikbot.jpg": "/static/media/klikbot.c51dbce81b66bda8c127.jpg",
+    "static/media/legoclassic-11001.jpg": "/static/media/legoclassic-11001.ae109c979de4f3bd3eeb.jpg",
+    "static/media/pinball.jpg": "/static/media/pinball.6e2b1da23573eb84bbb8.jpg",
+    "static/media/portablepersonalfan.jpg": "/static/media/portablepersonalfan.9e2b9a3207ce1fa9b6b4.jpg",
+    "static/media/nerf-elitedisruptor.jpg": "/static/media/nerf-elitedisruptor.ac1bca8a39bbb647903c.jpg",
+    "static/media/powerbank.jpg": "/static/media/powerbank.5af5e152673fcd688b55.jpg",
     "index.html": "/index.html",
-    "main.b5ba9070.css.map": "/static/css/main.b5ba9070.css.map",
-    "main.ddfcbf0c.js.map": "/static/js/main.ddfcbf0c.js.map"
+    "main.c6a7933b.css.map": "/static/css/main.c6a7933b.css.map",
+    "main.8ad07e9c.js.map": "/static/js/main.8ad07e9c.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5ba9070.css",
-    "static/js/main.ddfcbf0c.js"
+    "static/css/main.c6a7933b.css",
+    "static/js/main.8ad07e9c.js"
   ]
 }
